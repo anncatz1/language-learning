@@ -1,41 +1,29 @@
 //
-//  Q5.swift
+//  Q5b.swift
 //  Sleep Learning
 //
-//  Created by Mani Jahani on 7/3/19.
-//  Copyright © 2019 Memory Lab. All rights reserved.
+//  Created by Annie Xu on 6/29/20.
+//  Copyright © 2020 Memory Lab. All rights reserved.
 //
 
 import UIKit
 
-class Q5: UIViewController {
-    
-    //  Set the status bar to have light content so it's visible against the black
-    //  background
+class Q5: UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    @IBOutlet weak var responseField: UITextField!
-    
-    @IBAction func continueToNextQuestion(_ sender: Any) {
-        guard responseField.text != nil && responseField.text != "" else {
-            return
-        }
-        diary.diaryData["issuesWithApp"] = responseField.text
+    @IBAction func answeredYes(_ sender: Any) {
+        diary.diaryData["issuesWithAppYN"] = "Yes"
         diary.upload()
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
-            //  Display alert
-            let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
-            emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(emptyAlert, animated: true, completion: nil)
-            return false
-        }
-        else {
-            return true
-        }
+    @IBAction func answeredNo(_ sender: Any) {
+        diary.diaryData["issuesWithAppYN"] = "No"
+        diary.upload()
+    }
+    
+    @IBAction func unwindToPreviousQuestion(segue: UIStoryboardSegue) {
+        return
     }
 }
