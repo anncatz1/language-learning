@@ -728,15 +728,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GME-8Q-DZQ">
-                                <rect key="frame" x="100" y="422" width="51" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Yes"/>
-                                <connections>
-                                    <action selector="answeredYes:" destination="PYm-qu-CSL" eventType="touchUpInside" id="vot-C3-e9k"/>
-                                    <segue destination="OaW-5H-QzG" kind="show" id="5Cx-wH-1ln"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y4-We-v7d">
                                 <rect key="frame" x="272" y="422" width="42" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
@@ -744,7 +735,7 @@
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="answeredNo:" destination="PYm-qu-CSL" eventType="touchUpInside" id="3mZ-1w-LLY"/>
+                                    <action selector="answeredNo:" destination="PYm-qu-CSL" eventType="touchUpInside" id="qhN-m9-kn5"/>
                                     <segue destination="gnz-me-zTC" kind="show" id="yrj-JU-5XA"/>
                                 </connections>
                             </button>
@@ -758,19 +749,27 @@
                                     <segue destination="ltM-VN-q6U" kind="unwind" unwindAction="unwindToPreviousQuestionWithSegue:" id="eaa-uC-AUX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRe-aJ-EVw">
+                                <rect key="frame" x="100" y="422" width="51" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <action selector="answeredYes:" destination="PYm-qu-CSL" eventType="touchUpInside" id="dZp-Sw-xbn"/>
+                                    <segue destination="OaW-5H-QzG" kind="show" id="aL6-FQ-1aR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7y4-We-v7d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GME-8Q-DZQ" secondAttribute="trailing" constant="8" symbolic="YES" id="Du8-6C-DOJ"/>
                             <constraint firstAttribute="trailing" secondItem="2bV-Xj-ewA" secondAttribute="trailing" constant="40" id="EjE-ab-pYe"/>
                             <constraint firstItem="2bV-Xj-ewA" firstAttribute="top" secondItem="nKT-Of-zhz" secondAttribute="top" constant="40" id="Eqd-bI-CgT"/>
                             <constraint firstItem="nKT-Of-zhz" firstAttribute="bottom" secondItem="Qqo-7O-Nel" secondAttribute="bottom" constant="40" id="IDn-hV-8uL"/>
-                            <constraint firstItem="GME-8Q-DZQ" firstAttribute="leading" secondItem="nKT-Of-zhz" secondAttribute="leading" constant="100" id="McW-wE-cku"/>
                             <constraint firstItem="7y4-We-v7d" firstAttribute="centerY" secondItem="XnL-ye-3h5" secondAttribute="centerY" id="Pc3-Fy-qaN"/>
+                            <constraint firstItem="jRe-aJ-EVw" firstAttribute="leading" secondItem="nKT-Of-zhz" secondAttribute="leading" constant="100" id="fB9-qo-zBr"/>
                             <constraint firstItem="2bV-Xj-ewA" firstAttribute="leading" secondItem="nKT-Of-zhz" secondAttribute="leading" constant="40" id="lG9-tz-fkf"/>
                             <constraint firstItem="Qqo-7O-Nel" firstAttribute="leading" secondItem="nKT-Of-zhz" secondAttribute="leading" constant="40" id="p7k-vB-Dvf"/>
                             <constraint firstItem="nKT-Of-zhz" firstAttribute="trailing" secondItem="7y4-We-v7d" secondAttribute="trailing" constant="100" id="qdi-If-EPM"/>
-                            <constraint firstItem="GME-8Q-DZQ" firstAttribute="centerY" secondItem="XnL-ye-3h5" secondAttribute="centerY" id="xPy-on-K06"/>
+                            <constraint firstItem="jRe-aJ-EVw" firstAttribute="centerY" secondItem="XnL-ye-3h5" secondAttribute="centerY" id="vGM-GL-eeS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nKT-Of-zhz"/>
                     </view>
@@ -1135,7 +1134,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="B7T-sw-fYF"/>
-        <segue reference="giO-hV-Q4k"/>
+        <segue reference="yrj-JU-5XA"/>
         <segue reference="kEU-P8-Ofy"/>
         <segue reference="G3k-ey-9pz"/>
         <segue reference="jVL-wB-3Np"/>

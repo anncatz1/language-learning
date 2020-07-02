@@ -13,7 +13,7 @@ class Q4: UIViewController{
         return .lightContent
     }
     
-    @IBAction func answeredYes(_ sender: Any) {
+    @IBAction func answeredYes(_: Any) {
         diary.diaryData["issuesWithVolumeYN"] = "Yes"
         diary.upload()
     }
