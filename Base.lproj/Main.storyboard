@@ -766,6 +766,7 @@
                             <constraint firstItem="nKT-Of-zhz" firstAttribute="bottom" secondItem="Qqo-7O-Nel" secondAttribute="bottom" constant="40" id="IDn-hV-8uL"/>
                             <constraint firstItem="7y4-We-v7d" firstAttribute="centerY" secondItem="XnL-ye-3h5" secondAttribute="centerY" id="Pc3-Fy-qaN"/>
                             <constraint firstItem="jRe-aJ-EVw" firstAttribute="leading" secondItem="nKT-Of-zhz" secondAttribute="leading" constant="100" id="fB9-qo-zBr"/>
+                            <constraint firstItem="7y4-We-v7d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jRe-aJ-EVw" secondAttribute="trailing" constant="121" id="fLM-yx-pjQ"/>
                             <constraint firstItem="2bV-Xj-ewA" firstAttribute="leading" secondItem="nKT-Of-zhz" secondAttribute="leading" constant="40" id="lG9-tz-fkf"/>
                             <constraint firstItem="Qqo-7O-Nel" firstAttribute="leading" secondItem="nKT-Of-zhz" secondAttribute="leading" constant="40" id="p7k-vB-Dvf"/>
                             <constraint firstItem="nKT-Of-zhz" firstAttribute="trailing" secondItem="7y4-We-v7d" secondAttribute="trailing" constant="100" id="qdi-If-EPM"/>
