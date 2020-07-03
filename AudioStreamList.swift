@@ -16,6 +16,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 //  Get assigned language and audio offset time from the user database and
 //  set the stream list correspondingly

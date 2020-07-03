@@ -12,6 +12,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 struct Diary {
     var diaryData: [String: Any]

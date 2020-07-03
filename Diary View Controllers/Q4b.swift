@@ -1,5 +1,5 @@
 //
-//  Q5b.swift
+//  Q4b.swift
 //  Sleep Learning
 //
 //  Created by Mani Jahani on 7/3/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Q5b: UIViewController {
+class Q4b: UIViewController {
     
     //  Set the status bar to have light content so it's visible against the black
     //  background
@@ -22,7 +22,7 @@ class Q5b: UIViewController {
         guard responseField.text != nil && responseField.text != "" else {
             return
         }
-        diary.diaryData["issuesWithApp"] = responseField.text
+        diary.diaryData["issuesWithVolume"] = responseField.text
         diary.upload()
     }
     
@@ -37,5 +37,9 @@ class Q5b: UIViewController {
         else {
             return true
         }
+    }
+    
+    @IBAction func unwindToPreviousQuestion(segue: UIStoryboardSegue) {
+        return
     }
 }
