@@ -26,6 +26,11 @@ class Q3: UIViewController {
         diary.upload()
     }
     
+    @IBAction func answeredNA(_ sender: Any) {
+           diary.diaryData["headphonesStayedIn"] = "N/A"
+           diary.upload()
+       }
+    
     @IBAction func unwindToPreviousQuestion(segue: UIStoryboardSegue) {
         return
     }

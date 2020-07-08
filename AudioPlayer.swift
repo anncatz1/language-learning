@@ -57,12 +57,17 @@ class AudioPlayer {
         //  Record the volume for everytime the audio starts playing.
         diary.diaryData["volumes"] = (diary.diaryData["volumes"] as! [Float]) + [audioSession.outputVolume]
         diary.upload()
+        diary.diaryData["timesRecordVolume"] = (diary.diaryData["timesRecordVolume"] as! [Date]) + [Date()]
+        diary.upload()
     }
     
     func stopAudio(recordVol : Bool) {
         if recordVol {
             diary.diaryData["volumes"] = (diary.diaryData["volumes"] as! [Float]) + [audioSession.outputVolume]
-            diary.upload()}
+            diary.upload()
+            diary.diaryData["timesRecordVolume"] = (diary.diaryData["timesRecordVolume"] as! [Date]) + [Date()]
+            diary.upload()
+            }
         player.pause()
         player.removeAllItems()
     }

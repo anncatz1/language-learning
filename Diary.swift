@@ -23,6 +23,7 @@ struct Diary {
         diaryData["timeWhenAsleep"] = nil
         diaryData["timeWhenAwake"] = nil
         diaryData["volumes"] = [Float]()
+        diaryData["timesRecordVolume"] = [Date]()
         diaryData["numberOfRestarts"] = 0
         diaryData["timesPressedRestart"] = [Date]()
         diaryData["heardInitialWarningSounds"] = nil
