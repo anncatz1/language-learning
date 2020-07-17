@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fim-ii-SQ8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fim-ii-SQ8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -700,7 +700,7 @@
                                 </state>
                                 <connections>
                                     <action selector="answeredNA:" destination="ssb-MU-2fQ" eventType="touchUpInside" id="8su-hS-aPZ"/>
-                                    <segue destination="o4r-sn-ZmP" kind="show" id="P82-L8-KTb"/>
+                                    <segue destination="DqF-Bd-5Mn" kind="show" id="H5s-Ty-50T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -861,7 +861,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9d-j6-Tua" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dBl-65-zHt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7113" y="1108"/>
+            <point key="canvasLocation" x="7099" y="1154"/>
         </scene>
         <!--5b-->
         <scene sceneID="fvh-7c-iiI">
@@ -1148,11 +1148,78 @@
             </objects>
             <point key="canvasLocation" x="7025" y="402"/>
         </scene>
+        <!--3b-->
+        <scene sceneID="AYf-V9-1U7">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="DqF-Bd-5Mn" customClass="Q3b" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Nx-9o-68x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where did you put your phone last night if you did not use headphones? (On pillow, on bed, on nightstand)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLn-Fz-c0s">
+                                <rect key="frame" x="40" y="84" width="334" height="236.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2R-3T-sEZ">
+                                <rect key="frame" x="40" y="431" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wen-Qp-Gns">
+                                <rect key="frame" x="40" y="786" width="44" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RiZ-vD-4b7" kind="unwind" unwindAction="unwindToPreviousQuestionWithSegue:" id="XHQ-QX-PoY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-Ew-XRG">
+                                <rect key="frame" x="157.5" y="475" width="99" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueToNextQuestion:" destination="DqF-Bd-5Mn" eventType="touchUpInside" id="1Mx-bv-Wiu"/>
+                                    <segue destination="o4r-sn-ZmP" kind="show" id="Tgm-Xa-Hho"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gME-bl-tD7" firstAttribute="bottom" secondItem="wen-Qp-Gns" secondAttribute="bottom" constant="40" id="1OS-I8-IdE"/>
+                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" secondItem="rLn-Fz-c0s" secondAttribute="trailing" constant="40" id="LLt-E1-7Qo"/>
+                            <constraint firstItem="wen-Qp-Gns" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="40" id="Ljo-wJ-muV"/>
+                            <constraint firstItem="IUd-Ew-XRG" firstAttribute="top" secondItem="f2R-3T-sEZ" secondAttribute="bottom" constant="10" id="MxT-kQ-fAI"/>
+                            <constraint firstItem="f2R-3T-sEZ" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="40" id="Vlo-YS-TQw"/>
+                            <constraint firstItem="f2R-3T-sEZ" firstAttribute="centerY" secondItem="4Nx-9o-68x" secondAttribute="centerY" id="hss-y1-hTJ"/>
+                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" secondItem="f2R-3T-sEZ" secondAttribute="trailing" constant="40" id="rkt-Vc-nyW"/>
+                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wen-Qp-Gns" secondAttribute="trailing" symbolic="YES" id="sbB-hG-JhY"/>
+                            <constraint firstItem="IUd-Ew-XRG" firstAttribute="centerX" secondItem="4Nx-9o-68x" secondAttribute="centerX" id="uUc-hW-k1Q"/>
+                            <constraint firstItem="rLn-Fz-c0s" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="40" id="wcf-fr-JCX"/>
+                            <constraint firstItem="rLn-Fz-c0s" firstAttribute="top" secondItem="gME-bl-tD7" secondAttribute="top" constant="40" id="yNk-SK-Rzz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gME-bl-tD7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YQm-4N-8eU"/>
+                    <connections>
+                        <outlet property="responseField" destination="f2R-3T-sEZ" id="fep-JV-WpH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYb-Qf-vN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RiZ-vD-4b7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="6081" y="1154"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Q8-qO-L7z"/>
+        <segue reference="Tgm-Xa-Hho"/>
         <segue reference="B7T-sw-fYF"/>
-        <segue reference="KZD-pL-Sws"/>
+        <segue reference="giO-hV-Q4k"/>
         <segue reference="G3k-ey-9pz"/>
         <segue reference="74k-a7-wyQ"/>
     </inferredMetricsTieBreakers>
