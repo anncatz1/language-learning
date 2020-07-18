@@ -34,6 +34,7 @@ struct Diary {
         diaryData["notAwakenedButHeardALanguage"] = nil
         diaryData["languageHeardWhileAsleep"] = nil
         diaryData["headphonesStayedIn"] = nil
+        diaryData["phoneLocation"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil

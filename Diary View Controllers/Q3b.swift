@@ -22,7 +22,7 @@ class Q3b: UIViewController {
         guard responseField.text != nil && responseField.text != "" else {
             return
         }
-        diary.diaryData["issuesWithVolume"] = responseField.text
+        diary.diaryData["phoneLocation"] = responseField.text
         diary.upload()
     }
     
