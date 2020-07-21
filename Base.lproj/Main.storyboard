@@ -198,10 +198,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVK-Ru-B5U">
-                                <rect key="frame" x="40" y="84" width="334" height="99"/>
-                                <string key="text">Make sure your earbuds are plugged in. Wait for the raindrops audio to come in and check to see the volume is at a comfortable level.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wait for the raindrops audio to come in and check to see the volume is at a comfortable level." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVK-Ru-B5U">
+                                <rect key="frame" x="40" y="84" width="334" height="82.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -255,7 +254,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were you awakened by the raindrops or a language played?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-8L-gKe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were you awakened by raindrops or a language played?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-8L-gKe">
                                 <rect key="frame" x="40" y="84" width="334" height="118.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -457,8 +456,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you were not awakened, did you hear the raindrops or a language in your sleep?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-u5-f96">
-                                <rect key="frame" x="40" y="84" width="334" height="158"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you were not awakened, did you think you heard raindrops or a language while sleeping?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-u5-f96">
+                                <rect key="frame" x="40" y="84" width="334" height="197"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -861,7 +860,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9d-j6-Tua" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dBl-65-zHt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7099" y="1154"/>
+            <point key="canvasLocation" x="7098.5507246376819" y="1153.7946428571429"/>
         </scene>
         <!--5b-->
         <scene sceneID="fvh-7c-iiI">
@@ -1218,7 +1217,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Tgm-Xa-Hho"/>
-        <segue reference="B7T-sw-fYF"/>
+        <segue reference="6Jw-9s-4nb"/>
         <segue reference="giO-hV-Q4k"/>
         <segue reference="G3k-ey-9pz"/>
         <segue reference="74k-a7-wyQ"/>
