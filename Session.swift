@@ -22,7 +22,7 @@ class Session {
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
         audioPlayer.loadAudioToStartSession()
-        audioPlayer.playAudio()
+        audioPlayer.playAudio(recordVol: true)
     }
     
     func endSession() {

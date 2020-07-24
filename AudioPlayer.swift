@@ -51,14 +51,15 @@ class AudioPlayer {
         }
     }
     
-    func playAudio() {
+    func playAudio(recordVol : Bool) {
         player.play()
-        
         //  Record the volume for everytime the audio starts playing.
-        diary.diaryData["volumes"] = (diary.diaryData["volumes"] as! [Float]) + [audioSession.outputVolume]
-        diary.upload()
-        diary.diaryData["timesRecordVolume"] = (diary.diaryData["timesRecordVolume"] as! [Date]) + [Date()]
-        diary.upload()
+        if recordVol{
+            diary.diaryData["volumes"] = (diary.diaryData["volumes"] as! [Float]) + [audioSession.outputVolume]
+            diary.upload()
+            diary.diaryData["timesRecordVolume"] = (diary.diaryData["timesRecordVolume"] as! [Date]) + [Date()]
+            diary.upload()
+        }
     }
     
     func stopAudio(recordVol : Bool) {
@@ -109,7 +110,7 @@ class AudioPlayer {
         //  If restart pressed during one of the blank audio files: do nothing
         else if [blankAudio5minsURL, blankAudio20minsURL, blankAudio40minsURL].contains(currentURL) {
             print("Can't restart: No audio is playing")
-            self.playAudio()
+            self.playAudio(recordVol: true)
             return false
         }
             
@@ -122,7 +123,7 @@ class AudioPlayer {
             player.advanceToNextItem()
             player.insert(oceanAudio, after: blankAudio20mins)
         }
-        self.playAudio()
+        self.playAudio(recordVol: true)
         return true
     }
 }
