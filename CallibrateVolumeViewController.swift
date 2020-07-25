@@ -12,9 +12,10 @@ class CallibrateVolumeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //  Play the ocean audio so that the volume can be callibrated.
-        diary.dayChange()
+        //diary.dayChange()
+        diary.diaryName = diary.getDate()
         audioPlayer.loadAudio(with: oceanURL)
-        audioPlayer.playAudio(recordVol: false)
+        audioPlayer.playAudio(recordVol: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -16,6 +16,7 @@ import FirebaseFirestore
 
 struct Diary {
     var diaryData: [String: Any]
+    var diaryName: String
     
     init() {
         diaryData = [String: Any]()
@@ -39,6 +40,7 @@ struct Diary {
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
         diaryData["issuesWithApp"] = nil
+        diaryName = ""
     }
     
     //  Helper function that returns the date as a string -- to be used as the
@@ -46,7 +48,7 @@ struct Diary {
     internal func getDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
+        dateFormatter.timeStyle = .medium
         
         let todaysDate = Date()
         
@@ -105,10 +107,10 @@ struct Diary {
                 //  Find user ID
                 let userID = (document.data()!["ID"] as! String)
                 //  Find day number
-                let dayNum = document.data()!["dayNum"]
-                let dayNumS = "\(dayNum ?? "")"
+                //let dayNum = document.data()!["dayNum"]
+                //let dayNumS = "\(dayNum ?? "")"
                 //  Store diary data in the collection titled with the user ID in a document with the day number as the title
-                Database.collection(userID).document(dayNumS).setData(self.diaryData) { err in
+                Database.collection(userID).document(self.diaryName).setData(self.diaryData) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {
