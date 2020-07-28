@@ -20,6 +20,7 @@ class Q4b: UIViewController {
     
     @IBAction func continueToNextQuestion(_ sender: Any) {
         guard responseField.text != nil && responseField.text != "" else {
+            print("4b guard")
             return
         }
         diary.diaryData["issuesWithVolume"] = responseField.text
@@ -28,6 +29,7 @@ class Q4b: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
+            print("4b display alert")
             //  Display alert
             let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
             emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

@@ -16,6 +16,21 @@ class Q3b: UIViewController {
         return .lightContent
     }
     
+    @IBAction func answeredPillow(_ sender: Any) {
+        diary.diaryData["phoneLocation"] = "Pillow"
+        diary.upload()
+    }
+    
+    @IBAction func answeredBed(_ sender: Any) {
+        diary.diaryData["phoneLocation"] = "Bed"
+        diary.upload()
+    }
+    
+    @IBAction func answeredNightstand(_ sender: Any) {
+        diary.diaryData["phoneLocation"] = "Nightstand"
+        diary.upload()
+    }
+    
     @IBOutlet weak var responseField: UITextField!
     
     @IBAction func continueToNextQuestion(_ sender: Any) {

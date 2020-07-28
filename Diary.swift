@@ -48,7 +48,7 @@ struct Diary {
     internal func getDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .medium
+        dateFormatter.timeStyle = .short
         
         let todaysDate = Date()
         
