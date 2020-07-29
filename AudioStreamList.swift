@@ -56,10 +56,89 @@ func setAssignedLanguage() {
 var languageAudioStreamList: [String] {
     get {
         if assignedLanguage.lowercased() == "mandarin" {
-            return ["mandarin-1.m4a", "mandarin-2.m4a"]
+            //picks random number between 1 and 10 including 10 to choose audio file
+            let audio = Int.random(in: 1 ... 18)
+            switch audio {
+            case 1:
+                return ["mandarin-1.m4a", "mandarin-2.m4a"]
+            case 2:
+                return ["mandarin-5.m4a"]
+            case 3:
+                return ["mandarin-6.m4a"]
+            case 4:
+                return ["mandarin-7.m4a"]
+            case 5:
+                return ["mandarin-8.m4a"]
+            case 6:
+                return ["mandarin-9.m4a"]
+            case 7:
+                return ["mandarin-10.m4a"]
+            case 8:
+                return ["mandarin-11.m4a"]
+            case 9:
+                return ["mandarin-Q1.m4a"]
+            case 10:
+                return ["mandarin-Q2.m4a"]
+            case 11:
+                return ["mandarin-Q3.m4a"]
+            case 12:
+                return ["mandarin-Q4.m4a"]
+            case 13:
+                return ["mandarin-Q5.m4a"]
+            case 14:
+                return ["mandarin-S1.m4a"]
+            case 15:
+                return ["mandarin-S2.m4a"]
+            case 16:
+                return ["mandarin-S3.m4a"]
+            case 17:
+                return ["mandarin-S4.m4a"]
+            case 18:
+                return ["mandarin-S5.m4a"]
+            default:
+                return ["mandarin-1.m4a", "mandarin-2.m4a"]
+            }
         }
         else if assignedLanguage.lowercased() == "arabic" {
-            return ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
+            let audio = Int.random(in: 1 ... 17)
+            switch audio {
+            case 1:
+                return ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
+            case 2:
+                return ["arabic-f1.m4a"]
+            case 3:
+                return ["arabic-f2.m4a"]
+            case 4:
+                return ["arabic-f3.m4a"]
+            case 5:
+                return ["arabic-f4.m4a"]
+            case 6:
+                return ["arabic-f5.m4a"]
+            case 7:
+                return ["arabic-f6.m4a"]
+            case 8:
+                return ["Arabic-Q6.m4a"]
+            case 9:
+                return ["Arabic-Q1.m4a"]
+            case 10:
+                return ["Arabic-Q2.m4a"]
+            case 11:
+                return ["Arabic-Q3.m4a"]
+            case 12:
+                return ["Arabic-Q4.m4a"]
+            case 13:
+                return ["Arabic-Q5.m4a"]
+            case 14:
+                return ["arabic-S1.m4a"]
+            case 15:
+                return ["arabic-S2.m4a"]
+            case 16:
+                return ["arabic-S3.m4a"]
+            case 17:
+                return ["arabic-S4.m4a"]
+            default:
+                return ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
+            }
         }
         else {
             fatalError("Error: Invalid Language. No audio will be played.")

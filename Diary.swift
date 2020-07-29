@@ -44,7 +44,7 @@ struct Diary {
     }
     
     //  Helper function that returns the date as a string -- to be used as the
-    //  diary document title with format: Aug 1, 2019
+    //  diary document title with format: Aug 1, 2019 at 5:40 PM
     internal func getDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -57,7 +57,7 @@ struct Diary {
         return dateFormatter.string(from: todaysDate)
     }
     
-    // Changes document name
+    // Changes document name - not used
     func dayChange(){
         let Database = Firestore.firestore()
         
