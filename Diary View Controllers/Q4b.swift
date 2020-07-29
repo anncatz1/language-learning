@@ -20,7 +20,6 @@ class Q4b: UIViewController {
     
     @IBAction func continueToNextQuestion(_ sender: Any) {
         guard responseField.text != nil && responseField.text != "" else {
-            print("4b guard")
             return
         }
         diary.diaryData["issuesWithVolume"] = responseField.text

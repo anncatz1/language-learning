@@ -832,7 +832,7 @@
                                 </state>
                                 <connections>
                                     <action selector="continueToNextQuestion:" destination="OaW-5H-QzG" eventType="touchUpInside" id="QIV-Ex-GaC"/>
-                                    <segue destination="gnz-me-zTC" kind="show" id="giO-hV-Q4k"/>
+                                    <segue destination="gnz-me-zTC" kind="show" identifier="continueToNextQuestion" id="giO-hV-Q4k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1217,7 +1217,7 @@
                                 </state>
                                 <connections>
                                     <action selector="continueToNextQuestion:" destination="DqF-Bd-5Mn" eventType="touchUpInside" id="1Mx-bv-Wiu"/>
-                                    <segue destination="o4r-sn-ZmP" kind="show" id="Tgm-Xa-Hho"/>
+                                    <segue destination="o4r-sn-ZmP" kind="show" identifier="continueToNextQuestion" id="Tgm-Xa-Hho"/>
                                 </connections>
                             </button>
                         </subviews>
