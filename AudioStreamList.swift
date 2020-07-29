@@ -76,25 +76,25 @@ var languageAudioStreamList: [String] {
             case 8:
                 return ["mandarin-11.m4a"]
             case 9:
-                return ["mandarin-Q1.m4a"]
+                return ["mandarin_Q1.m4a"]
             case 10:
-                return ["mandarin-Q2.m4a"]
+                return ["mandarin_Q2.m4a"]
             case 11:
-                return ["mandarin-Q3.m4a"]
+                return ["mandarin_Q3.m4a"]
             case 12:
-                return ["mandarin-Q4.m4a"]
+                return ["mandarin_Q4.m4a"]
             case 13:
-                return ["mandarin-Q5.m4a"]
+                return ["mandarin_Q5.m4a"]
             case 14:
-                return ["mandarin-S1.m4a"]
+                return ["mandarin_S1.m4a"]
             case 15:
-                return ["mandarin-S2.m4a"]
+                return ["mandarin_S2.m4a"]
             case 16:
-                return ["mandarin-S3.m4a"]
+                return ["mandarin_S3.m4a"]
             case 17:
-                return ["mandarin-S4.m4a"]
+                return ["mandarin_S4.m4a"]
             case 18:
-                return ["mandarin-S5.m4a"]
+                return ["mandarin_S5.m4a"]
             default:
                 return ["mandarin-1.m4a", "mandarin-2.m4a"]
             }
@@ -117,17 +117,17 @@ var languageAudioStreamList: [String] {
             case 7:
                 return ["arabic-f6.m4a"]
             case 8:
-                return ["Arabic-Q6.m4a"]
+                return ["arabic-Q6.m4a"]
             case 9:
-                return ["Arabic-Q1.m4a"]
+                return ["arabic-Q1.m4a"]
             case 10:
-                return ["Arabic-Q2.m4a"]
+                return ["arabic-Q2.m4a"]
             case 11:
-                return ["Arabic-Q3.m4a"]
+                return ["arabic-Q3.m4a"]
             case 12:
-                return ["Arabic-Q4.m4a"]
+                return ["arabic-Q4.m4a"]
             case 13:
-                return ["Arabic-Q5.m4a"]
+                return ["arabic-Q5.m4a"]
             case 14:
                 return ["arabic-S1.m4a"]
             case 15:
