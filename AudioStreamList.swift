@@ -100,7 +100,7 @@ var languageAudioStreamList: [String] {
             }
         }
         else if assignedLanguage.lowercased() == "arabic" {
-            let audio = Int.random(in: 1 ... 17)
+            let audio = Int.random(in: 1 ... 11)
             switch audio {
             case 1:
                 return ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
@@ -117,27 +117,27 @@ var languageAudioStreamList: [String] {
             case 7:
                 return ["arabic-f6.m4a"]
             case 8:
-                return ["arabic-Q6.m4a"]
-            case 9:
-                return ["arabic-Q1.m4a"]
-            case 10:
-                return ["arabic-Q2.m4a"]
-            case 11:
-                return ["arabic-Q3.m4a"]
-            case 12:
-                return ["arabic-Q4.m4a"]
-            case 13:
-                return ["arabic-Q5.m4a"]
-            case 14:
                 return ["arabic-S1.m4a"]
-            case 15:
+            case 9:
                 return ["arabic-S2.m4a"]
-            case 16:
+            case 10:
                 return ["arabic-S3.m4a"]
-            case 17:
+            case 11:
                 return ["arabic-S4.m4a"]
             default:
                 return ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
+                /*case 8:
+                    return ["arabic-Q6.m4a"]
+                case 9:
+                    return ["arabic-Q1.m4a"]
+                case 10:
+                    return ["arabic-Q2.m4a"]
+                case 11:
+                    return ["arabic-Q3.m4a"]
+                case 12:
+                    return ["arabic-Q4.m4a"]
+                case 13:
+                    return ["arabic-Q5.m4a"]*/
             }
         }
         else {
