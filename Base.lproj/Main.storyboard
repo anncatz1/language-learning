@@ -513,7 +513,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s47-Se-IEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ah9-nu-z83" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4510" y="916"/>
+            <point key="canvasLocation" x="4508.695652173913" y="915.48913043478262"/>
         </scene>
         <!--2aii-->
         <scene sceneID="pz5-e3-Qik">
@@ -1259,10 +1259,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LcW-PT-QKk"/>
+        <segue reference="6Q8-qO-L7z"/>
         <segue reference="6Jw-9s-4nb"/>
         <segue reference="giO-hV-Q4k"/>
-        <segue reference="pYh-fq-S7q"/>
+        <segue reference="G3k-ey-9pz"/>
         <segue reference="74k-a7-wyQ"/>
     </inferredMetricsTieBreakers>
     <resources>
