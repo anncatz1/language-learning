@@ -40,6 +40,7 @@ struct Diary {
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
         diaryData["issuesWithApp"] = nil
+        diaryData["audioFile"] = nil
         diaryName = ""
     }
     

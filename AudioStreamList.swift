@@ -60,42 +60,80 @@ var languageAudioStreamList: [String] {
             let audio = Int.random(in: 1 ... 18)
             switch audio {
             case 1:
+                diary.diaryData["audioFile"] = "mandarin-1 & mandarin-2"
+                diary.upload()
                 return ["mandarin-1.m4a", "mandarin-2.m4a"]
             case 2:
+                diary.diaryData["audioFile"] = "mandarin-5"
+                diary.upload()
                 return ["mandarin-5.m4a"]
             case 3:
+                diary.diaryData["audioFile"] = "mandarin-6"
+                diary.upload()
                 return ["mandarin-6.m4a"]
             case 4:
+                diary.diaryData["audioFile"] = "mandarin-7"
+                diary.upload()
                 return ["mandarin-7.m4a"]
             case 5:
+                diary.diaryData["audioFile"] = "mandarin-8"
+                diary.upload()
                 return ["mandarin-8.m4a"]
             case 6:
+                diary.diaryData["audioFile"] = "mandarin-9"
+                diary.upload()
                 return ["mandarin-9.m4a"]
             case 7:
+                diary.diaryData["audioFile"] = "mandarin-10"
+                diary.upload()
                 return ["mandarin-10.m4a"]
             case 8:
+                diary.diaryData["audioFile"] = "mandarin-11"
+                diary.upload()
                 return ["mandarin-11.m4a"]
             case 9:
+                diary.diaryData["audioFile"] = "mandarin-Q1"
+                diary.upload()
                 return ["mandarin_Q1.m4a"]
             case 10:
+                diary.diaryData["audioFile"] = "mandarin-Q2"
+                diary.upload()
                 return ["mandarin_Q2.m4a"]
             case 11:
+                diary.diaryData["audioFile"] = "mandarin-Q3"
+                diary.upload()
                 return ["mandarin_Q3.m4a"]
             case 12:
+                diary.diaryData["audioFile"] = "mandarin-Q4"
+                diary.upload()
                 return ["mandarin_Q4.m4a"]
             case 13:
+                diary.diaryData["audioFile"] = "mandarin-Q5"
+                diary.upload()
                 return ["mandarin_Q5.m4a"]
             case 14:
+                diary.diaryData["audioFile"] = "mandarin-S1"
+                diary.upload()
                 return ["mandarin_S1.m4a"]
             case 15:
+                diary.diaryData["audioFile"] = "mandarin-S2"
+                diary.upload()
                 return ["mandarin_S2.m4a"]
             case 16:
+                diary.diaryData["audioFile"] = "mandarin-S3"
+                diary.upload()
                 return ["mandarin_S3.m4a"]
             case 17:
+                diary.diaryData["audioFile"] = "mandarin-S4"
+                diary.upload()
                 return ["mandarin_S4.m4a"]
             case 18:
+                diary.diaryData["audioFile"] = "mandarin-S5"
+                diary.upload()
                 return ["mandarin_S5.m4a"]
             default:
+                diary.diaryData["audioFile"] = "mandarin-1 & mandarin-2"
+                diary.upload()
                 return ["mandarin-1.m4a", "mandarin-2.m4a"]
             }
         }
@@ -103,41 +141,77 @@ var languageAudioStreamList: [String] {
             let audio = Int.random(in: 1 ... 11)
             switch audio {
             case 1:
+                diary.diaryData["audioFile"] = "arabic-1,2,3"
+                diary.upload()
                 return ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
             case 2:
+                diary.diaryData["audioFile"] = "arabic-f1"
+                diary.upload()
                 return ["arabic-f1.m4a"]
             case 3:
+                diary.diaryData["audioFile"] = "arabic-f2"
+                diary.upload()
                 return ["arabic-f2.m4a"]
             case 4:
+                diary.diaryData["audioFile"] = "arabic-f3"
+                diary.upload()
                 return ["arabic-f3.m4a"]
             case 5:
+                diary.diaryData["audioFile"] = "arabic-f4"
+                diary.upload()
                 return ["arabic-f4.m4a"]
             case 6:
+                diary.diaryData["audioFile"] = "arabic-f5"
+                diary.upload()
                 return ["arabic-f5.m4a"]
             case 7:
+                diary.diaryData["audioFile"] = "arabic-f6"
+                diary.upload()
                 return ["arabic-f6.m4a"]
             case 8:
+                diary.diaryData["audioFile"] = "arabic-S1"
+                diary.upload()
                 return ["arabic-S1.m4a"]
             case 9:
+                diary.diaryData["audioFile"] = "arabic-S2"
+                diary.upload()
                 return ["arabic-S2.m4a"]
             case 10:
+                diary.diaryData["audioFile"] = "arabic-S3"
+                diary.upload()
                 return ["arabic-S3.m4a"]
             case 11:
+                diary.diaryData["audioFile"] = "arabic-S4"
+                diary.upload()
                 return ["arabic-S4.m4a"]
+            case 12:
+                diary.diaryData["audioFile"] = "arabic-Q6"
+                diary.upload()
+                return ["arabic-Q6.m4a"]
+            case 13:
+                diary.diaryData["audioFile"] = "arabic-Q1"
+                diary.upload()
+                return ["arabic-Q1.m4a"]
+            case 14:
+                diary.diaryData["audioFile"] = "arabic-Q2"
+                diary.upload()
+                return ["arabic-Q2.m4a"]
+            case 15:
+                diary.diaryData["audioFile"] = "arabic-Q3"
+                diary.upload()
+                return ["arabic-Q3.m4a"]
+            case 16:
+                diary.diaryData["audioFile"] = "arabic-Q4"
+                diary.upload()
+                return ["arabic-Q4.m4a"]
+            case 17:
+                diary.diaryData["audioFile"] = "arabic-Q5"
+                diary.upload()
+                return ["arabic-Q5.m4a"]
             default:
+                diary.diaryData["audioFile"] = "arabic-1,2,3"
+                diary.upload()
                 return ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
-                /*case 8:
-                    return ["arabic-Q6.m4a"]
-                case 9:
-                    return ["arabic-Q1.m4a"]
-                case 10:
-                    return ["arabic-Q2.m4a"]
-                case 11:
-                    return ["arabic-Q3.m4a"]
-                case 12:
-                    return ["arabic-Q4.m4a"]
-                case 13:
-                    return ["arabic-Q5.m4a"]*/
             }
         }
         else {
