@@ -126,6 +126,27 @@ class AudioPlayer {
         self.playAudio(recordVol: true)
         return true
     }
+    
+   /* func setupNotifications() {
+        // Get the default notification center instance.
+        let nc = NotificationCenter.default
+        nc.addObserver(self,
+                       selector: #selector(handleRouteChange),
+                       name: AVAudioSession.routeChangeNotification,
+                       object: nil)
+        nc.addObserver(self,
+        selector: #selector(handleInterruption),
+        name: AVAudioSession.interruptionNotification,
+        object: nil)
+    }
+
+    @objc func handleRouteChange(notification: Notification) {
+        // To be implemented.
+    }
+
+    @objc func handleInterruption(notification: Notification) {
+        // To be implemented.
+    }*/
 }
 
 let audioPlayer = AudioPlayer()

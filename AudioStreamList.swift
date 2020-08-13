@@ -138,7 +138,8 @@ var languageAudioStreamList: [String] {
             }
         }
         else if assignedLanguage.lowercased() == "arabic" {
-            let audio = Int.random(in: 1 ... 11)
+            //let audio = Int.random(in: 1 ... 13)
+            let audio = 12
             switch audio {
             case 1:
                 diary.diaryData["audioFile"] = "arabic-1,2,3"
@@ -185,19 +186,19 @@ var languageAudioStreamList: [String] {
                 diary.upload()
                 return ["arabic-S4.m4a"]
             case 12:
-                diary.diaryData["audioFile"] = "arabic-Q6"
+                diary.diaryData["audioFile"] = "arabic-Q3"
                 diary.upload()
-                return ["arabic-Q6.m4a"]
+                return ["arabic-Q3.m4a"]
             case 13:
-                diary.diaryData["audioFile"] = "arabic-Q1"
+                diary.diaryData["audioFile"] = "arabic-Q5"
                 diary.upload()
-                return ["arabic-Q1.m4a"]
-            case 14:
-                diary.diaryData["audioFile"] = "arabic-Q2"
+                return ["arabic-Q5.m4a"]
+            /*case 14:
+                diary.diaryData["audioFile"] = "arabic-Q1"
                 diary.upload()
                 return ["arabic-Q2.m4a"]
             case 15:
-                diary.diaryData["audioFile"] = "arabic-Q3"
+                diary.diaryData["audioFile"] = "arabic-Q2"
                 diary.upload()
                 return ["arabic-Q3.m4a"]
             case 16:
@@ -205,9 +206,9 @@ var languageAudioStreamList: [String] {
                 diary.upload()
                 return ["arabic-Q4.m4a"]
             case 17:
-                diary.diaryData["audioFile"] = "arabic-Q5"
+                diary.diaryData["audioFile"] = "arabic-Q6"
                 diary.upload()
-                return ["arabic-Q5.m4a"]
+                return ["arabic-Q5.m4a"]*/
             default:
                 diary.diaryData["audioFile"] = "arabic-1,2,3"
                 diary.upload()
