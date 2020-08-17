@@ -33,7 +33,7 @@ class AudioPlayer {
     
     //  Adds the blank audio, ocean sound, and language streams to the queue
     func loadAudioToStartSession() {
-        let audioFilesList = (startBlankAudioURLList + [oceanURL] + languageAudioURLList + endBlankAudioURLList).map {
+        let audioFilesList = (startSoundAudioURLList + [oceanURL] + languageAudioURLList + endBlankAudioURLList).map {
             AVPlayerItem(url: $0)
         }
         player = AVQueuePlayer(items: audioFilesList)
@@ -95,33 +95,48 @@ class AudioPlayer {
         
         let currentURL = getPlayerItemURL(from: player.currentItem!)
         
-        //  If restart pressed during a language audio file: play blank (20 mins),
+        //  If restart pressed during a language audio file: play whitenoise (20 mins),
         //  ocean sounds, and then play from where the audio was paused.
         if languageAudioURLList.contains(currentURL) {
             let pausedItem = player.currentItem!
-            let blankAudio20mins = AVPlayerItem(url: blankAudio20minsURL)
+            let soundAudio5mins = AVPlayerItem(url: soundAudio5minsURL)
+            let soundAudio5mins2 = AVPlayerItem(url: soundAudio5minsURL)
+            let soundAudio5mins3 = AVPlayerItem(url: soundAudio5minsURL)
+            let soundAudio5mins4 = AVPlayerItem(url: soundAudio5minsURL)
+            //let blankAudio20mins = AVPlayerItem(url: blankAudio20minsURL)
             let oceanAudio = AVPlayerItem(url: oceanURL)
-            player.insert(blankAudio20mins, after: player.currentItem)
+            player.insert(soundAudio5mins, after: player.currentItem)
             player.advanceToNextItem()
-            player.insert(oceanAudio, after: blankAudio20mins)
+            player.insert(soundAudio5mins2, after: soundAudio5mins)
+            player.insert(soundAudio5mins3, after: soundAudio5mins2)
+            player.insert(soundAudio5mins4, after: soundAudio5mins3)
+            player.insert(oceanAudio, after: soundAudio5mins4)
             player.insert(pausedItem, after: oceanAudio)
         }
             
         //  If restart pressed during one of the blank audio files: do nothing
-        else if [blankAudio5minsURL, blankAudio20minsURL, blankAudio40minsURL].contains(currentURL) {
+        else if [blankAudio20minsURL, blankAudio40minsURL].contains(currentURL) {
             print("Can't restart: No audio is playing")
             self.playAudio(recordVol: true)
             return false
         }
             
-        //  If restart pressed during the ocean sound: play blank (20 mins), ocean sounds,
+        //  If restart pressed during the rain (ocean) sound: play whitenoise (20 mins), rain sounds,
         //  and then play the language audio files left to play.
         else {
-            let blankAudio20mins = AVPlayerItem(url: blankAudio20minsURL)
+            let soundAudio5mins = AVPlayerItem(url: soundAudio5minsURL)
+            let soundAudio5mins2 = AVPlayerItem(url: soundAudio5minsURL)
+            let soundAudio5mins3 = AVPlayerItem(url: soundAudio5minsURL)
+            let soundAudio5mins4 = AVPlayerItem(url: soundAudio5minsURL)
+            //let blankAudio20mins = AVPlayerItem(url: blankAudio20minsURL)
             let oceanAudio = AVPlayerItem(url: oceanURL)
-            player.insert(blankAudio20mins, after: player.currentItem)
+            player.insert(soundAudio5mins, after: player.currentItem)
+            //player.insert(blankAudio20mins, after: player.currentItem)
             player.advanceToNextItem()
-            player.insert(oceanAudio, after: blankAudio20mins)
+            player.insert(soundAudio5mins2, after: soundAudio5mins)
+            player.insert(soundAudio5mins3, after: soundAudio5mins2)
+            player.insert(soundAudio5mins4, after: soundAudio5mins3)
+            player.insert(oceanAudio, after: soundAudio5mins4)
         }
         self.playAudio(recordVol: true)
         return true

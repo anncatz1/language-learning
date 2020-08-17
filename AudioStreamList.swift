@@ -21,6 +21,7 @@ import FirebaseFirestore
 //  Get assigned language and audio offset time from the user database and
 //  set the stream list correspondingly
 var assignedLanguage: String = ""
+var assignedSound: String = ""
 var audioOffset: Int? = 0
 
 //  This function sets the assigned language field. This function uses closures
@@ -41,6 +42,7 @@ func setAssignedLanguage() {
     userInfoDocRef.getDocument { (document, error) in
         if let document = document, document.exists {
             assignedLanguage = (document.data()!["language"] as! String)
+            assignedSound = (document.data()!["sound"] as! String)
             audioOffset = Int(document.data()!["offset"] as! String)
             if audioOffset == nil { fatalError("Invalid audio offset") }
         }
@@ -138,8 +140,8 @@ var languageAudioStreamList: [String] {
             }
         }
         else if assignedLanguage.lowercased() == "arabic" {
-            //let audio = Int.random(in: 1 ... 13)
-            let audio = 12
+            let audio = Int.random(in: 1 ... 13)
+            //let audio = 12
             switch audio {
             case 1:
                 diary.diaryData["audioFile"] = "arabic-1,2,3"
@@ -221,6 +223,32 @@ var languageAudioStreamList: [String] {
     }
 }
 
+//  Get the audio file of the choice of sounds before going to sleep
+//  IMPORTANT: If audio files on the server are changed, this chunk of code has to
+//  be update. Pay attention to extensions (m4a, mp4, mp3, etc.).
+var sound5minFile: String {
+    get {
+        if assignedSound.lowercased() == "fan" {
+            return "5min%20sounds/Fan"
+        }
+        else if assignedSound.lowercased() == "frog" {
+            return "5min%20sounds/Frog"
+        }
+        else if assignedSound.lowercased() == "fire" {
+            return "5min%20sounds/Fire"
+        }
+        else if assignedSound.lowercased() == "sea" {
+            return "5min%20sounds/Sea"
+        }
+        else if assignedSound.lowercased() == "white" {
+            return "5min%20sounds/White"
+        }
+        else {
+            fatalError("Error: Invalid Sound. No audio will be played.")
+        }
+    }
+}
+
 //  For testing add "test/" at the end of the server, but make sure to change it back
 //  afterwards. The test folder includes very short single sound audio files for you
 //  to make sure that all appropriate audio files are indeed being played without having
@@ -231,16 +259,19 @@ var languageAudioStreamList: [String] {
 //  as well.
 let server = "https://storage.googleapis.com/sleep-learning-app/audio-files/"
 
-//  Create URLs for all of the audio
+//  Create URLs for all of the language audio
 let languageAudioURLList: [URL] = languageAudioStreamList.map {
     URL(string: server + $0)!
 }
 
-let blankAudio5minsURL = URL(string: server + "5-minutes-of-silence.m4a")!
+//let blankAudio5minsURL = URL(string: server + "5-minutes-of-silence.m4a")!
+let soundAudio5minsURL = URL(string: server + sound5minFile)!
 let blankAudio20minsURL = URL(string: server + "20-minutes-of-silence.m4a")!
 let blankAudio40minsURL = URL(string: server + "40-minutes-of-silence.m4a")!
 
-let startBlankAudioURLList: [URL] = [URL](repeating: blankAudio5minsURL, count: audioOffset!/5)
+//let startBlankAudioURLList: [URL] = [URL](repeating: blankAudio5minsURL, count: audioOffset!/5)
+let startSoundAudioURLList: [URL] = [URL](repeating: soundAudio5minsURL, count: audioOffset!/5)
+let startSoundAudioURLList20min: [URL] = [URL](repeating: soundAudio5minsURL, count: 4)
 let endBlankAudioURLList: [URL] = [URL](repeating: blankAudio40minsURL, count: 12)
 
 //  The "ocean" file is what's played before the language starts playing and also used to
