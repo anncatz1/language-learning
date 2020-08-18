@@ -114,16 +114,22 @@ class AudioPlayer {
             player.insert(pausedItem, after: oceanAudio)
         }
             
+        //  If restart pressed during a white noise audio file: restart the white noise audio from the beginning (with same offset).
+        /*if startSoundAudioURLList.contains(currentURL) {
+            player.removeAllItems()
+            loadAudioToStartSession()
+        }*/
+            
         //  If restart pressed during one of the blank audio files: do nothing
         else if [blankAudio20minsURL, blankAudio40minsURL].contains(currentURL) {
             print("Can't restart: No audio is playing")
-            self.playAudio(recordVol: true)
+            self.playAudio(recordVol: false)
             return false
         }
             
         //  If restart pressed during the rain (ocean) sound: play whitenoise (20 mins), rain sounds,
         //  and then play the language audio files left to play.
-        else {
+        else if [oceanURL].contains(currentURL){
             let soundAudio5mins = AVPlayerItem(url: soundAudio5minsURL)
             let soundAudio5mins2 = AVPlayerItem(url: soundAudio5minsURL)
             let soundAudio5mins3 = AVPlayerItem(url: soundAudio5minsURL)
@@ -137,6 +143,11 @@ class AudioPlayer {
             player.insert(soundAudio5mins3, after: soundAudio5mins2)
             player.insert(soundAudio5mins4, after: soundAudio5mins3)
             player.insert(oceanAudio, after: soundAudio5mins4)
+        }
+        else{
+            print("Don't restart: White noise audio playing")
+            self.playAudio(recordVol: false)
+            return false
         }
         self.playAudio(recordVol: true)
         return true
