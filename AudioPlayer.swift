@@ -33,7 +33,7 @@ class AudioPlayer {
     
     //  Adds the blank audio, ocean sound, and language streams to the queue
     func loadAudioToStartSession() {
-        let audioFilesList = (startSoundAudioURLList + [oceanURL] + languageAudioURLList + endBlankAudioURLList).map {
+        let audioFilesList = (whiteNoiseAudioURLList + [oceanURL] + languageAudioURLList + endBlankAudioURLList).map {
             AVPlayerItem(url: $0)
         }
         player = AVQueuePlayer(items: audioFilesList)
@@ -99,18 +99,19 @@ class AudioPlayer {
         //  ocean sounds, and then play from where the audio was paused.
         if languageAudioURLList.contains(currentURL) {
             let pausedItem = player.currentItem!
-            let soundAudio5mins = AVPlayerItem(url: soundAudio5minsURL)
-            let soundAudio5mins2 = AVPlayerItem(url: soundAudio5minsURL)
-            let soundAudio5mins3 = AVPlayerItem(url: soundAudio5minsURL)
-            let soundAudio5mins4 = AVPlayerItem(url: soundAudio5minsURL)
+            let whiteNoise5mins = AVPlayerItem(url: whiteNoise5minsURL)
+            let whiteNoise5mins2 = AVPlayerItem(url: whiteNoise5minsURL)
+            let whiteNoise5mins3 = AVPlayerItem(url: whiteNoise5minsURL)
+            let whiteNoise5mins4 = AVPlayerItem(url: whiteNoise5minsURL)
             //let blankAudio20mins = AVPlayerItem(url: blankAudio20minsURL)
+            //let soundAudio5mins = AVPlayerItem(url: soundAudio5minsURL)
             let oceanAudio = AVPlayerItem(url: oceanURL)
-            player.insert(soundAudio5mins, after: player.currentItem)
+            player.insert(whiteNoise5mins, after: player.currentItem)
             player.advanceToNextItem()
-            player.insert(soundAudio5mins2, after: soundAudio5mins)
-            player.insert(soundAudio5mins3, after: soundAudio5mins2)
-            player.insert(soundAudio5mins4, after: soundAudio5mins3)
-            player.insert(oceanAudio, after: soundAudio5mins4)
+            player.insert(whiteNoise5mins2, after: whiteNoise5mins)
+            player.insert(whiteNoise5mins3, after: whiteNoise5mins2)
+            player.insert(whiteNoise5mins4, after: whiteNoise5mins3)
+            player.insert(oceanAudio, after: whiteNoise5mins4)
             player.insert(pausedItem, after: oceanAudio)
         }
             
@@ -130,19 +131,20 @@ class AudioPlayer {
         //  If restart pressed during the rain (ocean) sound: play whitenoise (20 mins), rain sounds,
         //  and then play the language audio files left to play.
         else if [oceanURL].contains(currentURL){
-            let soundAudio5mins = AVPlayerItem(url: soundAudio5minsURL)
-            let soundAudio5mins2 = AVPlayerItem(url: soundAudio5minsURL)
-            let soundAudio5mins3 = AVPlayerItem(url: soundAudio5minsURL)
-            let soundAudio5mins4 = AVPlayerItem(url: soundAudio5minsURL)
+            let whiteNoise5mins = AVPlayerItem(url: whiteNoise5minsURL)
+            let whiteNoise5mins2 = AVPlayerItem(url: whiteNoise5minsURL)
+            let whiteNoise5mins3 = AVPlayerItem(url: whiteNoise5minsURL)
+            let whiteNoise5mins4 = AVPlayerItem(url: whiteNoise5minsURL)
             //let blankAudio20mins = AVPlayerItem(url: blankAudio20minsURL)
             let oceanAudio = AVPlayerItem(url: oceanURL)
-            player.insert(soundAudio5mins, after: player.currentItem)
+            //let soundAudio5mins = AVPlayerItem(url: soundAudio5minsURL)
+            player.insert(whiteNoise5mins, after: player.currentItem)
             //player.insert(blankAudio20mins, after: player.currentItem)
             player.advanceToNextItem()
-            player.insert(soundAudio5mins2, after: soundAudio5mins)
-            player.insert(soundAudio5mins3, after: soundAudio5mins2)
-            player.insert(soundAudio5mins4, after: soundAudio5mins3)
-            player.insert(oceanAudio, after: soundAudio5mins4)
+            player.insert(whiteNoise5mins2, after: whiteNoise5mins)
+            player.insert(whiteNoise5mins3, after: whiteNoise5mins2)
+            player.insert(whiteNoise5mins4, after: whiteNoise5mins3)
+            player.insert(oceanAudio, after: whiteNoise5mins4)
         }
         else{
             print("Don't restart: White noise audio playing")
