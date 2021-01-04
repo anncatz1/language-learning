@@ -42,7 +42,7 @@ func setAssignedLanguage() {
     userInfoDocRef.getDocument { (document, error) in
         if let document = document, document.exists {
             assignedLanguage = (document.data()!["language"] as! String)
-            assignedSound = (document.data()!["sound"] as! String)
+           // assignedSound = (document.data()!["sound"] as! String)
             audioOffset = Int(document.data()!["offset"] as! String)
             if audioOffset == nil { fatalError("Invalid audio offset") }
         }
@@ -264,16 +264,16 @@ let languageAudioURLList: [URL] = languageAudioStreamList.map {
     URL(string: server + $0)!
 }
 
-//let blankAudio5minsURL = URL(string: server + "5-minutes-of-silence.m4a")!
-let soundAudio5minsURL = URL(string: server + sound5minFile)!
+let blankAudio5minsURL = URL(string: server + "5-minutes-of-silence.m4a")!
+//let soundAudio5minsURL = URL(string: server + sound5minFile)!
 let whiteNoise5minsURL = URL(string: server + "whitenoiseaudio.mp3")!
 let blankAudio20minsURL = URL(string: server + "20-minutes-of-silence.m4a")!
 let blankAudio40minsURL = URL(string: server + "40-minutes-of-silence.m4a")!
 
-//let startBlankAudioURLList: [URL] = [URL](repeating: blankAudio5minsURL, count: audioOffset!/5)
-let startSoundAudioURLList: [URL] = [URL](repeating: soundAudio5minsURL, count: audioOffset!/5)
+let startBlankAudioURLList: [URL] = [URL](repeating: blankAudio5minsURL, count: audioOffset!/5)
+//let startSoundAudioURLList: [URL] = [URL](repeating: soundAudio5minsURL, count: audioOffset!/5)
 let whiteNoiseAudioURLList: [URL] = [URL](repeating: whiteNoise5minsURL, count: audioOffset!/5)
-let startSoundAudioURLList20min: [URL] = [URL](repeating: soundAudio5minsURL, count: 4)
+//let startSoundAudioURLList20min: [URL] = [URL](repeating: soundAudio5minsURL, count: 4)
 let whiteNoiseAudioURLList20min: [URL] = [URL](repeating: whiteNoise5minsURL, count: 4)
 let endBlankAudioURLList: [URL] = [URL](repeating: blankAudio40minsURL, count: 12)
 
