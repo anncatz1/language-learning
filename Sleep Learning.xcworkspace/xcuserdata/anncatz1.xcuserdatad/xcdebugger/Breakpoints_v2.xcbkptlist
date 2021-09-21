@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ACB08C6D-0358-4852-B8EE-02004E5EFEC0"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F32AAD36-FAF8-4D97-BB3C-B96D11512FC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sleep Learning/AudioStreamList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "F32AAD36-FAF8-4D97-BB3C-B96D11512FC0 - 2f640a7851d93be5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_84148F9E05DD6D57CC6FC36C30D4E7AD_func8"
+                  moduleName = "Sleep Learning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anncatz1/Documents/Research/Sleep-Learning-master/Sleep%20Learning/AudioStreamList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "F32AAD36-FAF8-4D97-BB3C-B96D11512FC0 - 481a2a1fed9295ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sleep_Learning.whiteNoiseAudioURLList.unsafeMutableAddressor : Swift.Array&lt;Foundation.URL&gt;"
+                  moduleName = "Sleep Learning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anncatz1/Documents/Research/Sleep-Learning-master/Sleep%20Learning/AudioStreamList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

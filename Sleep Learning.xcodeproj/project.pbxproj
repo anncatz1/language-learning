@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C5DDA5124AFAA9E00B324CA /* Q4b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5DDA5024AFAA9D00B324CA /* Q4b.swift */; };
+		2C5E242224B4F8E900707B94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E242124B4F8E900707B94 /* GoogleService-Info.plist */; };
+		2CC1187724AAA8CC0055E7E2 /* Q5b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1187624AAA8CC0055E7E2 /* Q5b.swift */; };
+		2CC1187924AAAF670055E7E2 /* Q4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1187824AAAF670055E7E2 /* Q4.swift */; };
+		2CC1187B24AAB05E0055E7E2 /* Q5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1187A24AAB05E0055E7E2 /* Q5.swift */; };
+		2CE61AD924C25C4400553EAC /* Q3b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE61AD824C25C4400553EAC /* Q3b.swift */; };
+		3C11183B22E0FBFF00C15000 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C11183A22E0FBFF00C15000 /* loginViewController.swift */; };
+		3C1E93FC22BBCE340024240A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E93FB22BBCE340024240A /* Diary.swift */; };
+		3C21E35122AEEB9E00003F7D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21E35022AEEB9E00003F7D /* Session.swift */; };
+		3C21E35322B0039700003F7D /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21E35222B0039700003F7D /* AudioPlayer.swift */; };
+		3C21E35B22B19B6900003F7D /* AudioStreamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21E35A22B19B6900003F7D /* AudioStreamList.swift */; };
+		3C3C4FEB22CD4EAA003B8E55 /* Q1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FEA22CD4EAA003B8E55 /* Q1.swift */; };
+		3C3C4FED22CD5355003B8E55 /* SessionCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FEC22CD5355003B8E55 /* SessionCompletedViewController.swift */; };
+		3C3C4FEF22CD6C97003B8E55 /* Q2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FEE22CD6C97003B8E55 /* Q2.swift */; };
+		3C3C4FF122CD6D7C003B8E55 /* Q2ai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FF022CD6D7C003B8E55 /* Q2ai.swift */; };
+		3C3C4FF322CD6D8A003B8E55 /* Q2aii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FF222CD6D8A003B8E55 /* Q2aii.swift */; };
+		3C3C4FF522CD6D9B003B8E55 /* Q2b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FF422CD6D9B003B8E55 /* Q2b.swift */; };
+		3C3C4FF722CD6DA6003B8E55 /* Q2bi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FF622CD6DA6003B8E55 /* Q2bi.swift */; };
+		3C3C4FF922CD6DB9003B8E55 /* Q3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FF822CD6DB9003B8E55 /* Q3.swift */; };
+		3C3C4FFF22CD6E6F003B8E55 /* Q1a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */; };
+		3C67854222A6BEB500031F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C67854122A6BEB500031F1B /* AppDelegate.swift */; };
+		3C67854422A6BEB500031F1B /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C67854322A6BEB500031F1B /* SessionViewController.swift */; };
+		3C67854722A6BEB500031F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C67854522A6BEB500031F1B /* Main.storyboard */; };
+		3C67854922A6BEB600031F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C67854822A6BEB600031F1B /* Assets.xcassets */; };
+		3C67854C22A6BEB600031F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C67854A22A6BEB600031F1B /* LaunchScreen.storyboard */; };
+		3CC2875022C273D40043394C /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2874F22C273D40043394C /* InstructionsViewController.swift */; };
+		3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */; };
+		90753D0C5544FC05FF206AFE /* Pods_Sleep_Learning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D46E92F204E28525E2499F0 /* Pods_Sleep_Learning.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C5DDA5024AFAA9D00B324CA /* Q4b.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Q4b.swift; sourceTree = "<group>"; };
+		2C5E242124B4F8E900707B94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CC1187624AAA8CC0055E7E2 /* Q5b.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Q5b.swift; sourceTree = "<group>"; };
+		2CC1187824AAAF670055E7E2 /* Q4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4.swift; sourceTree = "<group>"; };
+		2CC1187A24AAB05E0055E7E2 /* Q5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5.swift; sourceTree = "<group>"; };
+		2CE61AD824C25C4400553EAC /* Q3b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q3b.swift; sourceTree = "<group>"; };
+		2D1EBE3E6829047E71BB04FB /* Pods-Sleep Learning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Learning.release.xcconfig"; path = "Target Support Files/Pods-Sleep Learning/Pods-Sleep Learning.release.xcconfig"; sourceTree = "<group>"; };
+		3C11183A22E0FBFF00C15000 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		3C1E93FB22BBCE340024240A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		3C21E35022AEEB9E00003F7D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		3C21E35222B0039700003F7D /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		3C21E35A22B19B6900003F7D /* AudioStreamList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamList.swift; sourceTree = "<group>"; };
+		3C3C4FEA22CD4EAA003B8E55 /* Q1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1.swift; sourceTree = "<group>"; };
+		3C3C4FEC22CD5355003B8E55 /* SessionCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCompletedViewController.swift; sourceTree = "<group>"; };
+		3C3C4FEE22CD6C97003B8E55 /* Q2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2.swift; sourceTree = "<group>"; };
+		3C3C4FF022CD6D7C003B8E55 /* Q2ai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2ai.swift; sourceTree = "<group>"; };
+		3C3C4FF222CD6D8A003B8E55 /* Q2aii.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2aii.swift; sourceTree = "<group>"; };
+		3C3C4FF422CD6D9B003B8E55 /* Q2b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2b.swift; sourceTree = "<group>"; };
+		3C3C4FF622CD6DA6003B8E55 /* Q2bi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2bi.swift; sourceTree = "<group>"; };
+		3C3C4FF822CD6DB9003B8E55 /* Q3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q3.swift; sourceTree = "<group>"; };
+		3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1a.swift; sourceTree = "<group>"; };
+		3C67853E22A6BEB500031F1B /* Sleep Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C67854122A6BEB500031F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C67854322A6BEB500031F1B /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		3C67854622A6BEB500031F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C67854822A6BEB600031F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C67854B22A6BEB600031F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C67854D22A6BEB600031F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC2874F22C273D40043394C /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallibrateVolumeViewController.swift; sourceTree = "<group>"; };
+		5920F8A18996AFB25A8C0E04 /* Pods-Sleep Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Learning.debug.xcconfig"; path = "Target Support Files/Pods-Sleep Learning/Pods-Sleep Learning.debug.xcconfig"; sourceTree = "<group>"; };
+		6D46E92F204E28525E2499F0 /* Pods_Sleep_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C67853B22A6BEB500031F1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90753D0C5544FC05FF206AFE /* Pods_Sleep_Learning.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11EE21072E459A61BE2F85F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5920F8A18996AFB25A8C0E04 /* Pods-Sleep Learning.debug.xcconfig */,
+				2D1EBE3E6829047E71BB04FB /* Pods-Sleep Learning.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1915B436E31B5A17D9F4ECD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D46E92F204E28525E2499F0 /* Pods_Sleep_Learning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C3C4FE922CD4E5A003B8E55 /* Diary View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C3C4FEA22CD4EAA003B8E55 /* Q1.swift */,
+				3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */,
+				3C3C4FEE22CD6C97003B8E55 /* Q2.swift */,
+				3C3C4FF022CD6D7C003B8E55 /* Q2ai.swift */,
+				3C3C4FF222CD6D8A003B8E55 /* Q2aii.swift */,
+				3C3C4FF422CD6D9B003B8E55 /* Q2b.swift */,
+				3C3C4FF622CD6DA6003B8E55 /* Q2bi.swift */,
+				3C3C4FF822CD6DB9003B8E55 /* Q3.swift */,
+				2CE61AD824C25C4400553EAC /* Q3b.swift */,
+				2CC1187824AAAF670055E7E2 /* Q4.swift */,
+				2C5DDA5024AFAA9D00B324CA /* Q4b.swift */,
+				2CC1187A24AAB05E0055E7E2 /* Q5.swift */,
+				2CC1187624AAA8CC0055E7E2 /* Q5b.swift */,
+				3C3C4FEC22CD5355003B8E55 /* SessionCompletedViewController.swift */,
+			);
+			path = "Diary View Controllers";
+			sourceTree = "<group>";
+		};
+		3C67853522A6BEB500031F1B = {
+			isa = PBXGroup;
+			children = (
+				3C67854022A6BEB500031F1B /* Sleep Learning */,
+				3C67853F22A6BEB500031F1B /* Products */,
+				11EE21072E459A61BE2F85F5 /* Pods */,
+				1915B436E31B5A17D9F4ECD7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3C67853F22A6BEB500031F1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C67853E22A6BEB500031F1B /* Sleep Learning.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C67854022A6BEB500031F1B /* Sleep Learning */ = {
+			isa = PBXGroup;
+			children = (
+				2C5E242124B4F8E900707B94 /* GoogleService-Info.plist */,
+				3C67855322A6C0A100031F1B /* Supporting Files */,
+				3C3C4FE922CD4E5A003B8E55 /* Diary View Controllers */,
+				3C67854522A6BEB500031F1B /* Main.storyboard */,
+				3C11183A22E0FBFF00C15000 /* loginViewController.swift */,
+				3C67854322A6BEB500031F1B /* SessionViewController.swift */,
+				3CC2874F22C273D40043394C /* InstructionsViewController.swift */,
+				3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */,
+				3C21E35022AEEB9E00003F7D /* Session.swift */,
+				3C21E35222B0039700003F7D /* AudioPlayer.swift */,
+				3C21E35A22B19B6900003F7D /* AudioStreamList.swift */,
+				3C1E93FB22BBCE340024240A /* Diary.swift */,
+				3C67854D22A6BEB600031F1B /* Info.plist */,
+			);
+			path = "Sleep Learning";
+			sourceTree = "<group>";
+		};
+		3C67855322A6C0A100031F1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C67854122A6BEB500031F1B /* AppDelegate.swift */,
+				3C67854822A6BEB600031F1B /* Assets.xcassets */,
+				3C67854A22A6BEB600031F1B /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C67853D22A6BEB500031F1B /* Sleep Learning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C67855022A6BEB600031F1B /* Build configuration list for PBXNativeTarget "Sleep Learning" */;
+			buildPhases = (
+				1017CDBEC746963C5B169D25 /* [CP] Check Pods Manifest.lock */,
+				3C67853A22A6BEB500031F1B /* Sources */,
+				3C67853B22A6BEB500031F1B /* Frameworks */,
+				3C67853C22A6BEB500031F1B /* Resources */,
+				6E407E6EC3AADA5EC8ABE065 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sleep Learning";
+			productName = "Sleep Learning";
+			productReference = 3C67853E22A6BEB500031F1B /* Sleep Learning.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C67853622A6BEB500031F1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = "Memory Lab";
+				TargetAttributes = {
+					3C67853D22A6BEB500031F1B = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3C67853922A6BEB500031F1B /* Build configuration list for PBXProject "Sleep Learning" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C67853522A6BEB500031F1B;
+			productRefGroup = 3C67853F22A6BEB500031F1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C67853D22A6BEB500031F1B /* Sleep Learning */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C67853C22A6BEB500031F1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C67854C22A6BEB600031F1B /* LaunchScreen.storyboard in Resources */,
+				2C5E242224B4F8E900707B94 /* GoogleService-Info.plist in Resources */,
+				3C67854922A6BEB600031F1B /* Assets.xcassets in Resources */,
+				3C67854722A6BEB500031F1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1017CDBEC746963C5B169D25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sleep Learning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E407E6EC3AADA5EC8ABE065 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sleep Learning/Pods-Sleep Learning-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sleep Learning/Pods-Sleep Learning-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sleep Learning/Pods-Sleep Learning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C67853A22A6BEB500031F1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC1187B24AAB05E0055E7E2 /* Q5.swift in Sources */,
+				3C67854422A6BEB500031F1B /* SessionViewController.swift in Sources */,
+				3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */,
+				3C3C4FF322CD6D8A003B8E55 /* Q2aii.swift in Sources */,
+				2CE61AD924C25C4400553EAC /* Q3b.swift in Sources */,
+				3C3C4FEB22CD4EAA003B8E55 /* Q1.swift in Sources */,
+				3C11183B22E0FBFF00C15000 /* loginViewController.swift in Sources */,
+				3C1E93FC22BBCE340024240A /* Diary.swift in Sources */,
+				3C67854222A6BEB500031F1B /* AppDelegate.swift in Sources */,
+				3C3C4FED22CD5355003B8E55 /* SessionCompletedViewController.swift in Sources */,
+				3C3C4FF922CD6DB9003B8E55 /* Q3.swift in Sources */,
+				3C21E35122AEEB9E00003F7D /* Session.swift in Sources */,
+				3C3C4FEF22CD6C97003B8E55 /* Q2.swift in Sources */,
+				3C21E35B22B19B6900003F7D /* AudioStreamList.swift in Sources */,
+				3CC2875022C273D40043394C /* InstructionsViewController.swift in Sources */,
+				2CC1187724AAA8CC0055E7E2 /* Q5b.swift in Sources */,
+				2CC1187924AAAF670055E7E2 /* Q4.swift in Sources */,
+				3C3C4FF122CD6D7C003B8E55 /* Q2ai.swift in Sources */,
+				3C21E35322B0039700003F7D /* AudioPlayer.swift in Sources */,
+				3C3C4FFF22CD6E6F003B8E55 /* Q1a.swift in Sources */,
+				2C5DDA5124AFAA9E00B324CA /* Q4b.swift in Sources */,
+				3C3C4FF722CD6DA6003B8E55 /* Q2bi.swift in Sources */,
+				3C3C4FF522CD6D9B003B8E55 /* Q2b.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C67854522A6BEB500031F1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C67854622A6BEB500031F1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C67854A22A6BEB600031F1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C67854B22A6BEB600031F1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C67854E22A6BEB600031F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C67854F22A6BEB600031F1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C67855122A6BEB600031F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5920F8A18996AFB25A8C0E04 /* Pods-Sleep Learning.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 542BZ7JZM4;
+				INFOPLIST_FILE = "Sleep Learning/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3C67855222A6BEB600031F1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D1EBE3E6829047E71BB04FB /* Pods-Sleep Learning.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 542BZ7JZM4;
+				INFOPLIST_FILE = "Sleep Learning/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C67853922A6BEB500031F1B /* Build configuration list for PBXProject "Sleep Learning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C67854E22A6BEB600031F1B /* Debug */,
+				3C67854F22A6BEB600031F1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C67855022A6BEB600031F1B /* Build configuration list for PBXNativeTarget "Sleep Learning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C67855122A6BEB600031F1B /* Debug */,
+				3C67855222A6BEB600031F1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C67853622A6BEB500031F1B /* Project object */;
+}
