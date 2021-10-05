@@ -35,6 +35,12 @@
 		3CC2875022C273D40043394C /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2874F22C273D40043394C /* InstructionsViewController.swift */; };
 		3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */; };
 		90753D0C5544FC05FF206AFE /* Pods_Sleep_Learning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D46E92F204E28525E2499F0 /* Pods_Sleep_Learning.framework */; };
+		FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C42702B6AE004E7D70 /* Q1new.swift */; };
+		FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C62702B870004E7D70 /* Q2new.swift */; };
+		FAC8C0C92702B87D004E7D70 /* Q3new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C82702B87D004E7D70 /* Q3new.swift */; };
+		FAC8C0CB2702B884004E7D70 /* Q4new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CA2702B884004E7D70 /* Q4new.swift */; };
+		FAC8C0CD2702B88C004E7D70 /* Q5anew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CC2702B88C004E7D70 /* Q5anew.swift */; };
+		FAC8C0D02702B89B004E7D70 /* Q5bnew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CF2702B89B004E7D70 /* Q5bnew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +76,12 @@
 		3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallibrateVolumeViewController.swift; sourceTree = "<group>"; };
 		5920F8A18996AFB25A8C0E04 /* Pods-Sleep Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Learning.debug.xcconfig"; path = "Target Support Files/Pods-Sleep Learning/Pods-Sleep Learning.debug.xcconfig"; sourceTree = "<group>"; };
 		6D46E92F204E28525E2499F0 /* Pods_Sleep_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC8C0C42702B6AE004E7D70 /* Q1new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Q1new.swift; path = "Old diary/Q1new.swift"; sourceTree = "<group>"; };
+		FAC8C0C62702B870004E7D70 /* Q2new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2new.swift; sourceTree = "<group>"; };
+		FAC8C0C82702B87D004E7D70 /* Q3new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q3new.swift; sourceTree = "<group>"; };
+		FAC8C0CA2702B884004E7D70 /* Q4new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4new.swift; sourceTree = "<group>"; };
+		FAC8C0CC2702B88C004E7D70 /* Q5anew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5anew.swift; sourceTree = "<group>"; };
+		FAC8C0CF2702B89B004E7D70 /* Q5bnew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5bnew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,15 +116,13 @@
 		3C3C4FE922CD4E5A003B8E55 /* Diary View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3C3C4FEA22CD4EAA003B8E55 /* Q1.swift */,
-				3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */,
-				3C3C4FEE22CD6C97003B8E55 /* Q2.swift */,
-				3C3C4FF022CD6D7C003B8E55 /* Q2ai.swift */,
-				3C3C4FF222CD6D8A003B8E55 /* Q2aii.swift */,
-				3C3C4FF422CD6D9B003B8E55 /* Q2b.swift */,
-				3C3C4FF622CD6DA6003B8E55 /* Q2bi.swift */,
-				3C3C4FF822CD6DB9003B8E55 /* Q3.swift */,
-				2CE61AD824C25C4400553EAC /* Q3b.swift */,
+				FAC8C0C42702B6AE004E7D70 /* Q1new.swift */,
+				FAC8C0C62702B870004E7D70 /* Q2new.swift */,
+				FAC8C0C82702B87D004E7D70 /* Q3new.swift */,
+				FAC8C0CA2702B884004E7D70 /* Q4new.swift */,
+				FAC8C0CC2702B88C004E7D70 /* Q5anew.swift */,
+				FAC8C0CF2702B89B004E7D70 /* Q5bnew.swift */,
+				FAC8C0C32702B674004E7D70 /* Old diary */,
 				2CC1187824AAAF670055E7E2 /* Q4.swift */,
 				2C5DDA5024AFAA9D00B324CA /* Q4b.swift */,
 				2CC1187A24AAB05E0055E7E2 /* Q5.swift */,
@@ -168,6 +178,22 @@
 				3C67854A22A6BEB600031F1B /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAC8C0C32702B674004E7D70 /* Old diary */ = {
+			isa = PBXGroup;
+			children = (
+				3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */,
+				3C3C4FEE22CD6C97003B8E55 /* Q2.swift */,
+				3C3C4FF022CD6D7C003B8E55 /* Q2ai.swift */,
+				3C3C4FF222CD6D8A003B8E55 /* Q2aii.swift */,
+				3C3C4FF422CD6D9B003B8E55 /* Q2b.swift */,
+				3C3C4FF622CD6DA6003B8E55 /* Q2bi.swift */,
+				3C3C4FF822CD6DB9003B8E55 /* Q3.swift */,
+				2CE61AD824C25C4400553EAC /* Q3b.swift */,
+				3C3C4FEA22CD4EAA003B8E55 /* Q1.swift */,
+			);
+			path = "Old diary";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +322,13 @@
 			files = (
 				2CC1187B24AAB05E0055E7E2 /* Q5.swift in Sources */,
 				3C67854422A6BEB500031F1B /* SessionViewController.swift in Sources */,
+				FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */,
 				3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */,
+				FAC8C0C92702B87D004E7D70 /* Q3new.swift in Sources */,
 				3C3C4FF322CD6D8A003B8E55 /* Q2aii.swift in Sources */,
 				2CE61AD924C25C4400553EAC /* Q3b.swift in Sources */,
+				FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */,
+				FAC8C0CD2702B88C004E7D70 /* Q5anew.swift in Sources */,
 				3C3C4FEB22CD4EAA003B8E55 /* Q1.swift in Sources */,
 				3C11183B22E0FBFF00C15000 /* loginViewController.swift in Sources */,
 				3C1E93FC22BBCE340024240A /* Diary.swift in Sources */,
@@ -308,6 +338,7 @@
 				3C21E35122AEEB9E00003F7D /* Session.swift in Sources */,
 				3C3C4FEF22CD6C97003B8E55 /* Q2.swift in Sources */,
 				3C21E35B22B19B6900003F7D /* AudioStreamList.swift in Sources */,
+				FAC8C0D02702B89B004E7D70 /* Q5bnew.swift in Sources */,
 				3CC2875022C273D40043394C /* InstructionsViewController.swift in Sources */,
 				2CC1187724AAA8CC0055E7E2 /* Q5b.swift in Sources */,
 				2CC1187924AAAF670055E7E2 /* Q4.swift in Sources */,
@@ -315,6 +346,7 @@
 				3C21E35322B0039700003F7D /* AudioPlayer.swift in Sources */,
 				3C3C4FFF22CD6E6F003B8E55 /* Q1a.swift in Sources */,
 				2C5DDA5124AFAA9E00B324CA /* Q4b.swift in Sources */,
+				FAC8C0CB2702B884004E7D70 /* Q4new.swift in Sources */,
 				3C3C4FF722CD6DA6003B8E55 /* Q2bi.swift in Sources */,
 				3C3C4FF522CD6D9B003B8E55 /* Q2b.swift in Sources */,
 			);
