@@ -32,6 +32,7 @@ struct Diary {
         diaryData["streamMins"] = 0
         diaryData["activity"] = nil
         diaryData["disturbRating"] = 0
+        diaryData["interruptYN"] = nil
         diaryData["englishHeardYN"] = nil
         diaryData["englishPhrase"] = nil
         diaryData["issuesWithVolumeYN"] = nil

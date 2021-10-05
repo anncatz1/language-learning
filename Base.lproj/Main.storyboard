@@ -994,6 +994,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="bYH-dW-gw5"/>
+                    <connections>
+                        <outlet property="responseField" destination="0NW-NL-YuD" id="5DE-vm-KTS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmg-xv-cws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1050,6 +1053,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="JLm-6c-ERV"/>
+                    <connections>
+                        <outlet property="responseField" destination="0cg-oz-1B3" id="Muk-T3-fqL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoN-Mm-tcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

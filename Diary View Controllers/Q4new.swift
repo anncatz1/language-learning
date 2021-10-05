@@ -17,12 +17,12 @@ class Q4new: UIViewController {
     }
     
     @IBAction func answeredYes(_ sender: Any) {
-        diary.diaryData["interruptYes"] = "Yes"
+        diary.diaryData["interruptYN"] = "Yes"
         diary.upload()
     }
     
     @IBAction func answeredNo(_ sender: Any) {
-        diary.diaryData["interruptNo"] = "No"
+        diary.diaryData["interruptYN"] = "No"
         diary.upload()
     }
     
