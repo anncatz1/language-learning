@@ -1,14 +1,14 @@
 //
-//  Q4b.swift
+//  Q1new.swift
 //  Sleep Learning
 //
-//  Created by Mani Jahani on 7/3/19.
-//  Copyright © 2019 Memory Lab. All rights reserved.
+//  Created by Annie Xu on 9/27/21.
+//  Copyright © 2021 Memory Lab. All rights reserved.
 //
 
 import UIKit
 
-class Q6b: UIViewController {
+class Q1new: UIViewController {
     
     //  Set the status bar to have light content so it's visible against the black
     //  background
@@ -16,18 +16,28 @@ class Q6b: UIViewController {
         return .lightContent
     }
     
-    @IBOutlet weak var responseField: UITextField!
     
-    @IBAction func continueToNextQuestion(_ sender: Any) {
-        guard responseField.text != nil && responseField.text != "" else {
+    @IBOutlet weak var hoursField: UITextField!
+    @IBOutlet weak var minutesField: UITextField!
+    
+    @IBAction func enterInfo(_ sender: Any) {
+        guard hoursField.text != nil && hoursField.text != "" else {
             return
         }
-        diary.diaryData["issuesWithVolume"] = responseField.text
+        diary.diaryData["streamHours"] = Int(hoursField.text!)
+        diary.upload()
+    }
+    
+    @IBAction func enterInfo2(_ sender: Any) {
+        guard minutesField.text != nil && minutesField.text != "" else {
+            return
+        }
+        diary.diaryData["streamMins"] = Int(minutesField.text!)
         diary.upload()
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
+        if identifier == "continueToNextQuestion" && (minutesField.text == "" || minutesField.text == nil) {
             //  Display alert
             let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
             emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

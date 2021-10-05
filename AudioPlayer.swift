@@ -62,6 +62,16 @@ class AudioPlayer {
         }
     }
     
+    func pauseAudio(recordVol : Bool) {
+        if recordVol {
+            diary.diaryData["volumes"] = (diary.diaryData["volumes"] as! [Float]) + [audioSession.outputVolume]
+            diary.upload()
+            diary.diaryData["timesRecordVolume"] = (diary.diaryData["timesRecordVolume"] as! [Date]) + [Date()]
+            diary.upload()
+            }
+        player.pause()
+    }
+    
     func stopAudio(recordVol : Bool) {
         if recordVol {
             diary.diaryData["volumes"] = (diary.diaryData["volumes"] as! [Float]) + [audioSession.outputVolume]
@@ -80,6 +90,10 @@ class AudioPlayer {
     internal func getPlayerItemURL(from playerItem: AVPlayerItem) -> URL {
         return (playerItem.asset as! AVURLAsset).url
     }
+    
+    //func pause(){
+    //
+    //}
     
     //  Called when the "restart" button is pressed. It plays a 20-minute blank
     //  audio file and then the rest of the audio from when "restart" was pressed.

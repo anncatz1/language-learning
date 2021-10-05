@@ -1,14 +1,14 @@
 //
-//  Q4b.swift
+//  Q2new.swift
 //  Sleep Learning
 //
-//  Created by Mani Jahani on 7/3/19.
-//  Copyright © 2019 Memory Lab. All rights reserved.
+//  Created by Annie Xu on 9/27/21.
+//  Copyright © 2021 Memory Lab. All rights reserved.
 //
 
 import UIKit
 
-class Q6b: UIViewController {
+class Q2new: UIViewController {
     
     //  Set the status bar to have light content so it's visible against the black
     //  background
@@ -22,7 +22,7 @@ class Q6b: UIViewController {
         guard responseField.text != nil && responseField.text != "" else {
             return
         }
-        diary.diaryData["issuesWithVolume"] = responseField.text
+        diary.diaryData["activity"] = responseField.text
         diary.upload()
     }
     

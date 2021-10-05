@@ -13,10 +13,11 @@ import Foundation
 
 class Session {
     // is the participant asleep
-    var isAsleep = false
+    var sessionRunning = false
+    var sessionPaused = false
     
     func beginSession() {
-        isAsleep = true
+        sessionRunning = true
         diary.diaryData["timeWhenAsleep"] = Date()
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
@@ -27,18 +28,35 @@ class Session {
     
     func endSession() {
         audioPlayer.stopAudio(recordVol : true)
-        isAsleep = false
+        sessionRunning = false
         diary.diaryData["timeWhenAwake"] = Date()
         diary.upload()
     }
     
-    func restart() {
-        if audioPlayer.restartAudio() {
-            // Because diaryData has the type [String: Any], in order to manipulate the value
-            // they have to be cast to their correct type
-            diary.diaryData["numberOfRestarts"] = diary.diaryData["numberOfRestarts"] as! Int + 1
-            diary.diaryData["timesPressedRestart"] = (diary.diaryData["timesPressedRestart"] as! [Date]) + [Date()]
-            diary.upload()
-        }
+//    func restart() {
+//        if audioPlayer.restartAudio() {
+//            // Because diaryData has the type [String: Any], in order to manipulate the value
+//            // they have to be cast to their correct type
+//            diary.diaryData["numberOfRestarts"] = diary.diaryData["numberOfRestarts"] as! Int + 1
+//            diary.diaryData["timesPressedRestart"] = (diary.diaryData["timesPressedRestart"] as! [Date]) + [Date()]
+//            diary.upload()
+//        }
+//    }
+    
+    func continuePlay() {
+        audioPlayer.playAudio(recordVol: true)
+        // Because diaryData has the type [String: Any], in order to manipulate the value
+        // they have to be cast to their correct type
+        diary.diaryData["timesPressedContinue"] = (diary.diaryData["timesPressedContinue"] as! [Date]) + [Date()]
+        diary.upload()
+    }
+    
+    func pause() {
+        audioPlayer.pauseAudio(recordVol: true)
+        // Because diaryData has the type [String: Any], in order to manipulate the value
+        // they have to be cast to their correct type
+        diary.diaryData["numberOfPauses"] = diary.diaryData["numberOfPauses"] as! Int + 1
+        diary.diaryData["timesPressedPause"] = (diary.diaryData["timesPressedPause"] as! [Date]) + [Date()]
+        diary.upload()
     }
 }

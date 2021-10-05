@@ -25,23 +25,32 @@ struct Diary {
         diaryData["timeWhenAwake"] = nil
         diaryData["volumes"] = [Float]()
         diaryData["timesRecordVolume"] = [Date]()
-        diaryData["numberOfRestarts"] = 0
-        diaryData["timesPressedRestart"] = [Date]()
-        diaryData["heardInitialWarningSounds"] = nil
-        diaryData["pressedRestart"] = nil
-        diaryData["awakenedBySoundsOrLanguage"] = nil
-        diaryData["numberOfTimesWokenUp"] = nil
-        diaryData["languageHeardAfterWaking"] = nil
-        diaryData["notAwakenedButHeardALanguage"] = nil
-        diaryData["languageHeardWhileAsleep"] = nil
-        diaryData["headphonesStayedIn"] = nil
-        diaryData["phoneLocation"] = nil
+        diaryData["numberOfPauses"] = 0
+        diaryData["timesPressedPause"] = [Date]()
+        diaryData["timesPressedContinue"] = [Date]()
+        diaryData["streamHours"] = 0
+        diaryData["streamMins"] = 0
+        diaryData["activity"] = nil
+        diaryData["disturbRating"] = 0
+        diaryData["englishHeardYN"] = nil
+        diaryData["englishPhrase"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
         diaryData["issuesWithApp"] = nil
         diaryData["audioFile"] = nil
         diaryName = ""
+//        diaryData["numberOfRestarts"] = 0
+//        diaryData["timesPressedRestart"] = [Date]()
+//        diaryData["heardInitialWarningSounds"] = nil
+//        diaryData["pressedRestart"] = nil
+//        diaryData["awakenedBySoundsOrLanguage"] = nil
+//        diaryData["numberOfTimesWokenUp"] = nil
+//        diaryData["languageHeardAfterWaking"] = nil
+//        diaryData["notAwakenedButHeardALanguage"] = nil
+//        diaryData["languageHeardWhileAsleep"] = nil
+//        diaryData["headphonesStayedIn"] = nil
+//        diaryData["phoneLocation"] = nil
     }
     
     //  Helper function that returns the date as a string -- to be used as the

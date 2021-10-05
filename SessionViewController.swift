@@ -31,11 +31,17 @@ class SessionViewController: UIViewController {
     
     //  When "start" or "restart" is pressed, take the appropriate action depending on the state (isAsleep)
     @IBAction func startOrRestartSession(_ sender: UIButton) {
-        if !currentSession.isAsleep {
+        if !currentSession.sessionRunning {
             currentSession.beginSession()
         }
         else {
-            currentSession.restart()
+            if !currentSession.sessionPaused {
+                currentSession.pause()
+            }
+            else {
+                //currentSession.restart()
+                currentSession.continuePlay()
+            }
         }
         updateViewFromModel()
     }
@@ -65,12 +71,21 @@ class SessionViewController: UIViewController {
     }
 
     func updateViewFromModel() {
-        //  In session:
-        if currentSession.isAsleep {
-            startOrRestartButton.setTitle("Restart", for: UIControl.State.normal)
-            startOrRestartButton.setTitleColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), for: UIControl.State.normal)
-            endButton.isEnabled = true
-            endButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
+        //  In session want pause:
+        if currentSession.sessionRunning {
+            if !currentSession.sessionPaused{
+                startOrRestartButton.setTitle("Pause", for: UIControl.State.normal)
+                startOrRestartButton.setTitleColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), for: UIControl.State.normal)
+                endButton.isEnabled = true
+                endButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
+            }
+            // in session want start again
+            else {
+                startOrRestartButton.setTitle("Continue", for: UIControl.State.normal)
+                startOrRestartButton.setTitleColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), for: UIControl.State.normal)
+                endButton.isEnabled = true
+                endButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
+            }
         }
             
         //  Not in session:

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Q4: UIViewController{
+class Q6: UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

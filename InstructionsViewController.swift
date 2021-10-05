@@ -25,11 +25,11 @@ class InstructionsViewController: UIPageViewController, UIPageViewControllerData
     lazy var instructionPages: [UIViewController] = {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         //  Pages:
-        let chargeVC = sb.instantiateViewController(withIdentifier: "chargeInstructionVC")
+        //let chargeVC = sb.instantiateViewController(withIdentifier: "chargeInstructionVC")
         let wifiVC = sb.instantiateViewController(withIdentifier: "wifiInstructionVC")
         let dndVC = sb.instantiateViewController(withIdentifier: "doNotDisturbInstructionVC")
         let volumeVC = sb.instantiateViewController(withIdentifier: "volumeInstructionVC")
-        return [chargeVC, wifiVC, dndVC, volumeVC]
+        return [wifiVC, dndVC, volumeVC]
     }()
 
     override func viewDidLoad() {

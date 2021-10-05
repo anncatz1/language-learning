@@ -11,7 +11,7 @@ import UIKit
 class CallibrateVolumeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
-        //  Play the ocean audio so that the volume can be callibrated.
+        //  Play the ocean audio so that the volume can be calibrated.
         //diary.dayChange()
         diary.diaryName = diary.getDate()
         audioPlayer.loadAudio(with: oceanURL)
