@@ -17,6 +17,7 @@ import FirebaseFirestore
 struct Diary {
     var diaryData: [String: Any]
     var diaryName: String
+    //var diaryDate: String
     
     init() {
         diaryData = [String: Any]()
@@ -41,6 +42,7 @@ struct Diary {
         diaryData["issuesWithApp"] = nil
         diaryData["audioFile"] = nil
         diaryName = ""
+        //diaryDate = ""
 //        diaryData["numberOfRestarts"] = 0
 //        diaryData["timesPressedRestart"] = [Date]()
 //        diaryData["heardInitialWarningSounds"] = nil
@@ -69,35 +71,35 @@ struct Diary {
     }
     
     // Changes document name - not used
-    func dayChange(){
-        let Database = Firestore.firestore()
-        
-        //  Get user ID, add data to the appropriate collection corresponding to the user ID
-        //  User ID can be found in "Subjects -> [UserEmail] -> ID"
-        guard let userEmail = Auth.auth().currentUser?.email else {
-            print("No User Email")
-            return
-        }
-        let userInfoDocRef = Database.collection("Subjects").document(userEmail)
-        userInfoDocRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                //  Find day number
-                let dayNum = document.data()!["dayNum"] as! Int + 1
-                //  Change day number for each new session
-                userInfoDocRef.updateData(
-                ["dayNum" : dayNum]) { err in
-                    if let err = err {
-                        print("Error adding document: \(err)")
-                    } else {
-                        print("Document added")
-                    }
-                }
-            }
-            else {
-                print("User document does not exist")
-            }
-        }
-    }
+//    func dayChange(){
+//        let Database = Firestore.firestore()
+//
+//        //  Get user ID, add data to the appropriate collection corresponding to the user ID
+//        //  User ID can be found in "Subjects -> [UserEmail] -> ID"
+//        guard let userEmail = Auth.auth().currentUser?.email else {
+//            print("No User Email")
+//            return
+//        }
+//        let userInfoDocRef = Database.collection("Subjects").document(userEmail)
+//        userInfoDocRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                //  Find day number
+//                let dayNum = document.data()!["dayNum"] as! Int + 1
+//                //  Change day number for each new session
+//                userInfoDocRef.updateData(
+//                ["dayNum" : dayNum]) { err in
+//                    if let err = err {
+//                        print("Error adding document: \(err)")
+//                    } else {
+//                        print("Document added")
+//                    }
+//                }
+//            }
+//            else {
+//                print("User document does not exist")
+//            }
+//        }
+//    }
     
     // Uploads all the filled out fields in the diary to the server
     func upload() {

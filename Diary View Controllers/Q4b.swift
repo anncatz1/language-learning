@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Q6b: UIViewController {
+class Q4b: UIViewController {
     
     //  Set the status bar to have light content so it's visible against the black
     //  background

@@ -22,6 +22,7 @@ class Session {
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
+        sessionRunning = true
         audioPlayer.loadAudioToStartSession()
         audioPlayer.playAudio(recordVol: true)
     }
@@ -48,11 +49,13 @@ class Session {
         // Because diaryData has the type [String: Any], in order to manipulate the value
         // they have to be cast to their correct type
         diary.diaryData["timesPressedContinue"] = (diary.diaryData["timesPressedContinue"] as! [Date]) + [Date()]
+        sessionPaused = false
         diary.upload()
     }
     
     func pause() {
         audioPlayer.pauseAudio(recordVol: true)
+        sessionPaused = true
         // Because diaryData has the type [String: Any], in order to manipulate the value
         // they have to be cast to their correct type
         diary.diaryData["numberOfPauses"] = diary.diaryData["numberOfPauses"] as! Int + 1

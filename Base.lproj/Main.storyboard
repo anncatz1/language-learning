@@ -70,7 +70,7 @@
         <!--Q1new-->
         <scene sceneID="33S-Dy-WUp">
             <objects>
-                <viewController storyboardIdentifier="Q1new" title="Q1" modalPresentationStyle="fullScreen" id="AdF-3f-62M" userLabel="Q1new" customClass="Q1new" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Q1new" title="Q1" modalPresentationStyle="fullScreen" id="AdF-3f-62M" userLabel="Q1new" customClass="Q1new" customModule="Sleep_Learning" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce4-gb-BHF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STD-vr-vNX">
                                 <rect key="frame" x="100" y="395" width="68" height="44"/>
@@ -123,7 +123,7 @@
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVH-AS-xZG">
                                 <rect key="frame" x="152" y="447" width="110" height="46"/>
@@ -262,7 +262,7 @@
         <!--Q3new-->
         <scene sceneID="ctL-qk-wFM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="EAr-N8-ZlC" userLabel="Q3new" customClass="Q3new" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="EAr-N8-ZlC" userLabel="Q3new" customClass="Q3new" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UdX-Wl-FgA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,7 +284,7 @@
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" keyboardAppearance="alert"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ush-8J-ohF">
                                 <rect key="frame" x="158" y="410.66666666666669" width="98" height="42"/>
@@ -404,7 +404,7 @@
         <!--Q5-->
         <scene sceneID="eiw-gt-joj">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gnz-me-zTC" customClass="Q5" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gnz-me-zTC" customClass="Q5" customModule="Sleep_Learning" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lD-wq-QKG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -617,18 +617,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd4-nv-7Qh">
-                                <rect key="frame" x="40" y="266" width="334" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should now exit and kill the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmE-Ns-qGG">
-                                <rect key="frame" x="40" y="356" width="334" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0G-Vh-NwQ">
                                 <rect key="frame" x="172" y="660" width="70" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -640,26 +628,46 @@
                                     <segue destination="fim-ii-SQ8" kind="show" identifier="logOutSegue" id="gCI-e4-OXK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Minutes for day:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B58-CT-fxZ">
+                                <rect key="frame" x="38" y="229" width="338.33333333333331" height="39.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-7A-btH">
+                                <rect key="frame" x="274.33333333333331" y="345.66666666666669" width="67.666666666666686" height="39.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd4-nv-7Qh">
+                                <rect key="frame" x="38" y="93" width="334" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RTk-1i-D46"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NmE-Ns-qGG" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="40" id="0C0-ed-WU7"/>
-                            <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="Hd4-nv-7Qh" secondAttribute="trailing" constant="40" id="16v-Ek-Nqg"/>
+                            <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="Hd4-nv-7Qh" secondAttribute="trailing" constant="42" id="16v-Ek-Nqg"/>
+                            <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="JKF-7A-btH" secondAttribute="trailing" constant="72" id="CFC-Cj-xgY"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="HY4-t4-ahz"/>
-                            <constraint firstItem="Hd4-nv-7Qh" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="40" id="OOX-Ah-Pfx"/>
-                            <constraint firstItem="NmE-Ns-qGG" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" id="PeI-It-9h9"/>
+                            <constraint firstItem="Hd4-nv-7Qh" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" constant="-255" id="Lor-Z2-aIP"/>
+                            <constraint firstItem="Hd4-nv-7Qh" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="38" id="OOX-Ah-Pfx"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="bottom" secondItem="R0G-Vh-NwQ" secondAttribute="bottom" constant="40" id="cgH-fg-Yee"/>
-                            <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="NmE-Ns-qGG" secondAttribute="trailing" constant="40" id="fWT-gP-0EM"/>
-                            <constraint firstItem="NmE-Ns-qGG" firstAttribute="top" secondItem="Hd4-nv-7Qh" secondAttribute="bottom" constant="50" id="gqn-ZJ-8Sr"/>
+                            <constraint firstItem="B58-CT-fxZ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="eWm-yO-v3a"/>
+                            <constraint firstItem="B58-CT-fxZ" firstAttribute="top" secondItem="Hd4-nv-7Qh" secondAttribute="bottom" constant="96" id="ffZ-lt-PxT"/>
+                            <constraint firstItem="JKF-7A-btH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RTk-1i-D46" secondAttribute="leading" symbolic="YES" id="t35-dR-sc0"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="viX-X3-nPE"/>
+                            <constraint firstItem="JKF-7A-btH" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="77" id="zwB-mX-oSd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="32D-rs-pze"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v02-md-SeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8823" y="404"/>
+            <point key="canvasLocation" x="8821.7391304347839" y="403.53260869565219"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ojw-PB-Ldh">
@@ -832,119 +840,10 @@
             </objects>
             <point key="canvasLocation" x="7025" y="402"/>
         </scene>
-        <!--3b-->
-        <scene sceneID="AYf-V9-1U7">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DqF-Bd-5Mn" customClass="Q3b" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4Nx-9o-68x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where did you put your phone last night?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLn-Fz-c0s">
-                                <rect key="frame" x="40" y="40" width="334" height="79"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2R-3T-sEZ">
-                                <rect key="frame" x="40" y="365" width="334" height="34"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wen-Qp-Gns">
-                                <rect key="frame" x="40" y="660" width="44" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RiZ-vD-4b7" kind="unwind" unwindAction="unwindToPreviousQuestionWithSegue:" id="XHQ-QX-PoY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOC-04-HdI">
-                                <rect key="frame" x="50" y="159" width="120" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="On pillow"/>
-                                <connections>
-                                    <action selector="answeredPillow:" destination="DqF-Bd-5Mn" eventType="touchUpInside" id="ZAd-GO-dYi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-LT-JzL">
-                                <rect key="frame" x="279" y="159" width="95" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="On bed"/>
-                                <connections>
-                                    <action selector="answeredBed:" destination="DqF-Bd-5Mn" eventType="touchUpInside" id="rBy-zC-lH8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJ6-an-hPB">
-                                <rect key="frame" x="115.66666666666669" y="237" width="183" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="On nightstand"/>
-                                <connections>
-                                    <action selector="answeredNightstand:" destination="DqF-Bd-5Mn" eventType="touchUpInside" id="xAN-j9-CaP"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V9-vc-OOn">
-                                <rect key="frame" x="40" y="325" width="144" height="23"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-Ew-XRG">
-                                <rect key="frame" x="158" y="409" width="98" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="continueToNextQuestion:" destination="DqF-Bd-5Mn" eventType="touchUpInside" id="1Mx-bv-Wiu"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="gME-bl-tD7"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gME-bl-tD7" firstAttribute="bottom" secondItem="wen-Qp-Gns" secondAttribute="bottom" constant="40" id="1OS-I8-IdE"/>
-                            <constraint firstItem="eHw-LT-JzL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lOC-04-HdI" secondAttribute="trailing" constant="51" id="1ZS-fV-TGq"/>
-                            <constraint firstItem="mJ6-an-hPB" firstAttribute="centerX" secondItem="4Nx-9o-68x" secondAttribute="centerX" id="5Kh-u2-nW9"/>
-                            <constraint firstItem="mJ6-an-hPB" firstAttribute="top" secondItem="lOC-04-HdI" secondAttribute="bottom" constant="30" id="DW0-MJ-U2V"/>
-                            <constraint firstItem="0V9-vc-OOn" firstAttribute="top" secondItem="mJ6-an-hPB" secondAttribute="bottom" constant="40" id="FZI-rL-gi1"/>
-                            <constraint firstItem="eHw-LT-JzL" firstAttribute="top" secondItem="rLn-Fz-c0s" secondAttribute="bottom" constant="40" id="KPw-Es-dkA"/>
-                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" secondItem="rLn-Fz-c0s" secondAttribute="trailing" constant="40" id="LLt-E1-7Qo"/>
-                            <constraint firstItem="wen-Qp-Gns" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="40" id="Ljo-wJ-muV"/>
-                            <constraint firstItem="f2R-3T-sEZ" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="40" id="Vlo-YS-TQw"/>
-                            <constraint firstItem="IUd-Ew-XRG" firstAttribute="top" secondItem="f2R-3T-sEZ" secondAttribute="bottom" constant="10" id="clf-E8-vc0"/>
-                            <constraint firstItem="0V9-vc-OOn" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="40" id="njV-VY-ne2"/>
-                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" secondItem="f2R-3T-sEZ" secondAttribute="trailing" constant="40" id="rkt-Vc-nyW"/>
-                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wen-Qp-Gns" secondAttribute="trailing" symbolic="YES" id="sbB-hG-JhY"/>
-                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" secondItem="0V9-vc-OOn" secondAttribute="trailing" constant="230" id="tm5-yD-Z9E"/>
-                            <constraint firstItem="IUd-Ew-XRG" firstAttribute="centerX" secondItem="4Nx-9o-68x" secondAttribute="centerX" id="uUc-hW-k1Q"/>
-                            <constraint firstItem="lOC-04-HdI" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="50" id="vFu-hx-vpb"/>
-                            <constraint firstItem="lOC-04-HdI" firstAttribute="top" secondItem="rLn-Fz-c0s" secondAttribute="bottom" constant="40" id="wRT-Kl-Usg"/>
-                            <constraint firstItem="rLn-Fz-c0s" firstAttribute="leading" secondItem="gME-bl-tD7" secondAttribute="leading" constant="40" id="wcf-fr-JCX"/>
-                            <constraint firstItem="gME-bl-tD7" firstAttribute="trailing" secondItem="eHw-LT-JzL" secondAttribute="trailing" constant="40" id="xDp-La-7ub"/>
-                            <constraint firstItem="f2R-3T-sEZ" firstAttribute="top" secondItem="0V9-vc-OOn" secondAttribute="bottom" constant="17" id="xoG-gQ-iQ7"/>
-                            <constraint firstItem="rLn-Fz-c0s" firstAttribute="top" secondItem="gME-bl-tD7" secondAttribute="top" constant="40" id="yNk-SK-Rzz"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="YQm-4N-8eU"/>
-                    <connections>
-                        <outlet property="responseField" destination="f2R-3T-sEZ" id="fep-JV-WpH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IYb-Qf-vN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="RiZ-vD-4b7" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="6487" y="2121"/>
-        </scene>
         <!--Q2new-->
         <scene sceneID="BkZ-iv-xgJ">
             <objects>
-                <viewController storyboardIdentifier="Q2new" title="Q1" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JRe-MY-qWd" userLabel="Q2new" customClass="Q2new" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Q2new" title="Q1" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JRe-MY-qWd" userLabel="Q2new" customClass="Q2new" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pob-hT-aFm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1005,7 +904,7 @@
         <!--Q5bnew-->
         <scene sceneID="XDT-HP-jFZ">
             <objects>
-                <viewController title="Q1" modalPresentationStyle="fullScreen" id="Dvz-lI-7sT" userLabel="Q5bnew" customClass="Q5bnew" sceneMemberID="viewController">
+                <viewController title="Q1" modalPresentationStyle="fullScreen" id="Dvz-lI-7sT" userLabel="Q5bnew" customClass="Q5bnew" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jb9-lB-Hae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1027,7 +926,7 @@
                                     <segue destination="o4r-sn-ZmP" kind="show" id="yyY-21-pae"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Working out" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-oz-1B3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-oz-1B3">
                                 <rect key="frame" x="67" y="348" width="280" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1064,7 +963,7 @@
         <!--Q5anew-->
         <scene sceneID="THa-IG-h8L">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="bdl-y5-q1e" userLabel="Q5anew" customClass="Q5anew" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="bdl-y5-q1e" userLabel="Q5anew" customClass="Q5anew" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJR-O2-U8g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1131,9 +1030,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d7G-tq-P2G"/>
+        <segue reference="yyY-21-pae"/>
         <segue reference="6Jw-9s-4nb"/>
-        <segue reference="KZD-pL-Sws"/>
+        <segue reference="giO-hV-Q4k"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="donotdisturb" width="512" height="512"/>

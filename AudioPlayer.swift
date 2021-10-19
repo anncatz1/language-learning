@@ -33,7 +33,8 @@ class AudioPlayer {
     
     //  Adds the blank audio, ocean sound, and language streams to the queue
     func loadAudioToStartSession() {
-        let audioFilesList = (whiteOrSilentURLList + [oceanURL] + languageAudioURLList + endBlankAudioURLList).map {
+        let audioFilesList = (languageAudioURLList + endBlankAudioURLList).map {
+        //let audioFilesList = (whiteOrSilentURLList + [oceanURL] + languageAudioURLList + endBlankAudioURLList).map {
             AVPlayerItem(url: $0)
         }
         player = AVQueuePlayer(items: audioFilesList)
