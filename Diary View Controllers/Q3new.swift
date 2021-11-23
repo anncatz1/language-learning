@@ -1,5 +1,5 @@
 //
-//  Q3new.swift
+//  Q5anew.swift
 //  Sleep Learning
 //
 //  Created by Annie Xu on 9/27/21.
@@ -16,27 +16,14 @@ class Q3new: UIViewController {
         return .lightContent
     }
     
-    @IBOutlet weak var responseField: UITextField!
-    
-    @IBAction func continueToNextQuestion(_ sender: Any) {
-        guard responseField.text != nil && responseField.text != "" else {
-            return
-        }
-        diary.diaryData["disturbRating"] = Int(responseField.text!)
+    @IBAction func answeredYes(_ sender: Any) {
+        diary.diaryData["englishHeardYN"] = "Yes"
         diary.upload()
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
-            //  Display alert
-            let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
-            emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(emptyAlert, animated: true, completion: nil)
-            return false
-        }
-        else {
-            return true
-        }
+    @IBAction func answeredNo(_ sender: Any) {
+        diary.diaryData["englishHeardYN"] = "No"
+        diary.upload()
     }
     
     @IBAction func unwindToPreviousQuestion(segue: UIStoryboardSegue) {

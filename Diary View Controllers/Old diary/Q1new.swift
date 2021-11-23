@@ -17,22 +17,22 @@ class Q1new: UIViewController {
     }
     
     
-    @IBOutlet weak var hoursField: UITextField!
+    //@IBOutlet weak var hoursField: UITextField!
     @IBOutlet weak var minutesField: UITextField!
     
-    @IBAction func enterInfo(_ sender: Any) {
-        guard hoursField.text != nil && hoursField.text != "" else {
-            return
-        }
-        diary.diaryData["streamHours"] = Int(hoursField.text!)
-        diary.upload()
-    }
+//    @IBAction func enterInfo(_ sender: Any) {
+//        guard hoursField.text != nil && hoursField.text != "" else {
+//            return
+//        }
+//        diary.diaryData["streamHours"] = Int(hoursField.text!)
+//        diary.upload()
+//    }
     
-    @IBAction func enterInfo2(_ sender: Any) {
+    @IBAction func continueToNextQuestion(_ sender: Any) {
         guard minutesField.text != nil && minutesField.text != "" else {
             return
         }
-        diary.diaryData["streamMins"] = Int(minutesField.text!)
+        diary.diaryData["streamMinsReported"] = Int(minutesField.text!)
         diary.upload()
     }
     

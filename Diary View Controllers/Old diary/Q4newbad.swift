@@ -1,5 +1,5 @@
 //
-//  Q5anew.swift
+//  Q4new.swift
 //  Sleep Learning
 //
 //  Created by Annie Xu on 9/27/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Q5anew: UIViewController {
+class Q4newbad: UIViewController {
     
     //  Set the status bar to have light content so it's visible against the black
     //  background
@@ -16,13 +16,13 @@ class Q5anew: UIViewController {
         return .lightContent
     }
     
-    @IBAction func answeredYes(_ sender: Any) {
-        diary.diaryData["englishHeardYN"] = "Yes"
+    @IBAction func answeredYes(_: Any) {
+        diary.diaryData["interruptYN"] = "Yes"
         diary.upload()
     }
     
     @IBAction func answeredNo(_ sender: Any) {
-        diary.diaryData["englishHeardYN"] = "No"
+        diary.diaryData["interruptYN"] = "No"
         diary.upload()
     }
     

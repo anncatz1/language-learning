@@ -22,10 +22,28 @@ class SessionCompletedViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        changeText(bodyText)
         diary.upload()
     }
     
     var confirmedLogOut = false
+    
+    @IBOutlet weak var bodyText: UILabel!
+
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        bodyText.delegate = self //Without setting the delegate you won't be able to track UITextView events
+//    }
+//
+//    func textViewDidChange(_ textView: UITextView) { //Handle the text changes here
+//        print(textView.text); //the textView parameter is the textView where text was changed
+//    }
+    
+    func changeText(_ textView: UILabel){
+        let num = Int(diary.diaryData["timeForSession"] as! Double)
+        //num = Int(num)
+        textView.text = String(num)
+    }
     
     @IBAction func logOut(_ sender: UIButton) {
         //  Display confirmation alert

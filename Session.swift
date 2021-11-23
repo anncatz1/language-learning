@@ -10,11 +10,25 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestore
 
 class Session {
     // is the participant asleep
     var sessionRunning = false
     var sessionPaused = false
+    //var timeSession = 0
+    
+//    func getTimeInterval(time2 : Date) -> TimeInterval{
+//        let formatter = DateComponentsFormatter()
+//        formatter.allowedUnits = [.minute]
+//        let time1 = diary.diaryData["timeWhenAsleep"]
+//        //let time2 = Date()
+//        let timeint = time2.timeIntervalSince(time1 as! Date)
+//        //print(time1, time2, timeint)
+//        return timeint
+      //getTimeInterval(time2 : diary.diaryData["timeWhenAwake"] as! Date)
+//    }
     
     func beginSession() {
         sessionRunning = true
@@ -30,7 +44,12 @@ class Session {
     func endSession() {
         audioPlayer.stopAudio(recordVol : true)
         sessionRunning = false
-        diary.diaryData["timeWhenAwake"] = Date()
+        let date1 = Date()
+        diary.diaryData["timeWhenAwake"] = date1
+        diary.upload()
+        var elapsed = date1.timeIntervalSince(diary.diaryData["timeWhenAsleep"] as! Date)
+        elapsed = elapsed/60
+        diary.diaryData["timeForSession"] = elapsed
         diary.upload()
     }
     

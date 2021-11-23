@@ -16,8 +16,8 @@ import FirebaseFirestore
 
 struct Diary {
     var diaryData: [String: Any]
-    var diaryName: String
-    //var diaryDate: String
+    var diaryDate: String
+    var diaryDateTime: String
     
     init() {
         diaryData = [String: Any]()
@@ -29,19 +29,24 @@ struct Diary {
         diaryData["numberOfPauses"] = 0
         diaryData["timesPressedPause"] = [Date]()
         diaryData["timesPressedContinue"] = [Date]()
-        diaryData["streamHours"] = 0
-        diaryData["streamMins"] = 0
+        diaryData["streamMinsReported"] = 0
         diaryData["activity"] = nil
-        diaryData["disturbRating"] = 0
-        diaryData["interruptYN"] = nil
+        //diaryData["disturbRating"] = 0
+        //diaryData["interruptYN"] = nil
         diaryData["englishHeardYN"] = nil
-        diaryData["englishPhrase"] = nil
+        diaryData["numPhrases"] = nil
+        diaryData["englishPhrase1"] = nil
+        diaryData["englishPhrase2"] = nil
+        diaryData["englishPhrase3"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
         diaryData["issuesWithApp"] = nil
         diaryData["audioFile"] = nil
-        diaryName = ""
+        diaryData["timeForSession"] = nil
+        diaryData["totalTimeForDay"] = nil
+        diaryDate = ""
+        diaryDateTime = ""
         //diaryDate = ""
 //        diaryData["numberOfRestarts"] = 0
 //        diaryData["timesPressedRestart"] = [Date]()
@@ -61,6 +66,18 @@ struct Diary {
     internal func getDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
+        //dateFormatter.timeStyle = .short
+        
+        let todaysDate = Date()
+        
+        // US English Locale (en_US)
+        dateFormatter.locale = Locale(identifier: "en_US")
+        return dateFormatter.string(from: todaysDate)
+    }
+    
+    internal func getDateTime() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
         
         let todaysDate = Date()
@@ -69,6 +86,17 @@ struct Diary {
         dateFormatter.locale = Locale(identifier: "en_US")
         return dateFormatter.string(from: todaysDate)
     }
+    
+//    internal func getTime() -> String {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.timeStyle = .short
+//
+//        let todaysDate = Date()
+//
+//        // US English Locale (en_US)
+//        dateFormatter.locale = Locale(identifier: "en_US")
+//        return dateFormatter.string(from: todaysDate)
+//    }
     
     // Changes document name - not used
 //    func dayChange(){
@@ -123,7 +151,8 @@ struct Diary {
                 //let dayNum = document.data()!["dayNum"]
                 //let dayNumS = "\(dayNum ?? "")"
                 //  Store diary data in the collection titled with the user ID in a document with the day number as the title
-                Database.collection(userID).document(self.diaryName).setData(self.diaryData) { err in
+                let collection1 = Database.collection(userID).document(self.diaryDate).collection("Day Collection");
+                collection1.document(self.diaryDateTime).setData(self.diaryData) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {

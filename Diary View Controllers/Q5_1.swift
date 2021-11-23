@@ -1,5 +1,5 @@
 //
-//  Q5bnew.swift
+//  Q5_1.swift
 //  Sleep Learning
 //
 //  Created by Annie Xu on 9/27/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Q5bnew: UIViewController {
+class Q5_1: UIViewController {
     
     //  Set the status bar to have light content so it's visible against the black
     //  background
@@ -22,7 +22,7 @@ class Q5bnew: UIViewController {
         guard responseField.text != nil && responseField.text != "" else {
             return
         }
-        diary.diaryData["englishPhrase"] = responseField.text!
+        diary.diaryData["englishPhrase1"] = responseField.text!
         diary.upload()
     }
     
