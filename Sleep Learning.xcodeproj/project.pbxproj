@@ -35,12 +35,14 @@
 		3CC2875022C273D40043394C /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC2874F22C273D40043394C /* InstructionsViewController.swift */; };
 		3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */; };
 		90753D0C5544FC05FF206AFE /* Pods_Sleep_Learning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D46E92F204E28525E2499F0 /* Pods_Sleep_Learning.framework */; };
+		FA2337DE274C1F6F00C1A7C0 /* Q4new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */; };
+		FA2337E0274C208100C1A7C0 /* Q5_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337DF274C208100C1A7C0 /* Q5_2.swift */; };
+		FA2337E2274C675900C1A7C0 /* Q5_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337E1274C675900C1A7C0 /* Q5_3.swift */; };
 		FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C42702B6AE004E7D70 /* Q1new.swift */; };
 		FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C62702B870004E7D70 /* Q2new.swift */; };
-		FAC8C0C92702B87D004E7D70 /* Q3new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C82702B87D004E7D70 /* Q3new.swift */; };
-		FAC8C0CB2702B884004E7D70 /* Q4new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CA2702B884004E7D70 /* Q4new.swift */; };
-		FAC8C0CD2702B88C004E7D70 /* Q5anew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CC2702B88C004E7D70 /* Q5anew.swift */; };
-		FAC8C0D02702B89B004E7D70 /* Q5bnew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CF2702B89B004E7D70 /* Q5bnew.swift */; };
+		FAC8C0CB2702B884004E7D70 /* Q4newbad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */; };
+		FAC8C0CD2702B88C004E7D70 /* Q3new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CC2702B88C004E7D70 /* Q3new.swift */; };
+		FAC8C0D02702B89B004E7D70 /* Q5_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CF2702B89B004E7D70 /* Q5_1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,12 +78,14 @@
 		3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallibrateVolumeViewController.swift; sourceTree = "<group>"; };
 		5920F8A18996AFB25A8C0E04 /* Pods-Sleep Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleep Learning.debug.xcconfig"; path = "Target Support Files/Pods-Sleep Learning/Pods-Sleep Learning.debug.xcconfig"; sourceTree = "<group>"; };
 		6D46E92F204E28525E2499F0 /* Pods_Sleep_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleep_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4new.swift; sourceTree = "<group>"; };
+		FA2337DF274C208100C1A7C0 /* Q5_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_2.swift; sourceTree = "<group>"; };
+		FA2337E1274C675900C1A7C0 /* Q5_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_3.swift; sourceTree = "<group>"; };
 		FAC8C0C42702B6AE004E7D70 /* Q1new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Q1new.swift; path = "Old diary/Q1new.swift"; sourceTree = "<group>"; };
 		FAC8C0C62702B870004E7D70 /* Q2new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2new.swift; sourceTree = "<group>"; };
-		FAC8C0C82702B87D004E7D70 /* Q3new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q3new.swift; sourceTree = "<group>"; };
-		FAC8C0CA2702B884004E7D70 /* Q4new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4new.swift; sourceTree = "<group>"; };
-		FAC8C0CC2702B88C004E7D70 /* Q5anew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5anew.swift; sourceTree = "<group>"; };
-		FAC8C0CF2702B89B004E7D70 /* Q5bnew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5bnew.swift; sourceTree = "<group>"; };
+		FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4newbad.swift; sourceTree = "<group>"; };
+		FAC8C0CC2702B88C004E7D70 /* Q3new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q3new.swift; sourceTree = "<group>"; };
+		FAC8C0CF2702B89B004E7D70 /* Q5_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +122,11 @@
 			children = (
 				FAC8C0C42702B6AE004E7D70 /* Q1new.swift */,
 				FAC8C0C62702B870004E7D70 /* Q2new.swift */,
-				FAC8C0C82702B87D004E7D70 /* Q3new.swift */,
-				FAC8C0CA2702B884004E7D70 /* Q4new.swift */,
-				FAC8C0CC2702B88C004E7D70 /* Q5anew.swift */,
-				FAC8C0CF2702B89B004E7D70 /* Q5bnew.swift */,
+				FAC8C0CC2702B88C004E7D70 /* Q3new.swift */,
+				FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */,
+				FAC8C0CF2702B89B004E7D70 /* Q5_1.swift */,
+				FA2337DF274C208100C1A7C0 /* Q5_2.swift */,
+				FA2337E1274C675900C1A7C0 /* Q5_3.swift */,
 				FAC8C0C32702B674004E7D70 /* Old diary */,
 				2CC1187824AAAF670055E7E2 /* Q4.swift */,
 				2C5DDA5024AFAA9D00B324CA /* Q4b.swift */,
@@ -183,6 +188,7 @@
 		FAC8C0C32702B674004E7D70 /* Old diary */ = {
 			isa = PBXGroup;
 			children = (
+				FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */,
 				3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */,
 				3C3C4FEE22CD6C97003B8E55 /* Q2.swift */,
 				3C3C4FF022CD6D7C003B8E55 /* Q2ai.swift */,
@@ -324,11 +330,10 @@
 				3C67854422A6BEB500031F1B /* SessionViewController.swift in Sources */,
 				FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */,
 				3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */,
-				FAC8C0C92702B87D004E7D70 /* Q3new.swift in Sources */,
 				3C3C4FF322CD6D8A003B8E55 /* Q2aii.swift in Sources */,
 				2CE61AD924C25C4400553EAC /* Q3b.swift in Sources */,
 				FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */,
-				FAC8C0CD2702B88C004E7D70 /* Q5anew.swift in Sources */,
+				FAC8C0CD2702B88C004E7D70 /* Q3new.swift in Sources */,
 				3C3C4FEB22CD4EAA003B8E55 /* Q1.swift in Sources */,
 				3C11183B22E0FBFF00C15000 /* loginViewController.swift in Sources */,
 				3C1E93FC22BBCE340024240A /* Diary.swift in Sources */,
@@ -338,15 +343,18 @@
 				3C21E35122AEEB9E00003F7D /* Session.swift in Sources */,
 				3C3C4FEF22CD6C97003B8E55 /* Q2.swift in Sources */,
 				3C21E35B22B19B6900003F7D /* AudioStreamList.swift in Sources */,
-				FAC8C0D02702B89B004E7D70 /* Q5bnew.swift in Sources */,
+				FAC8C0D02702B89B004E7D70 /* Q5_1.swift in Sources */,
+				FA2337DE274C1F6F00C1A7C0 /* Q4new.swift in Sources */,
 				3CC2875022C273D40043394C /* InstructionsViewController.swift in Sources */,
 				2CC1187724AAA8CC0055E7E2 /* Q5b.swift in Sources */,
 				2CC1187924AAAF670055E7E2 /* Q4.swift in Sources */,
 				3C3C4FF122CD6D7C003B8E55 /* Q2ai.swift in Sources */,
 				3C21E35322B0039700003F7D /* AudioPlayer.swift in Sources */,
+				FA2337E0274C208100C1A7C0 /* Q5_2.swift in Sources */,
 				3C3C4FFF22CD6E6F003B8E55 /* Q1a.swift in Sources */,
 				2C5DDA5124AFAA9E00B324CA /* Q4b.swift in Sources */,
-				FAC8C0CB2702B884004E7D70 /* Q4new.swift in Sources */,
+				FA2337E2274C675900C1A7C0 /* Q5_3.swift in Sources */,
+				FAC8C0CB2702B884004E7D70 /* Q4newbad.swift in Sources */,
 				3C3C4FF722CD6DA6003B8E55 /* Q2bi.swift in Sources */,
 				3C3C4FF522CD6D9B003B8E55 /* Q2b.swift in Sources */,
 			);
