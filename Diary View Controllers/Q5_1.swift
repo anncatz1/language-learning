@@ -26,18 +26,18 @@ class Q5_1: UIViewController {
         diary.upload()
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
-            //  Display alert
-            let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
-            emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(emptyAlert, animated: true, completion: nil)
-            return false
-        }
-        else {
-            return true
-        }
-    }
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
+//            //  Display alert
+//            let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
+//            emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(emptyAlert, animated: true, completion: nil)
+//            return false
+//        }
+//        else {
+//            return true
+//        }
+//    }
     
     @IBAction func unwindToPreviousQuestion(segue: UIStoryboardSegue) {
         return

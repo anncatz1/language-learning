@@ -34,7 +34,7 @@ struct Diary {
         //diaryData["disturbRating"] = 0
         //diaryData["interruptYN"] = nil
         diaryData["englishHeardYN"] = nil
-        diaryData["numPhrases"] = nil
+        diaryData["numPhrases"] = 0
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil
