@@ -456,14 +456,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Minutes for day:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B58-CT-fxZ">
-                                <rect key="frame" x="38" y="229" width="338.33333333333331" height="39.666666666666686"/>
+                                <rect key="frame" x="38" y="223" width="338.33333333333331" height="39.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-7A-btH">
-                                <rect key="frame" x="219.33333333333334" y="343.66666666666669" width="83.666666666666657" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -474,8 +468,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXP-hh-rND">
-                                <rect key="frame" x="139.33333333333334" y="334" width="35" height="68.333333333333314"/>
+                                <rect key="frame" x="139.33333333333334" y="292.66666666666669" width="35" height="68.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-pd-Cxx">
+                                <rect key="frame" x="66.666666666666686" y="461" width="281" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start Another Session">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueToNextQuestion:" destination="Mws-iC-RzX" eventType="touchUpInside" id="ssU-dZ-xjp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USj-KV-AgY">
+                                <rect key="frame" x="153" y="529" width="108" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="End Day">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueToNextQuestion:" destination="Mws-iC-RzX" eventType="touchUpInside" id="Xff-Ij-93S"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-7A-btH">
+                                <rect key="frame" x="219.33333333333334" y="307.66666666666669" width="83.666666666666657" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -484,19 +504,23 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="Hd4-nv-7Qh" secondAttribute="trailing" constant="42" id="16v-Ek-Nqg"/>
+                            <constraint firstItem="Mke-pd-Cxx" firstAttribute="top" secondItem="EXP-hh-rND" secondAttribute="bottom" constant="100" id="7Rp-KL-vrE"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="JKF-7A-btH" secondAttribute="trailing" constant="111" id="CFC-Cj-xgY"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="HY4-t4-ahz"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" constant="-255" id="Lor-Z2-aIP"/>
+                            <constraint firstItem="USj-KV-AgY" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="MOa-g9-5Wy"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="38" id="OOX-Ah-Pfx"/>
+                            <constraint firstItem="JKF-7A-btH" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="45" id="agB-zZ-J3s"/>
                             <constraint firstItem="EXP-hh-rND" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RTk-1i-D46" secondAttribute="leading" symbolic="YES" id="ajJ-eo-sF5"/>
                             <constraint firstItem="JKF-7A-btH" firstAttribute="leading" secondItem="EXP-hh-rND" secondAttribute="trailing" constant="45" id="cDK-tT-Qcz"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="bottom" secondItem="R0G-Vh-NwQ" secondAttribute="bottom" constant="40" id="cgH-fg-Yee"/>
                             <constraint firstItem="B58-CT-fxZ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="eWm-yO-v3a"/>
-                            <constraint firstItem="B58-CT-fxZ" firstAttribute="top" secondItem="Hd4-nv-7Qh" secondAttribute="bottom" constant="96" id="ffZ-lt-PxT"/>
-                            <constraint firstItem="EXP-hh-rND" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" id="pov-55-lrG"/>
+                            <constraint firstItem="B58-CT-fxZ" firstAttribute="top" secondItem="Hd4-nv-7Qh" secondAttribute="bottom" constant="90" id="ffZ-lt-PxT"/>
+                            <constraint firstItem="EXP-hh-rND" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="30" id="iq1-8C-c0g"/>
+                            <constraint firstItem="Mke-pd-Cxx" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="lDV-gv-RgG"/>
                             <constraint firstItem="JKF-7A-btH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RTk-1i-D46" secondAttribute="leading" symbolic="YES" id="t35-dR-sc0"/>
-                            <constraint firstItem="JKF-7A-btH" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" id="tYh-sF-pFe"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="viX-X3-nPE"/>
+                            <constraint firstItem="USj-KV-AgY" firstAttribute="top" secondItem="Mke-pd-Cxx" secondAttribute="bottom" constant="20" id="yIy-ps-tRj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="32D-rs-pze"/>
@@ -743,7 +767,7 @@
         <!--Q5_1-->
         <scene sceneID="XDT-HP-jFZ">
             <objects>
-                <viewController title="Q5_1" modalPresentationStyle="fullScreen" id="Dvz-lI-7sT" customClass="Q5_1" sceneMemberID="viewController">
+                <viewController title="Q5_1" modalPresentationStyle="fullScreen" id="Dvz-lI-7sT" customClass="Q5_1" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jb9-lB-Hae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -762,7 +786,6 @@
                                 </state>
                                 <connections>
                                     <action selector="continueToNextQuestion:" destination="Dvz-lI-7sT" eventType="touchUpInside" id="dnd-QI-MAQ"/>
-                                    <action selector="continueToNextQuestion:" destination="2rl-8a-laL" eventType="touchUpInside" id="vvJ-TW-K21"/>
                                     <segue destination="L99-8b-K5o" kind="show" id="78X-1P-5dv"/>
                                 </connections>
                             </button>
@@ -797,14 +820,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoN-Mm-tcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="2rl-8a-laL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4812" y="1201"/>
         </scene>
         <!--Q3new-->
         <scene sceneID="THa-IG-h8L">
             <objects>
-                <viewController title="Q3new" modalPresentationStyle="fullScreen" id="bdl-y5-q1e" customClass="Q3new" sceneMemberID="viewController">
+                <viewController title="Q3new" modalPresentationStyle="fullScreen" id="bdl-y5-q1e" customClass="Q3new" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJR-O2-U8g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -944,7 +966,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="EHv-LT-Huc"/>
                     <connections>
-                        <outlet property="continueToNextQuestion" destination="F8j-yJ-JDa" id="kYA-F2-k3P"/>
                         <outlet property="responseField" destination="iEt-Sw-GdB" id="T1O-en-BON"/>
                     </connections>
                 </viewController>
@@ -1069,13 +1090,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPo-fL-zjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6291" y="1201"/>
+            <point key="canvasLocation" x="6289.8550724637689" y="1200.8152173913045"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VTl-3H-Q6f"/>
         <segue reference="6Jw-9s-4nb"/>
-        <segue reference="KZD-pL-Sws"/>
+        <segue reference="giO-hV-Q4k"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="donotdisturb" width="512" height="512"/>
