@@ -58,6 +58,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8i0-zE-oMh" secondAttribute="trailing" constant="40" id="zxW-81-RuC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wBa-AC-ggT"/>
                     <connections>
                         <outlet property="endButton" destination="mZq-m6-ywu" id="arK-Mw-fd0"/>
                         <outlet property="startOrRestartButton" destination="8i0-zE-oMh" id="G54-Sy-SCg"/>
@@ -480,17 +481,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="continueToNextQuestion:" destination="Mws-iC-RzX" eventType="touchUpInside" id="ssU-dZ-xjp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USj-KV-AgY">
-                                <rect key="frame" x="153" y="529" width="108" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="End Day">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="continueToNextQuestion:" destination="Mws-iC-RzX" eventType="touchUpInside" id="Xff-Ij-93S"/>
+                                    <action selector="startAnotherSession:" destination="6Vy-af-k0e" eventType="touchUpInside" id="KkB-lN-f48"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="startAnotherSession" id="EvE-EZ-gcj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-7A-btH">
@@ -504,23 +496,20 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="Hd4-nv-7Qh" secondAttribute="trailing" constant="42" id="16v-Ek-Nqg"/>
+                            <constraint firstItem="EXP-hh-rND" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="139.33333333333334" id="3O9-hX-nIi"/>
                             <constraint firstItem="Mke-pd-Cxx" firstAttribute="top" secondItem="EXP-hh-rND" secondAttribute="bottom" constant="100" id="7Rp-KL-vrE"/>
-                            <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="JKF-7A-btH" secondAttribute="trailing" constant="111" id="CFC-Cj-xgY"/>
+                            <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="JKF-7A-btH" secondAttribute="trailing" constant="111" id="FAH-uP-Qqn"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="HY4-t4-ahz"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" constant="-255" id="Lor-Z2-aIP"/>
-                            <constraint firstItem="USj-KV-AgY" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="MOa-g9-5Wy"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="38" id="OOX-Ah-Pfx"/>
                             <constraint firstItem="JKF-7A-btH" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="45" id="agB-zZ-J3s"/>
-                            <constraint firstItem="EXP-hh-rND" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RTk-1i-D46" secondAttribute="leading" symbolic="YES" id="ajJ-eo-sF5"/>
-                            <constraint firstItem="JKF-7A-btH" firstAttribute="leading" secondItem="EXP-hh-rND" secondAttribute="trailing" constant="45" id="cDK-tT-Qcz"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="bottom" secondItem="R0G-Vh-NwQ" secondAttribute="bottom" constant="40" id="cgH-fg-Yee"/>
                             <constraint firstItem="B58-CT-fxZ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="eWm-yO-v3a"/>
                             <constraint firstItem="B58-CT-fxZ" firstAttribute="top" secondItem="Hd4-nv-7Qh" secondAttribute="bottom" constant="90" id="ffZ-lt-PxT"/>
                             <constraint firstItem="EXP-hh-rND" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="30" id="iq1-8C-c0g"/>
                             <constraint firstItem="Mke-pd-Cxx" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="lDV-gv-RgG"/>
-                            <constraint firstItem="JKF-7A-btH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RTk-1i-D46" secondAttribute="leading" symbolic="YES" id="t35-dR-sc0"/>
+                            <constraint firstItem="JKF-7A-btH" firstAttribute="leading" secondItem="EXP-hh-rND" secondAttribute="trailing" constant="45" id="ncX-dd-2U4"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="viX-X3-nPE"/>
-                            <constraint firstItem="USj-KV-AgY" firstAttribute="top" secondItem="Mke-pd-Cxx" secondAttribute="bottom" constant="20" id="yIy-ps-tRj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="32D-rs-pze"/>
@@ -1094,9 +1083,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VTl-3H-Q6f"/>
+        <segue reference="DHe-Rt-MCK"/>
         <segue reference="6Jw-9s-4nb"/>
         <segue reference="giO-hV-Q4k"/>
+        <segue reference="EvE-EZ-gcj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="donotdisturb" width="512" height="512"/>

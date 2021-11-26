@@ -29,20 +29,14 @@ class SessionCompletedViewController: UIViewController {
     var confirmedLogOut = false
     
     @IBOutlet weak var bodyText: UILabel!
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        bodyText.delegate = self //Without setting the delegate you won't be able to track UITextView events
-//    }
-//
-//    func textViewDidChange(_ textView: UITextView) { //Handle the text changes here
-//        print(textView.text); //the textView parameter is the textView where text was changed
-//    }
     
     func changeText(_ textView: UILabel){
         let num = Int(diary.diaryData["timeForSession"] as! Double)
-        //num = Int(num)
         textView.text = String(num)
+    }
+    
+    @IBAction func startAnotherSession(_ sender: Any) {
+        self.performSegue(withIdentifier: "startAnotherSession", sender: sender)
     }
     
     @IBAction func logOut(_ sender: UIButton) {
@@ -75,7 +69,10 @@ class SessionCompletedViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "logOutSegue" && self.confirmedLogOut == true {
+        if identifier == "startAnotherSession" && self.confirmedLogOut == true {
+            return true
+        }
+        else if identifier == "logOutSegue" && self.confirmedLogOut == false {
             return true
         }
         return false
