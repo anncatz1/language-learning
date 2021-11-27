@@ -22,7 +22,7 @@ class Q4new: UIViewController {
         guard responseField.text != nil && responseField.text != "" else {
             return
         }
-        diary.diaryData["numPhrases"] = Int(responseField.text!)
+        diary.diaryData["numPhrases"] = responseField.text!
         diary.upload()
     }
     

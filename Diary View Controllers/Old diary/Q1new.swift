@@ -22,7 +22,7 @@ class Q1new: UIViewController {
         guard minutesField.text != nil && minutesField.text != "" else {
             return
         }
-        diary.diaryData["streamMinsReported"] = Int(minutesField.text!)
+        diary.diaryData["streamMinsReported"] = minutesField.text!
         diary.upload()
     }
     

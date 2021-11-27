@@ -31,10 +31,10 @@ class Session {
         diary.diaryData["numberOfPauses"] = 0
         diary.diaryData["timesPressedPause"] = [Date]()
         diary.diaryData["timesPressedContinue"] = [Date]()
-        diary.diaryData["streamMinsReported"] = 0
+        diary.diaryData["streamMinsReported"] = nil
         diary.diaryData["activity"] = nil
         diary.diaryData["englishHeardYN"] = nil
-        diary.diaryData["numPhrases"] = 0
+        diary.diaryData["numPhrases"] = nil
         diary.diaryData["englishPhrase1"] = nil
         diary.diaryData["englishPhrase2"] = nil
         diary.diaryData["englishPhrase3"] = nil
@@ -46,7 +46,7 @@ class Session {
         diary.diaryData["issuesWithAppYN"] = nil
         diary.diaryData["issuesWithApp"] = nil
         diary.diaryData["audioFile"] = nil
-        diary.diaryData["timeForSession"] = nil
+        diary.diaryData["timeForSession"] = 0.0
         
         diary.diaryData["timeWhenStart"] = Date()
         diary.upload()
