@@ -22,8 +22,8 @@ struct Diary {
     init() {
         diaryData = [String: Any]()
         // Initialize the values
-        diaryData["timeWhenAsleep"] = nil
-        diaryData["timeWhenAwake"] = nil
+        diaryData["timeStart"] = nil
+        diaryData["timeEnd"] = nil
         diaryData["volumes"] = [Float]()
         diaryData["timesRecordVolume"] = [Date]()
         diaryData["numberOfPauses"] = 0

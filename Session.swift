@@ -34,11 +34,36 @@ class Session {
         sessionRunning = true
         diary.diaryDate = diary.getDate()
         diary.diaryDateTime = diary.getDateTime()
-        diary.diaryData["timeWhenAsleep"] = Date()
+        
+        //reset diary data
+        diary.diaryData["timeWhenAsleep"] = nil
+        diary.diaryData["timeWhenAwake"] = nil
+        diary.diaryData["volumes"] = [Float]()
+        diary.diaryData["timesRecordVolume"] = [Date]()
+        diary.diaryData["numberOfPauses"] = 0
+        diary.diaryData["timesPressedPause"] = [Date]()
+        diary.diaryData["timesPressedContinue"] = [Date]()
+        diary.diaryData["streamMinsReported"] = 0
+        diary.diaryData["activity"] = nil
+        diary.diaryData["englishHeardYN"] = nil
+        diary.diaryData["numPhrases"] = 0
+        diary.diaryData["englishPhrase1"] = nil
+        diary.diaryData["englishPhrase2"] = nil
+        diary.diaryData["englishPhrase3"] = nil
+        diary.diaryData["englishSpeaker1"] = nil
+        diary.diaryData["englishSpeaker2"] = nil
+        diary.diaryData["englishSpeaker3"] = nil
+        diary.diaryData["issuesWithVolumeYN"] = nil
+        diary.diaryData["issuesWithVolume"] = nil
+        diary.diaryData["issuesWithAppYN"] = nil
+        diary.diaryData["issuesWithApp"] = nil
+        diary.diaryData["audioFile"] = nil
+        diary.diaryData["timeForSession"] = nil
+        
+        diary.diaryData["timeStart"] = Date()
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
-        sessionRunning = true
         audioPlayer.loadAudioToStartSession()
         audioPlayer.playAudio(recordVol: true)
     }
@@ -47,11 +72,15 @@ class Session {
         audioPlayer.stopAudio(recordVol : true)
         sessionRunning = false
         let date1 = Date()
-        diary.diaryData["timeWhenAwake"] = date1
+        diary.diaryData["timeEnd"] = date1
         diary.upload()
+        
+        // time for session
         var elapsed = date1.timeIntervalSince(diary.diaryData["timeWhenAsleep"] as! Date)
         elapsed = elapsed/60
+        elapsed = round(elapsed * 100) / 100.0
         diary.diaryData["timeForSession"] = elapsed
+        
         diary.upload()
     }
     
