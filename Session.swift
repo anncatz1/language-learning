@@ -17,18 +17,6 @@ class Session {
     // is the participant asleep
     var sessionRunning = false
     var sessionPaused = false
-    //var timeSession = 0
-    
-//    func getTimeInterval(time2 : Date) -> TimeInterval{
-//        let formatter = DateComponentsFormatter()
-//        formatter.allowedUnits = [.minute]
-//        let time1 = diary.diaryData["timeWhenAsleep"]
-//        //let time2 = Date()
-//        let timeint = time2.timeIntervalSince(time1 as! Date)
-//        //print(time1, time2, timeint)
-//        return timeint
-      //getTimeInterval(time2 : diary.diaryData["timeWhenAwake"] as! Date)
-//    }
     
     func beginSession() {
         sessionRunning = true
@@ -60,7 +48,7 @@ class Session {
         diary.diaryData["audioFile"] = nil
         diary.diaryData["timeForSession"] = nil
         
-        diary.diaryData["timeStart"] = Date()
+        diary.diaryData["timeWhenStart"] = Date()
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
@@ -72,15 +60,16 @@ class Session {
         audioPlayer.stopAudio(recordVol : true)
         sessionRunning = false
         let date1 = Date()
-        diary.diaryData["timeEnd"] = date1
+        diary.diaryData["timeWhenEnd"] = date1
         diary.upload()
         
         // time for session
-        var elapsed = date1.timeIntervalSince(diary.diaryData["timeWhenAsleep"] as! Date)
+        var elapsed = date1.timeIntervalSince(diary.diaryData["timeWhenStart"] as! Date)
         elapsed = elapsed/60
         elapsed = round(elapsed * 100) / 100.0
         diary.diaryData["timeForSession"] = elapsed
         
+        diary.diaryData["totalTimeForDay"] = (diary.diaryData["totalTimeForDay"] as! Double) + elapsed
         diary.upload()
     }
     

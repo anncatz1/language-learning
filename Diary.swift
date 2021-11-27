@@ -29,12 +29,12 @@ struct Diary {
         diaryData["numberOfPauses"] = 0
         diaryData["timesPressedPause"] = [Date]()
         diaryData["timesPressedContinue"] = [Date]()
-        diaryData["streamMinsReported"] = 0
+        diaryData["streamMinsReported"] = nil
         diaryData["activity"] = nil
         //diaryData["disturbRating"] = 0
         //diaryData["interruptYN"] = nil
         diaryData["englishHeardYN"] = nil
-        diaryData["numPhrases"] = 0
+        diaryData["numPhrases"] = nil
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil
@@ -46,8 +46,8 @@ struct Diary {
         diaryData["issuesWithAppYN"] = nil
         diaryData["issuesWithApp"] = nil
         diaryData["audioFile"] = nil
-        diaryData["timeForSession"] = nil
-        diaryData["totalTimeForDay"] = nil
+        diaryData["timeForSession"] = 0.0
+        diaryData["totalTimeForDay"] = 0.0
         diaryDate = ""
         diaryDateTime = ""
         //diaryDate = ""
@@ -89,48 +89,6 @@ struct Diary {
         dateFormatter.locale = Locale(identifier: "en_US")
         return dateFormatter.string(from: todaysDate)
     }
-    
-//    internal func getTime() -> String {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.timeStyle = .short
-//
-//        let todaysDate = Date()
-//
-//        // US English Locale (en_US)
-//        dateFormatter.locale = Locale(identifier: "en_US")
-//        return dateFormatter.string(from: todaysDate)
-//    }
-    
-    // Changes document name - not used
-//    func dayChange(){
-//        let Database = Firestore.firestore()
-//
-//        //  Get user ID, add data to the appropriate collection corresponding to the user ID
-//        //  User ID can be found in "Subjects -> [UserEmail] -> ID"
-//        guard let userEmail = Auth.auth().currentUser?.email else {
-//            print("No User Email")
-//            return
-//        }
-//        let userInfoDocRef = Database.collection("Subjects").document(userEmail)
-//        userInfoDocRef.getDocument { (document, error) in
-//            if let document = document, document.exists {
-//                //  Find day number
-//                let dayNum = document.data()!["dayNum"] as! Int + 1
-//                //  Change day number for each new session
-//                userInfoDocRef.updateData(
-//                ["dayNum" : dayNum]) { err in
-//                    if let err = err {
-//                        print("Error adding document: \(err)")
-//                    } else {
-//                        print("Document added")
-//                    }
-//                }
-//            }
-//            else {
-//                print("User document does not exist")
-//            }
-//        }
-//    }
     
     // Uploads all the filled out fields in the diary to the server
     func upload() {

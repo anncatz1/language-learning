@@ -31,7 +31,7 @@ class SessionCompletedViewController: UIViewController {
     @IBOutlet weak var bodyText: UILabel!
     
     func changeText(_ textView: UILabel){
-        let num = Int(diary.diaryData["timeForSession"] as! Double)
+        let num = Int(diary.diaryData["totalTimeForDay"] as! Double)
         textView.text = String(num)
     }
     
