@@ -16,17 +16,7 @@ class Q1new: UIViewController {
         return .lightContent
     }
     
-    
-    //@IBOutlet weak var hoursField: UITextField!
     @IBOutlet weak var minutesField: UITextField!
-    
-//    @IBAction func enterInfo(_ sender: Any) {
-//        guard hoursField.text != nil && hoursField.text != "" else {
-//            return
-//        }
-//        diary.diaryData["streamHours"] = Int(hoursField.text!)
-//        diary.upload()
-//    }
     
     @IBAction func continueToNextQuestion(_ sender: Any) {
         guard minutesField.text != nil && minutesField.text != "" else {

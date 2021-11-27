@@ -18,11 +18,14 @@ class Q5_2: UIViewController {
     
     @IBOutlet weak var responseField: UITextField!
     
+    @IBOutlet weak var response2Field: UITextField!
+    
     @IBAction func continueToNextQuestion(_ sender: Any) {
         guard responseField.text != nil && responseField.text != "" else {
             return
         }
         diary.diaryData["englishPhrase2"] = responseField.text!
+        diary.diaryData["englishSpeaker2"] = response2Field.text!
         diary.upload()
     }
     

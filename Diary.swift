@@ -38,6 +38,9 @@ struct Diary {
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil
+        diaryData["englishSpeaker1"] = nil
+        diaryData["englishSpeaker2"] = nil
+        diaryData["englishSpeaker3"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
