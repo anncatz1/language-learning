@@ -32,6 +32,8 @@ class Session {
     
     func beginSession() {
         sessionRunning = true
+        diary.diaryDate = diary.getDate()
+        diary.diaryDateTime = diary.getDateTime()
         diary.diaryData["timeWhenAsleep"] = Date()
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
