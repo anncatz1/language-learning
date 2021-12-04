@@ -45,7 +45,6 @@ class Session {
         diary.diaryData["issuesWithVolume"] = nil
         diary.diaryData["issuesWithAppYN"] = nil
         diary.diaryData["issuesWithApp"] = nil
-        diary.diaryData["audioFile"] = nil
         diary.diaryData["timeForSession"] = 0.0
         
         diary.diaryData["timeWhenStart"] = Date()
