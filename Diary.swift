@@ -18,12 +18,13 @@ struct Diary {
     var diaryData: [String: Any]
     var diaryDate: String
     var diaryDateTime: String
+    var diarydayNum: Int
     
     init() {
         diaryData = [String: Any]()
         // Initialize the values
-        diaryData["timeStart"] = nil
-        diaryData["timeEnd"] = nil
+        diaryData["timeWhenStart"] = nil
+        diaryData["timeWhenEnd"] = nil
         diaryData["volumes"] = [Float]()
         diaryData["timesRecordVolume"] = [Date]()
         diaryData["numberOfPauses"] = 0
@@ -50,6 +51,7 @@ struct Diary {
         diaryData["totalTimeForDay"] = 0.0
         diaryDate = ""
         diaryDateTime = ""
+        diarydayNum = 1
         //diaryDate = ""
 //        diaryData["numberOfRestarts"] = 0
 //        diaryData["timesPressedRestart"] = [Date]()
@@ -62,6 +64,35 @@ struct Diary {
 //        diaryData["languageHeardWhileAsleep"] = nil
 //        diaryData["headphonesStayedIn"] = nil
 //        diaryData["phoneLocation"] = nil
+    }
+    
+    mutating func resetInfo(resetDay : Bool){
+        //reset diary data
+        diaryData["timeWhenStart"] = nil
+        diaryData["timeWhenEnd"] = nil
+        diaryData["volumes"] = [Float]()
+        diaryData["timesRecordVolume"] = [Date]()
+        diaryData["numberOfPauses"] = 0
+        diaryData["timesPressedPause"] = [Date]()
+        diaryData["timesPressedContinue"] = [Date]()
+        diaryData["streamMinsReported"] = nil
+        diaryData["activity"] = nil
+        diaryData["englishHeardYN"] = nil
+        diaryData["numPhrases"] = nil
+        diaryData["englishPhrase1"] = nil
+        diaryData["englishPhrase2"] = nil
+        diaryData["englishPhrase3"] = nil
+        diaryData["englishSpeaker1"] = nil
+        diaryData["englishSpeaker2"] = nil
+        diaryData["englishSpeaker3"] = nil
+        diaryData["issuesWithVolumeYN"] = nil
+        diaryData["issuesWithVolume"] = nil
+        diaryData["issuesWithAppYN"] = nil
+        diaryData["issuesWithApp"] = nil
+        diaryData["timeForSession"] = 0.0
+        if (resetDay){
+            diaryData["totalTimeForDay"] = 0.0
+        }
     }
     
     //  Helper function that returns the date as a string -- to be used as the
@@ -108,11 +139,12 @@ struct Diary {
             if let document = document, document.exists {
                 //  Find user ID
                 let userID = (document.data()!["ID"] as! String)
+                let collectionName = "Day " + String(diary.diarydayNum)
                 //  Find day number
                 //let dayNum = document.data()!["dayNum"]
                 //let dayNumS = "\(dayNum ?? "")"
                 //  Store diary data in the collection titled with the user ID in a document with the day number as the title
-                let collection1 = Database.collection(userID).document(self.diaryDate).collection("Day Collection");
+                let collection1 = Database.collection(userID).document(self.diaryDate).collection(collectionName);
                 collection1.document(self.diaryDateTime).setData(self.diaryData) { err in
                     if let err = err {
                         print("Error adding document: \(err)")

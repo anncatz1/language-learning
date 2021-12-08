@@ -22,31 +22,7 @@ class Session {
         sessionRunning = true
         diary.diaryDate = diary.getDate()
         diary.diaryDateTime = diary.getDateTime()
-        
-        //reset diary data
-        diary.diaryData["timeWhenAsleep"] = nil
-        diary.diaryData["timeWhenAwake"] = nil
-        diary.diaryData["volumes"] = [Float]()
-        diary.diaryData["timesRecordVolume"] = [Date]()
-        diary.diaryData["numberOfPauses"] = 0
-        diary.diaryData["timesPressedPause"] = [Date]()
-        diary.diaryData["timesPressedContinue"] = [Date]()
-        diary.diaryData["streamMinsReported"] = nil
-        diary.diaryData["activity"] = nil
-        diary.diaryData["englishHeardYN"] = nil
-        diary.diaryData["numPhrases"] = nil
-        diary.diaryData["englishPhrase1"] = nil
-        diary.diaryData["englishPhrase2"] = nil
-        diary.diaryData["englishPhrase3"] = nil
-        diary.diaryData["englishSpeaker1"] = nil
-        diary.diaryData["englishSpeaker2"] = nil
-        diary.diaryData["englishSpeaker3"] = nil
-        diary.diaryData["issuesWithVolumeYN"] = nil
-        diary.diaryData["issuesWithVolume"] = nil
-        diary.diaryData["issuesWithAppYN"] = nil
-        diary.diaryData["issuesWithApp"] = nil
-        diary.diaryData["timeForSession"] = 0.0
-        
+        diary.resetInfo(resetDay: false)
         diary.diaryData["timeWhenStart"] = Date()
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
@@ -56,7 +32,7 @@ class Session {
     }
     
     func endSession() {
-        audioPlayer.stopAudio(recordVol : true)
+        audioPlayer.stopAudio(recordVol: true)
         sessionRunning = false
         let date1 = Date()
         diary.diaryData["timeWhenEnd"] = date1
@@ -70,6 +46,12 @@ class Session {
         
         diary.diaryData["totalTimeForDay"] = (diary.diaryData["totalTimeForDay"] as! Double) + elapsed
         diary.upload()
+    }
+    
+    func endDay()
+    {
+        diary.diarydayNum = diary.diarydayNum + 1
+        diary.resetInfo(resetDay : true)
     }
     
 //    func restart() {

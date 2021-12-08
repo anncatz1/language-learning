@@ -37,13 +37,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZq-m6-ywu">
-                                <rect key="frame" x="40" y="657" width="334" height="39"/>
+                                <rect key="frame" x="40" y="539" width="334" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Press Here to End Session">
+                                <state key="normal" title="Stop (End segment)">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="endSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="byz-7X-S8e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPW-Zx-bjj">
+                                <rect key="frame" x="40" y="653" width="334" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="End Day">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="endDaySegment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Duj-Pe-kQD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,16 +61,21 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8i0-zE-oMh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="6mi-ci-GZk"/>
+                            <constraint firstItem="KPW-Zx-bjj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="92f-Lb-WW3"/>
+                            <constraint firstItem="KPW-Zx-bjj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="CUb-64-Ql2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mZq-m6-ywu" secondAttribute="trailing" constant="40" id="EFB-rr-3Om"/>
                             <constraint firstItem="8i0-zE-oMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HDZ-5k-2EM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mZq-m6-ywu" secondAttribute="bottom" constant="40" id="HXl-6s-Upg"/>
+                            <constraint firstItem="KPW-Zx-bjj" firstAttribute="top" secondItem="mZq-m6-ywu" secondAttribute="bottom" constant="75" id="Lgi-QP-5g8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KPW-Zx-bjj" secondAttribute="trailing" id="QnG-1D-jxa"/>
                             <constraint firstItem="mZq-m6-ywu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="bxP-rJ-b6e"/>
+                            <constraint firstItem="mZq-m6-ywu" firstAttribute="top" secondItem="8i0-zE-oMh" secondAttribute="bottom" constant="145" id="kov-fq-lYo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8i0-zE-oMh" secondAttribute="trailing" constant="40" id="zxW-81-RuC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wBa-AC-ggT"/>
                     <connections>
                         <outlet property="endButton" destination="mZq-m6-ywu" id="arK-Mw-fd0"/>
+                        <outlet property="endDayButton" destination="KPW-Zx-bjj" id="ILg-5q-fTt"/>
                         <outlet property="startOrRestartButton" destination="8i0-zE-oMh" id="G54-Sy-SCg"/>
                     </connections>
                 </viewController>
@@ -76,8 +91,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long did you listen to the stream for? (Give your best estimate of the total time.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxU-E5-FQp">
-                                <rect key="frame" x="40" y="40" width="334" height="157.66666666666666"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long did you think you listened to the streaming? (Give your best estimate of the total time.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxU-E5-FQp">
+                                <rect key="frame" x="40" y="40" width="334" height="197"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
