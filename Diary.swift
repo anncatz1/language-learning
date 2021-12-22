@@ -32,7 +32,6 @@ struct Diary {
         diaryData["timesPressedContinue"] = [Date]()
         diaryData["streamMinsReported"] = nil
         diaryData["activity"] = nil
-        //diaryData["disturbRating"] = 0
         //diaryData["interruptYN"] = nil
         diaryData["englishHeardYN"] = nil
         diaryData["numPhrases"] = nil
@@ -140,9 +139,6 @@ struct Diary {
                 //  Find user ID
                 let userID = (document.data()!["ID"] as! String)
                 let collectionName = "Day " + String(diary.diarydayNum)
-                //  Find day number
-                //let dayNum = document.data()!["dayNum"]
-                //let dayNumS = "\(dayNum ?? "")"
                 //  Store diary data in the collection titled with the user ID in a document with the day number as the title
                 let collection1 = Database.collection(userID).document(self.diaryDate).collection(collectionName);
                 collection1.document(self.diaryDateTime).setData(self.diaryData) { err in

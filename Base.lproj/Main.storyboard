@@ -43,7 +43,7 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="endSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="byz-7X-S8e"/>
+                                    <action selector="endSegment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kr4-Kk-gSg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPW-Zx-bjj">
@@ -53,7 +53,7 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="endDaySegment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Duj-Pe-kQD"/>
+                                    <action selector="endDay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1D-Mp-5Xm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,8 +74,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="wBa-AC-ggT"/>
                     <connections>
-                        <outlet property="endButton" destination="mZq-m6-ywu" id="arK-Mw-fd0"/>
                         <outlet property="endDayButton" destination="KPW-Zx-bjj" id="ILg-5q-fTt"/>
+                        <outlet property="endSegmentButton" destination="mZq-m6-ywu" id="9Kd-Ig-0qy"/>
                         <outlet property="startOrRestartButton" destination="8i0-zE-oMh" id="G54-Sy-SCg"/>
                     </connections>
                 </viewController>

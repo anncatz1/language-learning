@@ -54,16 +54,6 @@ class Session {
         diary.resetInfo(resetDay : true)
     }
     
-//    func restart() {
-//        if audioPlayer.restartAudio() {
-//            // Because diaryData has the type [String: Any], in order to manipulate the value
-//            // they have to be cast to their correct type
-//            diary.diaryData["numberOfRestarts"] = diary.diaryData["numberOfRestarts"] as! Int + 1
-//            diary.diaryData["timesPressedRestart"] = (diary.diaryData["timesPressedRestart"] as! [Date]) + [Date()]
-//            diary.upload()
-//        }
-//    }
-    
     func continuePlay() {
         audioPlayer.playAudio(recordVol: true)
         // Because diaryData has the type [String: Any], in order to manipulate the value
@@ -83,3 +73,13 @@ class Session {
         diary.upload()
     }
 }
+
+//    func restart() {
+//        if audioPlayer.restartAudio() {
+//            // Because diaryData has the type [String: Any], in order to manipulate the value
+//            // they have to be cast to their correct type
+//            diary.diaryData["numberOfRestarts"] = diary.diaryData["numberOfRestarts"] as! Int + 1
+//            diary.diaryData["timesPressedRestart"] = (diary.diaryData["timesPressedRestart"] as! [Date]) + [Date()]
+//            diary.upload()
+//        }
+//    }

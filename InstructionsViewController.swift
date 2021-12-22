@@ -26,10 +26,10 @@ class InstructionsViewController: UIPageViewController, UIPageViewControllerData
         let sb = UIStoryboard(name: "Main", bundle: nil)
         //  Pages:
         //let chargeVC = sb.instantiateViewController(withIdentifier: "chargeInstructionVC")
-        let wifiVC = sb.instantiateViewController(withIdentifier: "wifiInstructionVC")
+        //let wifiVC = sb.instantiateViewController(withIdentifier: "wifiInstructionVC")
         let dndVC = sb.instantiateViewController(withIdentifier: "doNotDisturbInstructionVC")
         //let volumeVC = sb.instantiateViewController(withIdentifier: "volumeInstructionVC")
-        return [wifiVC, dndVC]
+        return [dndVC]
     }()
 
     override func viewDidLoad() {

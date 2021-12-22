@@ -22,7 +22,7 @@ import FirebaseFirestore
 //  set the stream list correspondingly
 var assignedLanguage: String = ""
 //var assignedSound: String = ""
-var assignedWhiteNoise: String = ""
+//var assignedWhiteNoise: String = ""
 var audioOffset: Int? = 0
 
 //  This function sets the assigned language field. This function uses closures
@@ -43,8 +43,8 @@ func setAssignedLanguage() {
     userInfoDocRef.getDocument { (document, error) in
         if let document = document, document.exists {
             assignedLanguage = (document.data()!["language"] as! String)
-            assignedWhiteNoise = (document.data()!["whitenoise"] as! String) //if yes, there is white noise; no means it's silent
-            audioOffset = Int(document.data()!["offset"] as! String)
+            //assignedWhiteNoise = (document.data()!["whitenoise"] as! String) //if yes, there is white noise; no means it's silent
+            //audioOffset = Int(document.data()!["offset"] as! String)
             if audioOffset == nil { fatalError("Invalid audio offset") }
         }
         else {
@@ -250,19 +250,19 @@ var languageAudioStreamList: [String] {
     }
 }*/
 
-var WhiteOrSilent: String {
-    get {
-        if assignedWhiteNoise.lowercased() == "yes" {
-            return "whitenoiseaudio.mp3"
-        }
-        else if assignedWhiteNoise.lowercased() == "no" {
-            return "5-minutes-of-silence.m4a"
-        }
-        else {
-            fatalError("Error: Invalid Sound. No audio will be played.")
-        }
-    }
-}
+//var WhiteOrSilent: String {
+//    get {
+//        if assignedWhiteNoise.lowercased() == "yes" {
+//            return "whitenoiseaudio.mp3"
+//        }
+//        else if assignedWhiteNoise.lowercased() == "no" {
+//            return "5-minutes-of-silence.m4a"
+//        }
+//        else {
+//            fatalError("Error: Invalid Sound. No audio will be played.")
+//        }
+//    }
+//}
 
 //  For testing add "test/" at the end of the server, but make sure to change it back
 //  afterwards. The test folder includes very short single sound audio files for you
@@ -279,21 +279,21 @@ let languageAudioURLList: [URL] = languageAudioStreamList.map {
     URL(string: server + $0)!
 }
 
-let whiteOrSilentAudio5minsURL = URL(string: server + WhiteOrSilent)!
-let whiteOrSilentURLList: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: audioOffset!/5)
-let whiteOrSilentAudioURLList20min: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: 4)
-let whiteOrSilentAudioURLList40min: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: 8)
+//let whiteOrSilentAudio5minsURL = URL(string: server + WhiteOrSilent)!
+//let whiteOrSilentURLList: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: audioOffset!/5)
+//let whiteOrSilentAudioURLList20min: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: 4)
+//let whiteOrSilentAudioURLList40min: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: 8)
 
-//old
-let blankAudio5minsURL = URL(string: server + "5-minutes-of-silence.m4a")!
-let whiteNoise5minsURL = URL(string: server + "whitenoiseaudio.mp3")!
-let blankAudio20minsURL = URL(string: server + "20-minutes-of-silence.m4a")!
+////old
+//let blankAudio5minsURL = URL(string: server + "5-minutes-of-silence.m4a")!
+//let whiteNoise5minsURL = URL(string: server + "whitenoiseaudio.mp3")!
+//let blankAudio20minsURL = URL(string: server + "20-minutes-of-silence.m4a")!
 let blankAudio40minsURL = URL(string: server + "40-minutes-of-silence.m4a")!
 //let soundAudio5minsURL = URL(string: server + sound5minFile)!
 
-let startBlankAudioURLList: [URL] = [URL](repeating: blankAudio5minsURL, count: audioOffset!/5)
+//let startBlankAudioURLList: [URL] = [URL](repeating: blankAudio5minsURL, count: audioOffset!/5)
 //let startSoundAudioURLList: [URL] = [URL](repeating: soundAudio5minsURL, count: audioOffset!/5)
-let whiteNoiseAudioURLList: [URL] = [URL](repeating: whiteNoise5minsURL, count: audioOffset!/5)
+//let whiteNoiseAudioURLList: [URL] = [URL](repeating: whiteNoise5minsURL, count: audioOffset!/5)
 //let startSoundAudioURLList20min: [URL] = [URL](repeating: soundAudio5minsURL, count: 4)
 //let whiteNoiseAudioURLList20min: [URL] = [URL](repeating: whiteNoise5minsURL, count: 4)
 // end of old

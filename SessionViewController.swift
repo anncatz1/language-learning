@@ -102,18 +102,18 @@ class SessionViewController: UIViewController {
             if !currentSession.sessionPaused{
                 startOrRestartButton.setTitle("Pause", for: UIControl.State.normal)
                 startOrRestartButton.setTitleColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), for: UIControl.State.normal)
-                endSegmentButton.isEnabled = true
+                endSegmentButton.isEnabled = true // END SEGMENT BUTTON
                 endSegmentButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
-                endDayButton.isEnabled = true
+                endDayButton.isEnabled = true // END DAY BUTTON
                 endDayButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
             }
             // in session want start again
             else {
                 startOrRestartButton.setTitle("Continue", for: UIControl.State.normal)
                 startOrRestartButton.setTitleColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), for: UIControl.State.normal)
-                endSegmentButton.isEnabled = true
+                endSegmentButton.isEnabled = true // END SEGMENT BUTTON
                 endSegmentButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
-                endDayButton.isEnabled = true
+                endDayButton.isEnabled = true // END DAY BUTTON
                 endDayButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
             }
         }
