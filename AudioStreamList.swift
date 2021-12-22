@@ -56,7 +56,7 @@ func setAssignedLanguage() {
 //  Create the audio stream list filled with the assigned language audio files.
 //  IMPORTANT: If audio files on the server are changed, this chunk of code has to
 //  be update. Pay attention to extensions (m4a, mp4, mp3, etc.).
-func getLangAudioStreamList(String: serverName) -> [URL] {
+func getLangAudioStreamList(serverName : String) -> [URL] {
     //get {
     var listAudio = [String]()
     if assignedLanguage.lowercased() == "mandarin" {
@@ -222,8 +222,7 @@ func getLangAudioStreamList(String: serverName) -> [URL] {
     else {
         fatalError("Error: Invalid Language. No audio will be played.")
     }
-    return listAudio.map {
-        URL(string: server + $0)!
+    return listAudio.map {URL(string: server + $0)!}
 }
 
 //  Get the audio file of the choice of sounds before going to sleep
@@ -278,8 +277,8 @@ let server = "https://storage.googleapis.com/sleep-learning-app/audio-files/"
 
 //  Create URLs for all of the language audio
 //var languageAudioStreamList = getLangAudioStreamList()
-    let languageAudioURLList: [URL] = getLangAudioStreamList(serverName: server)
-}
+let languageAudioURLList: [URL] = getLangAudioStreamList(serverName: server)
+
 
 //let whiteOrSilentAudio5minsURL = URL(string: server + WhiteOrSilent)!
 //let whiteOrSilentURLList: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: audioOffset!/5)
@@ -306,3 +305,4 @@ let endBlankAudioURLList: [URL] = [URL](repeating: blankAudio40minsURL, count: 1
 //  calibrate the volume. It is no longer actual ocean sounds but the name has remained out
 //  of laziness.
 let oceanURL = URL(string: server + "ocean.mp3")!
+
