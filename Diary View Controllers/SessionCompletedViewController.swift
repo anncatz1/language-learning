@@ -23,7 +23,7 @@ class SessionCompletedViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         changeText(bodyText)
-        diary.upload()
+        changedDay()
     }
     
     var confirmedLogOut = false
@@ -33,6 +33,14 @@ class SessionCompletedViewController: UIViewController {
     func changeText(_ textView: UILabel){
         let num = Int(diary.diaryData["totalTimeForDay"] as! Double)
         textView.text = String(num)
+    }
+    
+    func changedDay(){
+        if diary.changedDay == true {
+            diary.diarydayNum = diary.diarydayNum + 1
+            diary.resetInfo(resetDay : true)
+            diary.changedDay = false
+        }
     }
     
     @IBAction func startAnotherSession(_ sender: Any) {

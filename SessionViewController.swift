@@ -79,7 +79,7 @@ class SessionViewController: UIViewController {
         //  Create Yes button that ends session
         let yesButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
             self.currentSession.endSession()
-            self.currentSession.endDay()
+            diary.changedDay = true
             self.hasSessionEnded = true
             self.performSegue(withIdentifier: "beginDiarySegue", sender: sender)
         })

@@ -19,6 +19,7 @@ struct Diary {
     var diaryDate: String
     var diaryDateTime: String
     var diarydayNum: Int
+    var changedDay: Bool 
     
     init() {
         diaryData = [String: Any]()
@@ -51,6 +52,7 @@ struct Diary {
         diaryDate = ""
         diaryDateTime = ""
         diarydayNum = 1
+        changedDay = false
         //diaryDate = ""
 //        diaryData["numberOfRestarts"] = 0
 //        diaryData["timesPressedRestart"] = [Date]()
