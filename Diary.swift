@@ -52,7 +52,7 @@ struct Diary {
         diaryDate = ""
         diaryDateTime = ""
         diarydayNum = 1
-        changedDay = false
+        changedDay = true
         //diaryDate = ""
 //        diaryData["numberOfRestarts"] = 0
 //        diaryData["timesPressedRestart"] = [Date]()

@@ -27,7 +27,10 @@ class Session {
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
-        audioPlayer.loadAudioToStartSession()
+        if (diary.changedDay == true){
+            audioPlayer.loadAudioToStartSession()
+            diary.changedDay = false
+        }
         audioPlayer.playAudio(recordVol: true)
     }
     
@@ -48,11 +51,11 @@ class Session {
         diary.upload()
     }
     
-    func endDay()
-    {
-        diary.diarydayNum = diary.diarydayNum + 1
-        diary.resetInfo(resetDay : true)
-    }
+//    func endDay()
+//    {
+//        diary.diarydayNum = diary.diarydayNum + 1
+//        diary.resetInfo(resetDay : true)
+//    }
     
     func continuePlay() {
         audioPlayer.playAudio(recordVol: true)

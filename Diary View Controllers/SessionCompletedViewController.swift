@@ -39,7 +39,6 @@ class SessionCompletedViewController: UIViewController {
         if diary.changedDay == true {
             diary.diarydayNum = diary.diarydayNum + 1
             diary.resetInfo(resetDay : true)
-            diary.changedDay = false
         }
     }
     
