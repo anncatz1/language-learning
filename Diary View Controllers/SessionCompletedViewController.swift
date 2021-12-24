@@ -22,25 +22,30 @@ class SessionCompletedViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        changeText(bodyText)
-        changedDay()
+        changeTextForDay(bodyText)
+        //changedDay()
     }
     
     var confirmedLogOut = false
     
     @IBOutlet weak var bodyText: UILabel!
     
-    func changeText(_ textView: UILabel){
+    func changeTextForSession(_ textView: UILabel){
+        let num = Int(diary.diaryData["timeForSession"] as! Double)
+        textView.text = String(num)
+    }
+    
+    func changeTextForDay(_ textView: UILabel){
         let num = Int(diary.diaryData["totalTimeForDay"] as! Double)
         textView.text = String(num)
     }
     
-    func changedDay(){
-        if diary.changedDay == true {
-            diary.diarydayNum = diary.diarydayNum + 1
-            diary.resetInfo(resetDay : true)
-        }
-    }
+//    func changedDay(){
+//        if diary.changedDay == true {
+//            diary.diarydayNum = diary.diarydayNum + 1
+//            diary.resetInfo(resetDay : true)
+//        }
+//    }
     
     @IBAction func startAnotherSession(_ sender: Any) {
         self.performSegue(withIdentifier: "startAnotherSession", sender: sender)

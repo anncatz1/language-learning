@@ -27,10 +27,10 @@ class Session {
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
-        if (diary.changedDay == true){
-            audioPlayer.loadAudioToStartSession()
-            diary.changedDay = false
-        }
+        //if (diary.changedDay == true){
+        audioPlayer.loadAudioToStartSession()
+          //  diary.changedDay = false
+        //}
         audioPlayer.playAudio(recordVol: true)
     }
     

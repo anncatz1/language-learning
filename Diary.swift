@@ -18,8 +18,8 @@ struct Diary {
     var diaryData: [String: Any]
     var diaryDate: String
     var diaryDateTime: String
-    var diarydayNum: Int
-    var changedDay: Bool 
+    //var diarydayNum: Int
+    //var changedDay: Bool 
     
     init() {
         diaryData = [String: Any]()
@@ -51,8 +51,8 @@ struct Diary {
         diaryData["totalTimeForDay"] = 0.0
         diaryDate = ""
         diaryDateTime = ""
-        diarydayNum = 1
-        changedDay = true
+        //diarydayNum = 1
+        //changedDay = true
         //diaryDate = ""
 //        diaryData["numberOfRestarts"] = 0
 //        diaryData["timesPressedRestart"] = [Date]()
@@ -140,9 +140,9 @@ struct Diary {
             if let document = document, document.exists {
                 //  Find user ID
                 let userID = (document.data()!["ID"] as! String)
-                let collectionName = "Day " + String(diary.diarydayNum)
+                //let collectionName = "Day " + String(diary.diarydayNum)
                 //  Store diary data in the collection titled with the user ID in a document with the day number as the title
-                let collection1 = Database.collection(userID).document(self.diaryDate).collection(collectionName);
+                let collection1 = Database.collection(userID).document(self.diaryDate).collection("Day");
                 collection1.document(self.diaryDateTime).setData(self.diaryData) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
