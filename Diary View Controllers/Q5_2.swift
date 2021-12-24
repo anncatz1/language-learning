@@ -20,6 +20,11 @@ class Q5_2: UIViewController {
     
     @IBOutlet weak var response2Field: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     @IBAction func continueToNextQuestion(_ sender: Any) {
         guard responseField.text != nil && responseField.text != "" else {
             return

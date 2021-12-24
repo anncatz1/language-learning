@@ -50,7 +50,7 @@ class SessionViewController: UIViewController {
     //  When "end" is pressed, view a confirmation alert and take the appropriate action based on user input.
     @IBAction func endSegment(_ sender: UIButton) {
         //  Declare Alert message
-        let confirmAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to end the segment?", preferredStyle: .alert)
+        let confirmAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to stop the session?", preferredStyle: .alert)
         
         //  Create Yes button that ends session
         let yesButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in

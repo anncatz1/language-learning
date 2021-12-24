@@ -20,17 +20,22 @@ class Q5_1: UIViewController {
     
     @IBOutlet weak var response2Field: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     @IBAction func continueToNextQuestion(_ sender: Any) {
-        guard responseField.text != nil && responseField.text != "" else {
+        guard responseField.text != nil && responseField.text != "" && response2Field.text != nil && response2Field.text != "" else {
             return
         }
         diary.diaryData["englishPhrase1"] = responseField.text!
         diary.diaryData["englishSpeaker1"] = response2Field.text!
         diary.upload()
     }
-    
+
 //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
+//        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) && (response2Field.text == "" || response2Field.text == nil) {
 //            //  Display alert
 //            let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
 //            emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -41,8 +46,21 @@ class Q5_1: UIViewController {
 //            return true
 //        }
 //    }
-    
+
     @IBAction func unwindToPreviousQuestion(segue: UIStoryboardSegue) {
         return
+    }
+}
+
+// Put this piece of code anywhere you like
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
