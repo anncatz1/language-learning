@@ -454,7 +454,7 @@
                                     <segue destination="fim-ii-SQ8" kind="show" identifier="logOutSegue" id="gCI-e4-OXK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Minutes for day:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B58-CT-fxZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Current Minutes for day:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B58-CT-fxZ">
                                 <rect key="frame" x="54" y="171" width="308.66666666666669" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -467,13 +467,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXP-hh-rND">
-                                <rect key="frame" x="150" y="222" width="42.333333333333343" height="64.666666666666686"/>
+                                <rect key="frame" x="150" y="226.99999999999997" width="42.333333333333343" height="64.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="54"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-pd-Cxx">
-                                <rect key="frame" x="53" y="550" width="308" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-pd-Cxx">
+                                <rect key="frame" x="53" y="542.33333333333337" width="308" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Start Another Session">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -484,7 +484,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-7A-btH">
-                                <rect key="frame" x="227.33333333333334" y="237.00000000000003" width="75.666666666666657" height="44.333333333333343"/>
+                                <rect key="frame" x="227.33333333333334" y="247.00000000000003" width="75.666666666666657" height="44.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -496,13 +496,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZI-PY-g1L">
-                                <rect key="frame" x="160" y="427.66666666666669" width="33.333333333333343" height="64.666666666666686"/>
+                                <rect key="frame" x="160" y="417.66666666666669" width="33.333333333333343" height="64.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="54"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQL-2X-TXz">
-                                <rect key="frame" x="228.33333333333334" y="442.66666666666669" width="75.666666666666657" height="44.333333333333314"/>
+                                <rect key="frame" x="228.33333333333334" y="432.66666666666669" width="75.666666666666657" height="44.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -513,27 +513,27 @@
                         <constraints>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="Hd4-nv-7Qh" secondAttribute="trailing" constant="42" id="16v-Ek-Nqg"/>
                             <constraint firstItem="EXP-hh-rND" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="150" id="3O9-hX-nIi"/>
-                            <constraint firstItem="CQL-2X-TXz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eZI-PY-g1L" secondAttribute="trailing" constant="8" symbolic="YES" id="51c-ep-xff"/>
-                            <constraint firstItem="fp7-tc-K41" firstAttribute="top" secondItem="EXP-hh-rND" secondAttribute="bottom" constant="75" id="7QN-Gb-wLw"/>
-                            <constraint firstItem="EXP-hh-rND" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="15" id="7Ta-hH-2Cw"/>
+                            <constraint firstItem="CQL-2X-TXz" firstAttribute="leading" secondItem="eZI-PY-g1L" secondAttribute="trailing" constant="35" id="51c-ep-xff"/>
+                            <constraint firstItem="Mke-pd-Cxx" firstAttribute="top" secondItem="eZI-PY-g1L" secondAttribute="bottom" constant="60" id="5iD-xL-0sA"/>
+                            <constraint firstItem="fp7-tc-K41" firstAttribute="top" relation="lessThanOrEqual" secondItem="EXP-hh-rND" secondAttribute="bottom" constant="75" id="7QN-Gb-wLw"/>
+                            <constraint firstItem="EXP-hh-rND" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="20" id="7Ta-hH-2Cw"/>
+                            <constraint firstItem="R0G-Vh-NwQ" firstAttribute="top" secondItem="Mke-pd-Cxx" secondAttribute="bottom" constant="65.670000000000002" id="98x-nn-CL1"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="JKF-7A-btH" secondAttribute="trailing" constant="111" id="FAH-uP-Qqn"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="HY4-t4-ahz"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" constant="-287" id="Lor-Z2-aIP"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="38" id="OOX-Ah-Pfx"/>
-                            <constraint firstItem="JKF-7A-btH" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="30" id="Yhx-nH-bvx"/>
+                            <constraint firstItem="JKF-7A-btH" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="40" id="Yhx-nH-bvx"/>
                             <constraint firstItem="eZI-PY-g1L" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="160" id="bxn-s3-rEB"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="bottom" secondItem="R0G-Vh-NwQ" secondAttribute="bottom" constant="40" id="cgH-fg-Yee"/>
                             <constraint firstItem="B58-CT-fxZ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" constant="1.1666666666666572" id="eWm-yO-v3a"/>
-                            <constraint firstItem="eZI-PY-g1L" firstAttribute="top" secondItem="fp7-tc-K41" secondAttribute="bottom" constant="30" id="exK-CV-9kh"/>
+                            <constraint firstItem="eZI-PY-g1L" firstAttribute="top" secondItem="fp7-tc-K41" secondAttribute="bottom" constant="20" id="exK-CV-9kh"/>
                             <constraint firstItem="B58-CT-fxZ" firstAttribute="top" secondItem="Hd4-nv-7Qh" secondAttribute="bottom" constant="70" id="ffZ-lt-PxT"/>
-                            <constraint firstItem="R0G-Vh-NwQ" firstAttribute="top" secondItem="Mke-pd-Cxx" secondAttribute="bottom" constant="58" id="ieI-Ir-fRM"/>
-                            <constraint firstItem="CQL-2X-TXz" firstAttribute="top" secondItem="fp7-tc-K41" secondAttribute="bottom" constant="45" id="jJS-Vu-YKM"/>
+                            <constraint firstItem="CQL-2X-TXz" firstAttribute="top" secondItem="fp7-tc-K41" secondAttribute="bottom" constant="35" id="jJS-Vu-YKM"/>
                             <constraint firstItem="Mke-pd-Cxx" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="lDV-gv-RgG"/>
                             <constraint firstItem="JKF-7A-btH" firstAttribute="leading" secondItem="EXP-hh-rND" secondAttribute="trailing" constant="35" id="ncX-dd-2U4"/>
                             <constraint firstItem="fp7-tc-K41" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="og1-TQ-KOl"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" secondItem="CQL-2X-TXz" secondAttribute="trailing" constant="110" id="vM7-Hb-xPL"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="viX-X3-nPE"/>
-                            <constraint firstItem="Mke-pd-Cxx" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="ygL-Cm-WxW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="32D-rs-pze"/>

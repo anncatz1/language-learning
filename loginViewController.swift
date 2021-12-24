@@ -17,6 +17,11 @@ class loginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var IDTextField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     @IBAction func signIn(_ sender: UIButton) {
         //  If the email or password fields are empty, display an error message
         guard let email = emailTextField.text, email != "", let password = IDTextField.text, password != "" else {
