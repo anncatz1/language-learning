@@ -81,7 +81,7 @@
 		FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4new.swift; sourceTree = "<group>"; };
 		FA2337DF274C208100C1A7C0 /* Q5_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_2.swift; sourceTree = "<group>"; };
 		FA2337E1274C675900C1A7C0 /* Q5_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_3.swift; sourceTree = "<group>"; };
-		FAC8C0C42702B6AE004E7D70 /* Q1new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Q1new.swift; path = "Old diary/Q1new.swift"; sourceTree = "<group>"; };
+		FAC8C0C42702B6AE004E7D70 /* Q1new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1new.swift; sourceTree = "<group>"; };
 		FAC8C0C62702B870004E7D70 /* Q2new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2new.swift; sourceTree = "<group>"; };
 		FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4newbad.swift; sourceTree = "<group>"; };
 		FAC8C0CC2702B88C004E7D70 /* Q3new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q3new.swift; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 		3C3C4FE922CD4E5A003B8E55 /* Diary View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FAC8C0C42702B6AE004E7D70 /* Q1new.swift */,
 				FAC8C0C62702B870004E7D70 /* Q2new.swift */,
 				FAC8C0CC2702B88C004E7D70 /* Q3new.swift */,
 				FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */,
@@ -188,6 +187,7 @@
 		FAC8C0C32702B674004E7D70 /* Old diary */ = {
 			isa = PBXGroup;
 			children = (
+				FAC8C0C42702B6AE004E7D70 /* Q1new.swift */,
 				FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */,
 				3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */,
 				3C3C4FEE22CD6C97003B8E55 /* Q2.swift */,
@@ -514,7 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -536,7 +536,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
