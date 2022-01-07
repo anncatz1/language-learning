@@ -33,7 +33,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startOrRestartSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S70-EA-Vlc"/>
-                                    <segue destination="AdF-3f-62M" kind="show" identifier="beginDiarySegue" id="hiV-g8-Jnn"/>
+                                    <segue destination="JRe-MY-qWd" kind="show" id="HM8-qx-KwP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZq-m6-ywu">
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTl-on-PcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2360.8695652173915" y="405.97826086956525"/>
+            <point key="canvasLocation" x="2365" y="540"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="J2g-We-46n">
@@ -454,8 +454,8 @@
                                     <segue destination="fim-ii-SQ8" kind="show" identifier="logOutSegue" id="gCI-e4-OXK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Current Minutes for day:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B58-CT-fxZ">
-                                <rect key="frame" x="54" y="171" width="308.66666666666669" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Current Minutes for Session:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B58-CT-fxZ">
+                                <rect key="frame" x="26.666666666666657" y="171" width="363" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -489,14 +489,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Minutes for session:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp7-tc-K41">
-                                <rect key="frame" x="27.666666666666657" y="361.66666666666669" width="359" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Minutes for Day:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp7-tc-K41">
+                                <rect key="frame" x="51" y="361.66666666666669" width="312.33333333333331" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZI-PY-g1L">
                                 <rect key="frame" x="160" y="417.66666666666669" width="33.333333333333343" height="64.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33.333333333333343" id="VO5-Ga-IE7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="54"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -520,6 +523,7 @@
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="top" secondItem="Mke-pd-Cxx" secondAttribute="bottom" constant="65.670000000000002" id="98x-nn-CL1"/>
                             <constraint firstItem="RTk-1i-D46" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="JKF-7A-btH" secondAttribute="trailing" constant="111" id="FAH-uP-Qqn"/>
                             <constraint firstItem="R0G-Vh-NwQ" firstAttribute="centerX" secondItem="E6G-xs-0lu" secondAttribute="centerX" id="HY4-t4-ahz"/>
+                            <constraint firstAttribute="bottom" secondItem="eZI-PY-g1L" secondAttribute="bottom" constant="253.66666666666669" id="LWA-BF-dHt"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="centerY" secondItem="E6G-xs-0lu" secondAttribute="centerY" constant="-287" id="Lor-Z2-aIP"/>
                             <constraint firstItem="Hd4-nv-7Qh" firstAttribute="leading" secondItem="RTk-1i-D46" secondAttribute="leading" constant="38" id="OOX-Ah-Pfx"/>
                             <constraint firstItem="JKF-7A-btH" firstAttribute="top" secondItem="B58-CT-fxZ" secondAttribute="bottom" constant="40" id="Yhx-nH-bvx"/>
@@ -538,8 +542,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="32D-rs-pze"/>
                     <connections>
-                        <outlet property="timeDay" destination="EXP-hh-rND" id="ne5-4H-X0C"/>
-                        <outlet property="timeSession" destination="eZI-PY-g1L" id="RmS-6L-I55"/>
+                        <outlet property="timeDay" destination="eZI-PY-g1L" id="Lc3-0x-BXI"/>
+                        <outlet property="timeSession" destination="EXP-hh-rND" id="5Ki-HO-onD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v02-md-SeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1200,6 +1204,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="HM8-qx-KwP"/>
         <segue reference="VTl-3H-Q6f"/>
         <segue reference="6Jw-9s-4nb"/>
         <segue reference="giO-hV-Q4k"/>

@@ -23,14 +23,13 @@ class SessionCompletedViewController: UIViewController {
     
     var confirmedLogOut = false
     
-    @IBOutlet weak var timeDay: UILabel!
-    
     @IBOutlet weak var timeSession: UILabel!
     
+    @IBOutlet weak var timeDay: UILabel!
+    
     override func viewDidAppear(_ animated: Bool) {
-        changeTextForDay(timeDay)
         changeTextForSession(timeSession)
-        //changedDay()
+        changeTextForDay(timeDay)
     }
     
     func changeTextForDay(_ textView: UILabel){
