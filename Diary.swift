@@ -31,9 +31,7 @@ struct Diary {
         diaryData["numberOfPauses"] = 0
         diaryData["timesPressedPause"] = [Date]()
         diaryData["timesPressedContinue"] = [Date]()
-        diaryData["streamMinsReported"] = nil
         diaryData["activity"] = nil
-        //diaryData["interruptYN"] = nil
         diaryData["englishHeardYN"] = nil
         diaryData["numPhrases"] = nil
         diaryData["englishPhrase1"] = nil
@@ -48,7 +46,8 @@ struct Diary {
         diaryData["issuesWithApp"] = nil
         diaryData["audioFile"] = nil
         diaryData["timeForSession"] = 0.0
-        diaryData["totalTimeForDay"] = 0.0
+        diaryData["timeForDay"] = 0.0
+        diaryData["timePaused"] = 0.0
         diaryDate = ""
         diaryDateTime = ""
         //diarydayNum = 1
@@ -91,6 +90,7 @@ struct Diary {
         diaryData["issuesWithAppYN"] = nil
         diaryData["issuesWithApp"] = nil
         diaryData["timeForSession"] = 0.0
+        diaryData["timePaused"] = 0.0
         if (resetDay){
             diaryData["totalTimeForDay"] = 0.0
         }

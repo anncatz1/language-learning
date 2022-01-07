@@ -27,41 +27,44 @@ class Session {
         diary.upload()
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
-        //if (diary.changedDay == true){
         audioPlayer.loadAudioToStartSession()
-          //  diary.changedDay = false
-        //}
         audioPlayer.playAudio(recordVol: true)
     }
     
     func endSession() {
         audioPlayer.stopAudio(recordVol: true)
         sessionRunning = false
-        let date1 = Date()
-        diary.diaryData["timeWhenEnd"] = date1
+        let timeEnd = Date()
+        diary.diaryData["timeWhenEnd"] = timeEnd
         diary.upload()
         
         // time for session
-        var elapsed = date1.timeIntervalSince(diary.diaryData["timeWhenStart"] as! Date)
-        elapsed = elapsed/60
-        elapsed = round(elapsed * 100) / 100.0
+        let timeStart = diary.diaryData["timeWhenStart"] as! Date
+        let elapsed = intervalBetweenTwoDates(date1: timeEnd, date2: timeStart)
         diary.diaryData["timeForSession"] = elapsed
         
-        diary.diaryData["totalTimeForDay"] = (diary.diaryData["totalTimeForDay"] as! Double) + elapsed
+        diary.diaryData["timeForDay"] = (diary.diaryData["timeForDay"] as! Double) + elapsed
         diary.upload()
     }
     
-//    func endDay()
-//    {
-//        diary.diarydayNum = diary.diarydayNum + 1
-//        diary.resetInfo(resetDay : true)
-//    }
+    func intervalBetweenTwoDates(date1 : Date, date2 : Date) -> TimeInterval
+    {
+        var elapsed = date1.timeIntervalSince(date2)
+        elapsed = elapsed/60
+        elapsed = round(elapsed * 100) / 100.0
+        return elapsed
+    }
     
     func continuePlay() {
         audioPlayer.playAudio(recordVol: true)
         // Because diaryData has the type [String: Any], in order to manipulate the value
         // they have to be cast to their correct type
-        diary.diaryData["timesPressedContinue"] = (diary.diaryData["timesPressedContinue"] as! [Date]) + [Date()]
+        let continueDate = Date()
+        let datesPaused = diary.diaryData["timesPressedPause"] as! [Date]
+        let pauseDate = datesPaused[datesPaused.count-1]
+        diary.diaryData["timePaused"] = (diary.diaryData["timePaused"] as! Double) + intervalBetweenTwoDates(date1: continueDate, date2: pauseDate)
+        diary.diaryData["timesPressedContinue"] = (diary.diaryData["timesPressedContinue"] as! [Date]) + [continueDate]
+        
         sessionPaused = false
         diary.upload()
     }

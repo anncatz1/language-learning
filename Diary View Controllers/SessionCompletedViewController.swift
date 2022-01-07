@@ -33,7 +33,7 @@ class SessionCompletedViewController: UIViewController {
     }
     
     func changeTextForDay(_ textView: UILabel){
-        let num = Int(diary.diaryData["totalTimeForDay"] as! Double)
+        let num = Int(diary.diaryData["timeForDay"] as! Double)
         textView.text = String(num)
     }
     
