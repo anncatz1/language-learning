@@ -23,7 +23,7 @@ import FirebaseFirestore
 var assignedLanguage: String = ""
 //var assignedSound: String = ""
 //var assignedWhiteNoise: String = ""
-var audioOffset: Int? = 0
+//var audioOffset: Int? = 0
 
 //  This function sets the assigned language field. This function uses closures
 //  that run asynchronously, so it needs to get called early so it completes running
@@ -45,7 +45,7 @@ func setAssignedLanguage() {
             assignedLanguage = (document.data()!["language"] as! String)
             //assignedWhiteNoise = (document.data()!["whitenoise"] as! String) //if yes, there is white noise; no means it's silent
             //audioOffset = Int(document.data()!["offset"] as! String)
-            if audioOffset == nil { fatalError("Invalid audio offset") }
+            //if audioOffset == nil { fatalError("Invalid audio offset") }
         }
         else {
             fatalError("User document does not exist")
@@ -278,18 +278,17 @@ let server = "https://storage.googleapis.com/sleep-learning-app/audio-files/"
 //  Create URLs for all of the language audio
 //var languageAudioStreamList = getLangAudioStreamList()
 let languageAudioURLList: [URL] = getLangAudioStreamList(serverName: server)
+let blankAudio40minsURL = URL(string: server + "40-minutes-of-silence.m4a")!
 
-
+//old
 //let whiteOrSilentAudio5minsURL = URL(string: server + WhiteOrSilent)!
 //let whiteOrSilentURLList: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: audioOffset!/5)
 //let whiteOrSilentAudioURLList20min: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: 4)
 //let whiteOrSilentAudioURLList40min: [URL] = [URL](repeating: whiteOrSilentAudio5minsURL, count: 8)
 
-////old
 //let blankAudio5minsURL = URL(string: server + "5-minutes-of-silence.m4a")!
 //let whiteNoise5minsURL = URL(string: server + "whitenoiseaudio.mp3")!
 //let blankAudio20minsURL = URL(string: server + "20-minutes-of-silence.m4a")!
-let blankAudio40minsURL = URL(string: server + "40-minutes-of-silence.m4a")!
 //let soundAudio5minsURL = URL(string: server + sound5minFile)!
 
 //let startBlankAudioURLList: [URL] = [URL](repeating: blankAudio5minsURL, count: audioOffset!/5)
@@ -299,7 +298,7 @@ let blankAudio40minsURL = URL(string: server + "40-minutes-of-silence.m4a")!
 //let whiteNoiseAudioURLList20min: [URL] = [URL](repeating: whiteNoise5minsURL, count: 4)
 // end of old
 
-let endBlankAudioURLList: [URL] = [URL](repeating: blankAudio40minsURL, count: 12)
+let endBlankAudioURLList: [URL] = [URL](repeating: blankAudio40minsURL, count: 2)
 
 //  The "ocean" file is what's played before the language starts playing and also used to
 //  calibrate the volume. It is no longer actual ocean sounds but the name has remained out
