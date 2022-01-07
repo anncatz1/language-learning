@@ -21,9 +21,6 @@ import FirebaseFirestore
 //  Get assigned language and audio offset time from the user database and
 //  set the stream list correspondingly
 var assignedLanguage: String = ""
-//var assignedSound: String = ""
-//var assignedWhiteNoise: String = ""
-//var audioOffset: Int? = 0
 
 //  This function sets the assigned language field. This function uses closures
 //  that run asynchronously, so it needs to get called early so it completes running
@@ -34,7 +31,6 @@ func setAssignedLanguage() {
     let Database = Firestore.firestore()
     
     //  Assigned language can be found in "Subjects -> [userEmail] -> language"
-    //  Offset value can be found in "Subjects -> [userEmail] -> offset"
     guard let userEmail = Auth.auth().currentUser?.email else {
         print("No User Email")
         return
@@ -43,9 +39,6 @@ func setAssignedLanguage() {
     userInfoDocRef.getDocument { (document, error) in
         if let document = document, document.exists {
             assignedLanguage = (document.data()!["language"] as! String)
-            //assignedWhiteNoise = (document.data()!["whitenoise"] as! String) //if yes, there is white noise; no means it's silent
-            //audioOffset = Int(document.data()!["offset"] as! String)
-            //if audioOffset == nil { fatalError("Invalid audio offset") }
         }
         else {
             fatalError("User document does not exist")
@@ -57,146 +50,200 @@ func setAssignedLanguage() {
 //  IMPORTANT: If audio files on the server are changed, this chunk of code has to
 //  be update. Pay attention to extensions (m4a, mp4, mp3, etc.).
 func getLangAudioStreamList(serverName : String) -> [URL] {
-    //get {
     var listAudio = [String]()
-    if assignedLanguage.lowercased() == "mandarin" {
+    let listArabic = ["arabic-f1-part1_MG-JL",
+    "arabic-f1-part2_JL",
+    "arabic-f1-part3_JS",
+    "arabic-f2-part1_MG-YZ",
+    "arabic-f2-part2_MG-YZ-MG",
+    "arabic-f2-part3_MG-JS",
+    "arabic-f3-part1_JL-JL",
+    "arabic-f3-part2_JS-JS",
+    "arabic-f3-part3_JS-MG",
+    "arabic-f4-part1_YZ-JL-JS",
+    "arabic-f4-part2_MG-YZ",
+    "arabic-f4-part3_JL",
+    "arabic-f5-part1_JS-JL",
+    "arabic-f5-part2_JL-JS",
+    "arabic-f6-part1_MG",
+    "arabic-Q1-part1_MG",
+    "arabic-Q1-part2_JS-YZ-YZ",
+    "arabic-Q1-part3_JL-MG",
+    "arabic-Q2-part1_JL-JS",
+    "arabic-Q2-part2_YZ-JS",
+    "arabic-Q2-part3_JS-MG",
+    "arabic-Q3-part1_JS",
+    "arabic-Q3-part2_YZ",
+    "arabic-Q3-part3_YZ-JS",
+    "arabic-Q4-part1_JL",
+    "arabic-Q4-part2_MG-YZ",
+    "arabic-Q4-part3_MG",
+    "arabic-Q5-part1_JS-YZ-JS",
+    "arabic-Q5-part2_MG",
+    "arabic-Q5-part3_YZ-MG",
+    "arabic-Q6-part1_JS-JS",
+    "arabic-Q6-part2_JL-JL-YZ",
+    "arabic-Q6-part3_JL-JL-MG",
+    "arabic-S1-part1_YZ-JS-YZ",
+    "arabic-S1-part2_JS",
+    "arabic-S1-part3_MG-YZ-JS",
+    "arabic-S2-part1_YZ",
+    "arabic-S2-part2_YZ-JL",
+    "arabic-S2-part3_JS-MG",
+    "arabic-S3-part1_MG-JL",
+    "arabic-S3-part2_JS",
+    "arabic-S3-part3_JS",
+    "arabic-S4-part1_MG",
+    "arabic-S4-part2_JL-JL",
+    "arabic-S4-part3_MG-YZ-JL"]
+    let listMandarin = ["mandarin_Q1-part1_JL-JS",
+    "mandarin_Q1-part2_JS",
+    "mandarin_Q1-part3_YZ"]
+    if assignedLanguage.lowercased() == "arabic" {
         //picks random number between 1 and 10 including 10 to choose audio file
-        let audio = Int.random(in: 1 ... 18)
-        switch audio {
-        case 1:
-            diary.diaryData["audioFile"] = "mandarin-1 & mandarin-2"
-            diary.upload()
-            listAudio = ["mandarin-1.m4a", "mandarin-2.m4a"]
-        case 2:
-            diary.diaryData["audioFile"] = "mandarin-5"
-            diary.upload()
-            listAudio = ["mandarin-5.m4a"]
-        case 3:
-            diary.diaryData["audioFile"] = "mandarin-6"
-            diary.upload()
-            listAudio = ["mandarin-6.m4a"]
-        case 4:
-            diary.diaryData["audioFile"] = "mandarin-7"
-            diary.upload()
-            listAudio = ["mandarin-7.m4a"]
-        case 5:
-            diary.diaryData["audioFile"] = "mandarin-8"
-            diary.upload()
-            listAudio = ["mandarin-8.m4a"]
-        case 6:
-            diary.diaryData["audioFile"] = "mandarin-9"
-            diary.upload()
-            listAudio = ["mandarin-9.m4a"]
-        case 7:
-            diary.diaryData["audioFile"] = "mandarin-10"
-            diary.upload()
-            listAudio = ["mandarin-10.m4a"]
-        case 8:
-            diary.diaryData["audioFile"] = "mandarin-11"
-            diary.upload()
-            listAudio = ["mandarin-11.m4a"]
-        case 9:
-            diary.diaryData["audioFile"] = "mandarin-Q1"
-            diary.upload()
-            listAudio = ["mandarin_Q1.m4a"]
-        case 10:
-            diary.diaryData["audioFile"] = "mandarin-Q2"
-            diary.upload()
-            listAudio = ["mandarin_Q2.m4a"]
-        case 11:
-            diary.diaryData["audioFile"] = "mandarin-Q3"
-            diary.upload()
-            listAudio = ["mandarin_Q3.m4a"]
-        case 12:
-            diary.diaryData["audioFile"] = "mandarin-Q4"
-            diary.upload()
-            listAudio = ["mandarin_Q4.m4a"]
-        case 13:
-            diary.diaryData["audioFile"] = "mandarin-Q5"
-            diary.upload()
-            listAudio = ["mandarin_Q5.m4a"]
-        case 14:
-            diary.diaryData["audioFile"] = "mandarin-S1"
-            diary.upload()
-            listAudio = ["mandarin_S1.m4a"]
-        case 15:
-            diary.diaryData["audioFile"] = "mandarin-S2"
-            diary.upload()
-            listAudio = ["mandarin_S2.m4a"]
-        case 16:
-            diary.diaryData["audioFile"] = "mandarin-S3"
-            diary.upload()
-            listAudio = ["mandarin_S3.m4a"]
-        case 17:
-            diary.diaryData["audioFile"] = "mandarin-S4"
-            diary.upload()
-            listAudio = ["mandarin_S4.m4a"]
-        case 18:
-            diary.diaryData["audioFile"] = "mandarin-S5"
-            diary.upload()
-            listAudio = ["mandarin_S5.m4a"]
-        default:
-            diary.diaryData["audioFile"] = "mandarin-1 & mandarin-2"
-            diary.upload()
-            listAudio = ["mandarin-1.m4a", "mandarin-2.m4a"]
-        }
+        let audio = Int.random(in: 1 ... 2)
+        listAudio = [listArabic[audio]]
     }
-    else if assignedLanguage.lowercased() == "arabic" {
-        let audio = Int.random(in: 1 ... 13)
-        //let audio = 12
-        switch audio {
-        case 1:
-            diary.diaryData["audioFile"] = "arabic-1,2,3"
-            diary.upload()
-            listAudio = ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
-        case 2:
-            diary.diaryData["audioFile"] = "arabic-f1"
-            diary.upload()
-            listAudio = ["arabic-f1.m4a"]
-        case 3:
-            diary.diaryData["audioFile"] = "arabic-f2"
-            diary.upload()
-            listAudio = ["arabic-f2.m4a"]
-        case 4:
-            diary.diaryData["audioFile"] = "arabic-f3"
-            diary.upload()
-            listAudio = ["arabic-f3.m4a"]
-        case 5:
-            diary.diaryData["audioFile"] = "arabic-f4"
-            diary.upload()
-            listAudio = ["arabic-f4.m4a"]
-        case 6:
-            diary.diaryData["audioFile"] = "arabic-f5"
-            diary.upload()
-            listAudio = ["arabic-f5.m4a"]
-        case 7:
-            diary.diaryData["audioFile"] = "arabic-f6"
-            diary.upload()
-            listAudio = ["arabic-f6.m4a"]
-        case 8:
-            diary.diaryData["audioFile"] = "arabic-S1"
-            diary.upload()
-            listAudio = ["arabic-S1.m4a"]
-        case 9:
-            diary.diaryData["audioFile"] = "arabic-S2"
-            diary.upload()
-            listAudio = ["arabic-S2.m4a"]
-        case 10:
-            diary.diaryData["audioFile"] = "arabic-S3"
-            diary.upload()
-            listAudio = ["arabic-S3.m4a"]
-        case 11:
-            diary.diaryData["audioFile"] = "arabic-S4"
-            diary.upload()
-            listAudio = ["arabic-S4.m4a"]
-        case 12:
-            diary.diaryData["audioFile"] = "arabic-Q3"
-            diary.upload()
-            listAudio = ["arabic-Q3.m4a"]
-        case 13:
-            diary.diaryData["audioFile"] = "arabic-Q5"
-            diary.upload()
-            listAudio = ["arabic-Q5.m4a"]
+    else if assignedLanguage.lowercased() == "mandarin" {
+        //picks random number between 1 and 10 including 10 to choose audio file
+        let audio = Int.random(in: 1 ... 45)
+        listAudio = [listMandarin[audio]]
+    }
+//        switch audio {
+//        case 1:
+//            diary.diaryData["audioFile"] = "mandarin-1 & mandarin-2"
+//            diary.upload()
+//            listAudio = ["mandarin-1.m4a", "mandarin-2.m4a"]
+//        case 2:
+//            diary.diaryData["audioFile"] = "mandarin-5"
+//            diary.upload()
+//            listAudio = ["mandarin-5.m4a"]
+//        case 3:
+//            diary.diaryData["audioFile"] = "mandarin-6"
+//            diary.upload()
+//            listAudio = ["mandarin-6.m4a"]
+//        case 4:
+//            diary.diaryData["audioFile"] = "mandarin-7"
+//            diary.upload()
+//            listAudio = ["mandarin-7.m4a"]
+//        case 5:
+//            diary.diaryData["audioFile"] = "mandarin-8"
+//            diary.upload()
+//            listAudio = ["mandarin-8.m4a"]
+//        case 6:
+//            diary.diaryData["audioFile"] = "mandarin-9"
+//            diary.upload()
+//            listAudio = ["mandarin-9.m4a"]
+//        case 7:
+//            diary.diaryData["audioFile"] = "mandarin-10"
+//            diary.upload()
+//            listAudio = ["mandarin-10.m4a"]
+//        case 8:
+//            diary.diaryData["audioFile"] = "mandarin-11"
+//            diary.upload()
+//            listAudio = ["mandarin-11.m4a"]
+//        case 9:
+//            diary.diaryData["audioFile"] = "mandarin-Q1"
+//            diary.upload()
+//            listAudio = ["mandarin_Q1.m4a"]
+//        case 10:
+//            diary.diaryData["audioFile"] = "mandarin-Q2"
+//            diary.upload()
+//            listAudio = ["mandarin_Q2.m4a"]
+//        case 11:
+//            diary.diaryData["audioFile"] = "mandarin-Q3"
+//            diary.upload()
+//            listAudio = ["mandarin_Q3.m4a"]
+//        case 12:
+//            diary.diaryData["audioFile"] = "mandarin-Q4"
+//            diary.upload()
+//            listAudio = ["mandarin_Q4.m4a"]
+//        case 13:
+//            diary.diaryData["audioFile"] = "mandarin-Q5"
+//            diary.upload()
+//            listAudio = ["mandarin_Q5.m4a"]
+//        case 14:
+//            diary.diaryData["audioFile"] = "mandarin-S1"
+//            diary.upload()
+//            listAudio = ["mandarin_S1.m4a"]
+//        case 15:
+//            diary.diaryData["audioFile"] = "mandarin-S2"
+//            diary.upload()
+//            listAudio = ["mandarin_S2.m4a"]
+//        case 16:
+//            diary.diaryData["audioFile"] = "mandarin-S3"
+//            diary.upload()
+//            listAudio = ["mandarin_S3.m4a"]
+//        case 17:
+//            diary.diaryData["audioFile"] = "mandarin-S4"
+//            diary.upload()
+//            listAudio = ["mandarin_S4.m4a"]
+//        case 18:
+//            diary.diaryData["audioFile"] = "mandarin-S5"
+//            diary.upload()
+//            listAudio = ["mandarin_S5.m4a"]
+//        default:
+//            diary.diaryData["audioFile"] = "mandarin-1 & mandarin-2"
+//            diary.upload()
+//            listAudio = ["mandarin-1.m4a", "mandarin-2.m4a"]
+//        }
+//    }
+//    else if assignedLanguage.lowercased() == "arabic" {
+//        let audio = Int.random(in: 1 ... 13)
+//        //let audio = 12
+//        switch audio {
+//        case 1:
+//            diary.diaryData["audioFile"] = "arabic-1,2,3"
+//            diary.upload()
+//            listAudio = ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
+//        case 2:
+//            diary.diaryData["audioFile"] = "arabic-f1"
+//            diary.upload()
+//            listAudio = ["arabic-f1.m4a"]
+//        case 3:
+//            diary.diaryData["audioFile"] = "arabic-f2"
+//            diary.upload()
+//            listAudio = ["arabic-f2.m4a"]
+//        case 4:
+//            diary.diaryData["audioFile"] = "arabic-f3"
+//            diary.upload()
+//            listAudio = ["arabic-f3.m4a"]
+//        case 5:
+//            diary.diaryData["audioFile"] = "arabic-f4"
+//            diary.upload()
+//            listAudio = ["arabic-f4.m4a"]
+//        case 6:
+//            diary.diaryData["audioFile"] = "arabic-f5"
+//            diary.upload()
+//            listAudio = ["arabic-f5.m4a"]
+//        case 7:
+//            diary.diaryData["audioFile"] = "arabic-f6"
+//            diary.upload()
+//            listAudio = ["arabic-f6.m4a"]
+//        case 8:
+//            diary.diaryData["audioFile"] = "arabic-S1"
+//            diary.upload()
+//            listAudio = ["arabic-S1.m4a"]
+//        case 9:
+//            diary.diaryData["audioFile"] = "arabic-S2"
+//            diary.upload()
+//            listAudio = ["arabic-S2.m4a"]
+//        case 10:
+//            diary.diaryData["audioFile"] = "arabic-S3"
+//            diary.upload()
+//            listAudio = ["arabic-S3.m4a"]
+//        case 11:
+//            diary.diaryData["audioFile"] = "arabic-S4"
+//            diary.upload()
+//            listAudio = ["arabic-S4.m4a"]
+//        case 12:
+//            diary.diaryData["audioFile"] = "arabic-Q3"
+//            diary.upload()
+//            listAudio = ["arabic-Q3.m4a"]
+//        case 13:
+//            diary.diaryData["audioFile"] = "arabic-Q5"
+//            diary.upload()
+//            listAudio = ["arabic-Q5.m4a"]
         /*case 14:
             diary.diaryData["audioFile"] = "arabic-Q1"
             diary.upload()
@@ -212,17 +259,17 @@ func getLangAudioStreamList(serverName : String) -> [URL] {
         case 17:
             diary.diaryData["audioFile"] = "arabic-Q6"
             diary.upload()
-            return ["arabic-Q5.m4a"]*/
-        default:
-            diary.diaryData["audioFile"] = "arabic-1,2,3"
-            diary.upload()
-            listAudio = ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
-        }
-    }
+//            return ["arabic-Q5.m4a"]*/
+//        default:
+//            diary.diaryData["audioFile"] = "arabic-1,2,3"
+//            diary.upload()
+//            listAudio = ["arabic-1.m4a", "arabic-2.m4a", "arabic-3.m4a"]
+//        }
+//    }
     else {
         fatalError("Error: Invalid Language. No audio will be played.")
     }
-    return listAudio.map {URL(string: server + $0)!}
+    return listAudio.map {URL(string: server + $0 + ".m4a")!}
 }
 
 //  Get the audio file of the choice of sounds before going to sleep
