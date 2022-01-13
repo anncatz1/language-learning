@@ -49,9 +49,10 @@ func setAssignedLanguage() {
 //  Create the audio stream list filled with the assigned language audio files.
 //  IMPORTANT: If audio files on the server are changed, this chunk of code has to
 //  be update. Pay attention to extensions (m4a, mp4, mp3, etc.).
-func getLangAudioStreamList(serverName : String) -> [URL] {
-    var listAudio = [String]()
-    let listArabic = ["arabic-f1-part1_MG-JL",
+func getLangAudioStreamList() -> URL {
+    var audioName = ""
+    let listArabic =
+    ["arabic-f1-part1_MG-JL",
     "arabic-f1-part2_JL",
     "arabic-f1-part3_JS",
     "arabic-f2-part1_MG-YZ",
@@ -96,86 +97,93 @@ func getLangAudioStreamList(serverName : String) -> [URL] {
     "arabic-S4-part1_MG",
     "arabic-S4-part2_JL-JL",
     "arabic-S4-part3_MG-YZ-JL"]
-    let listMandarin = ["mandarin_Q1-part1_JL-JS",
-                        "mandarin_Q1-part2_JS",
-                        "mandarin_Q1-part3_YZ",
-                        "mandarin_Q2-part1_YZ-JL-MG",
-                        "mandarin_Q2-part2_JS",
-                        "mandarin_Q2-part3_MG-JL",
-                        "mandarin_Q3-part1_JS-YZ-YZ",
-                        "mandarin_Q3-part2_JS-JL",
-                        "mandarin_Q3-part3_YZ-YZ",
-                        "mandarin_Q4-part1_JL-JL-MG",
-                        "mandarin_Q4-part2_MG-JS",
-                        "mandarin_Q4-part3_YZ",
-                        "mandarin_Q5-part1_JS-YZ-JS",
-                        "mandarin_Q5-part2_MG-MG-JL",
-                        "mandarin_Q5-part3_YZ-MG",
-                        "mandarin_S1-part1_MG",
-                        "mandarin_S1-part2_YZ-YZ-JL",
-                        "mandarin_S1-part3_JL-JS-MG",
-                        "mandarin_S2-part1_JS-JL",
-                        "mandarin_S2-part2_MG-MG",
-                        "mandarin_S2-part3_JL-JS-YZ",
-                        "mandarin_S3-part1_YZ-YZ-JS",
-                        "mandarin_S3-part2_JS-JL",
-                        "mandarin_S3-part3_JL-JL-MG",
-                        "mandarin_S4-part1_YZ-MG-YZ",
-                        "mandarin_S4-part2_YZ",
-                        "mandarin_S4-part3_MG-JS-JL",
-                        "mandarin_S5-part1_JS",
-                        "mandarin_S5-part2_MG-YZ-YZ",
-                        "mandarin_S5-part3_YZ",
-                        "Mandarin-5-part1_JL-MG",
-                        "Mandarin-6-part1_JL-JS",
-                        "Mandarin-6-part2_MG-JS",
-                        "Mandarin-6-part3_JL-YZ",
-                        "Mandarin-7-part1_JS",
-                        "Mandarin-7-part2_YZ-JL-JL",
-                        "Mandarin-7-part3_JS-JS",
-                        "Mandarin-8-part1_MG",
-                        "Mandarin-8-part2_YZ-YZ-JL",
-                        "Mandarin-8-part3_MG-YZ",
-                        "Mandarin-9-part1_MG-JL",
-                        "Mandarin-9-part2_YZ-MG",
-                        "Mandarin-9-part3_JS-JS",
-                        "Mandarin-10-part1_JS",
-                        "Mandarin-10-part2_MG-MG",
-                        "Mandarin-10-part3_JS",
-                        "Mandarin-11-part1_JL-MG-JL",
-                        "Mandarin-11-part2_YZ-JL",
-                        "Mandarin-11-part3_MG-JS-JS",
-                        "mandarin-f1-part1_JL-JL",
-                        "mandarin-f1-part2_YZ-YZ",
-                        "mandarin-f1-part3_JS-MG-YZ",
-                        "mandarin-f2-part1_MG",
-                        "mandarin-f2-part2_YZ-JS-JL",
-                        "mandarin-f3-part1_JL-YZ-JS",
-                        "mandarin-f3-part2_YZ-YZ",
-                        "mandarin-f4-part1_MG",
-                        "mandarin-f4-part2_JL",
-                        "mandarin-f4-part3_JS",
-                        "mandarin-f5-part1_MG",
-                        "mandarin-f5-part2_JS-JL-YZ",
-                        "mandarin-f5-part3_JL-JL",
-                        "mandarin-f6-part1_MG-MG"]
+    let listMandarin =
+    ["mandarin_Q1-part1_JL-JS",
+    "mandarin_Q1-part2_JS",
+    "mandarin_Q1-part3_YZ",
+    "mandarin_Q2-part1_YZ-JL-MG",
+    "mandarin_Q2-part2_JS",
+    "mandarin_Q2-part3_MG-JL",
+    "mandarin_Q3-part1_JS-YZ-YZ",
+    "mandarin_Q3-part2_JS-JL",
+    "mandarin_Q3-part3_YZ-YZ",
+    "mandarin_Q4-part1_JL-JL-MG",
+    "mandarin_Q4-part2_MG-JS",
+    "mandarin_Q4-part3_YZ",
+    "mandarin_Q5-part1_JS-YZ-JS",
+    "mandarin_Q5-part2_MG-MG-JL",
+    "mandarin_Q5-part3_YZ-MG",
+    "mandarin_S1-part1_MG",
+    "mandarin_S1-part2_YZ-YZ-JL",
+    "mandarin_S1-part3_JL-JS-MG",
+    "mandarin_S2-part1_JS-JL",
+    "mandarin_S2-part2_MG-MG",
+    "mandarin_S2-part3_JL-JS-YZ",
+    "mandarin_S3-part1_YZ-YZ-JS",
+    "mandarin_S3-part2_JS-JL",
+    "mandarin_S3-part3_JL-JL-MG",
+    "mandarin_S4-part1_YZ-MG-YZ",
+    "mandarin_S4-part2_YZ",
+    "mandarin_S4-part3_MG-JS-JL",
+    "mandarin_S5-part1_JS",
+    "mandarin_S5-part2_MG-YZ-YZ",
+    "mandarin_S5-part3_YZ",
+    "Mandarin-5-part1_JL-MG",
+    "Mandarin-6-part1_JL-JS",
+    "Mandarin-6-part2_MG-JS",
+    "Mandarin-6-part3_JL-YZ",
+    "Mandarin-7-part1_JS",
+    "Mandarin-7-part2_YZ-JL-JL",
+    "Mandarin-7-part3_JS-JS",
+    "Mandarin-8-part1_MG",
+    "Mandarin-8-part2_YZ-YZ-JL",
+    "Mandarin-8-part3_MG-YZ",
+    "Mandarin-9-part1_MG-JL",
+    "Mandarin-9-part2_YZ-MG",
+    "Mandarin-9-part3_JS-JS",
+    "Mandarin-10-part1_JS",
+    "Mandarin-10-part2_MG-MG",
+    "Mandarin-10-part3_JS",
+    "Mandarin-11-part1_JL-MG-JL",
+    "Mandarin-11-part2_YZ-JL",
+    "Mandarin-11-part3_MG-JS-JS",
+    "mandarin-f1-part1_JL-JL",
+    "mandarin-f1-part2_YZ-YZ",
+    "mandarin-f1-part3_JS-MG-YZ",
+    "mandarin-f2-part1_MG",
+    "mandarin-f2-part2_YZ-JS-JL",
+    "mandarin-f3-part1_JL-YZ-JS",
+    "mandarin-f3-part2_YZ-YZ",
+    "mandarin-f4-part1_MG",
+    "mandarin-f4-part2_JL",
+    "mandarin-f4-part3_JS",
+    "mandarin-f5-part1_MG",
+    "mandarin-f5-part2_JS-JL-YZ",
+    "mandarin-f5-part3_JL-JL",
+    "mandarin-f6-part1_MG-MG"]
     if assignedLanguage.lowercased() == "arabic" {
         //picks random number between 1 and 10 including 10 to choose audio file
-        let audio = Int.random(in: 0 ... 44)
-        listAudio = [listArabic[audio]]
-        diary.diaryData["audioFile"] = listArabic[audio]
+        let audioInt = Int.random(in: 0 ... 0)//... 44)
+        audioName = listArabic[audioInt]
+        diary.diaryData["audioFile"] = audioName
         diary.upload()
+        diary.eventFile(fileName : audioName)
+        audioName = "arabic/" + audioName
     }
     else if assignedLanguage.lowercased() == "mandarin" {
         //picks random number between 1 and 10 including 10 to choose audio file
-        let audio = Int.random(in: 0 ... 62)
-        listAudio = [listMandarin[audio]]
+        let audioInt = Int.random(in: 0 ... 0)//... 62)
+        audioName = listMandarin[audioInt]
+        diary.diaryData["audioFile"] = audioName
+        diary.upload()
+        diary.eventFile(fileName : audioName)
+        audioName = "mandarin/" + audioName
     }
     else {
         fatalError("Error: Invalid Language. No audio will be played.")
     }
-    print(listAudio.map {URL(string: server + $0 + ".m4a")!})
-    return listAudio.map {URL(string: server + $0 + ".m4a")!}
+    //listAudio.map {URL(string: server + $0 + ".m4a")!}
+    return URL(string: server + audioName + ".m4a")!
 }
 
 //  Get the audio file of the choice of sounds before going to sleep
@@ -230,7 +238,7 @@ let server = "https://storage.googleapis.com/sleep-learning-app/audio-files/"
 
 //  Create URLs for all of the language audio
 //var languageAudioStreamList = getLangAudioStreamList()
-let languageAudioURLList: [URL] = getLangAudioStreamList(serverName: server)
+let languageAudioURLList: [URL] = [getLangAudioStreamList()]
 let blankAudio40minsURL = URL(string: server + "40-minutes-of-silence.m4a")!
 
 //old

@@ -13,6 +13,9 @@
 import UIKit
 import Firebase
 
+import Foundation
+import FirebaseFirestore
+
 class SessionCompletedViewController: UIViewController {
     
     //  Set the status bar to have light content so it's visible against the black
@@ -51,6 +54,7 @@ class SessionCompletedViewController: UIViewController {
     
     @IBAction func startAnotherSession(_ sender: Any) {
         self.performSegue(withIdentifier: "startAnotherSession", sender: sender)
+        session.continuingDay = true
     }
     
     @IBAction func logOut(_ sender: UIButton) {

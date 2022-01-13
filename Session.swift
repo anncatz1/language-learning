@@ -13,36 +13,44 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-class Session {
+public class Session {
     // is the participant asleep
     var sessionRunning = false
     var sessionPaused = false
+    var continuingDay = false
     
     func beginSession() {
         sessionRunning = true
         diary.diaryDate = diary.getDate()
         diary.diaryDateTime = diary.getDateTime()
-        diary.resetInfo(resetDay: false)
-        diary.diaryData["timeWhenStart"] = Date()
-        diary.upload()
+                
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
-        audioPlayer.loadAudioToStartSession()
+        if !continuingDay{
+            diary.resetInfo(resetDay: true)
+            diary.diaryData["timeWhenStart"] = Date()
+            diary.upload()
+            audioPlayer.loadAudioToStartSession()
+        }
+        else{
+            diary.resetInfo(resetDay: false)
+            diary.diaryData["timeWhenStart"] = Date()
+            diary.upload()
+        }
         audioPlayer.playAudio(recordVol: true)
     }
     
     func endSession() {
         audioPlayer.stopAudio(recordVol: true)
         sessionRunning = false
+        
         let timeEnd = Date()
         diary.diaryData["timeWhenEnd"] = timeEnd
         diary.upload()
-        
         // time for session
         let timeStart = diary.diaryData["timeWhenStart"] as! Date
         let elapsed = intervalBetweenTwoDates(date1: timeEnd, date2: timeStart)
         diary.diaryData["timeForSession"] = elapsed
-        
         diary.diaryData["timeForDay"] = (diary.diaryData["timeForDay"] as! Double) + elapsed
         diary.upload()
     }
@@ -89,3 +97,5 @@ class Session {
 //            diary.upload()
 //        }
 //    }
+
+var session = Session()
