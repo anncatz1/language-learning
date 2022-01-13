@@ -164,7 +164,6 @@
 				3C11183A22E0FBFF00C15000 /* loginViewController.swift */,
 				3C67854322A6BEB500031F1B /* SessionViewController.swift */,
 				3CC2874F22C273D40043394C /* InstructionsViewController.swift */,
-				3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */,
 				3C21E35022AEEB9E00003F7D /* Session.swift */,
 				3C21E35222B0039700003F7D /* AudioPlayer.swift */,
 				3C21E35A22B19B6900003F7D /* AudioStreamList.swift */,
@@ -187,6 +186,7 @@
 		FAC8C0C32702B674004E7D70 /* Old diary */ = {
 			isa = PBXGroup;
 			children = (
+				3CEBA66422CAD95E009014B6 /* CallibrateVolumeViewController.swift */,
 				FAC8C0C42702B6AE004E7D70 /* Q1new.swift */,
 				FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */,
 				3C3C4FFE22CD6E6F003B8E55 /* Q1a.swift */,
@@ -514,7 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.1;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -536,7 +536,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.1;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
