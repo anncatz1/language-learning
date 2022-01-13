@@ -45,16 +45,9 @@ class SessionCompletedViewController: UIViewController {
         textView.text = String(num)
     }
     
-//    func changedDay(){
-//        if diary.changedDay == true {
-//            diary.diarydayNum = diary.diarydayNum + 1
-//            diary.resetInfo(resetDay : true)
-//        }
-//    }
-    
     @IBAction func startAnotherSession(_ sender: Any) {
         self.performSegue(withIdentifier: "startAnotherSession", sender: sender)
-        session.continuingDay = true
+        diary.continueDay = true
     }
     
     @IBAction func logOut(_ sender: UIButton) {

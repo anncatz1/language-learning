@@ -17,7 +17,6 @@ public class Session {
     // is the participant asleep
     var sessionRunning = false
     var sessionPaused = false
-    var continuingDay = false
     
     func beginSession() {
         sessionRunning = true
@@ -26,7 +25,7 @@ public class Session {
                 
         //  The first series of audio files are silent, so the audio is loaded and
         //  played immediately when the session begins
-        if !continuingDay{
+        if !diary.continueDay{
             diary.resetInfo(resetDay: true)
             diary.diaryData["timeWhenStart"] = Date()
             diary.upload()
@@ -38,6 +37,7 @@ public class Session {
             diary.upload()
         }
         audioPlayer.playAudio(recordVol: true)
+        diary.eventFile(fileName : diary.diaryData["audioFile"] as! String)
     }
     
     func endSession() {
