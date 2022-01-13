@@ -53,17 +53,6 @@ struct Diary {
         //diarydayNum = 1
         //changedDay = true
         //diaryDate = ""
-//        diaryData["numberOfRestarts"] = 0
-//        diaryData["timesPressedRestart"] = [Date]()
-//        diaryData["heardInitialWarningSounds"] = nil
-//        diaryData["pressedRestart"] = nil
-//        diaryData["awakenedBySoundsOrLanguage"] = nil
-//        diaryData["numberOfTimesWokenUp"] = nil
-//        diaryData["languageHeardAfterWaking"] = nil
-//        diaryData["notAwakenedButHeardALanguage"] = nil
-//        diaryData["languageHeardWhileAsleep"] = nil
-//        diaryData["headphonesStayedIn"] = nil
-//        diaryData["phoneLocation"] = nil
     }
     
     mutating func resetInfo(resetDay : Bool){
