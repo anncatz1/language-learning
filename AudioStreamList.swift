@@ -163,7 +163,7 @@ func getLangAudioStreamList() -> URL {
     "mandarin-f6-part1_MG-MG"]
     if assignedLanguage.lowercased() == "arabic" {
         //picks random number between 1 and 10 including 10 to choose audio file
-        let audioInt = Int.random(in: 0 ... 0)//... 44)
+        let audioInt = Int.random(in: 0 ... 44)
         audioName = listArabic[audioInt]
         diary.diaryData["audioFile"] = audioName
         diary.upload()
@@ -172,7 +172,7 @@ func getLangAudioStreamList() -> URL {
     }
     else if assignedLanguage.lowercased() == "mandarin" {
         //picks random number between 1 and 10 including 10 to choose audio file
-        let audioInt = Int.random(in: 0 ... 0)//... 62)
+        let audioInt = Int.random(in: 0 ... 62)
         audioName = listMandarin[audioInt]
         diary.diaryData["audioFile"] = audioName
         diary.upload()

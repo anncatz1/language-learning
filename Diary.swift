@@ -36,9 +36,9 @@ struct Diary {
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil
-        diaryData["englishSpeaker1"] = nil
-        diaryData["englishSpeaker2"] = nil
-        diaryData["englishSpeaker3"] = nil
+        diaryData["englishPhraseGender1"] = nil
+        diaryData["englishPhraseGender2"] = nil
+        diaryData["englishPhraseGender3"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
@@ -67,9 +67,9 @@ struct Diary {
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil
-        diaryData["englishGender1"] = nil
-        diaryData["englishGender2"] = nil
-        diaryData["englishGender3"] = nil
+        diaryData["englishPhraseGender1"] = nil
+        diaryData["englishPhraseGender2"] = nil
+        diaryData["englishPhraseGender3"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
@@ -79,6 +79,7 @@ struct Diary {
         if (resetDay){
             diaryData["timeForDay"] = 0.0
             diaryData["audioFile"] = nil
+            continueDay = false
         }
     }
     
