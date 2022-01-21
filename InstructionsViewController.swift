@@ -28,8 +28,8 @@ class InstructionsViewController: UIPageViewController, UIPageViewControllerData
         //let chargeVC = sb.instantiateViewController(withIdentifier: "chargeInstructionVC")
         //let wifiVC = sb.instantiateViewController(withIdentifier: "wifiInstructionVC")
         let dndVC = sb.instantiateViewController(withIdentifier: "doNotDisturbInstructionVC")
-        //let volumeVC = sb.instantiateViewController(withIdentifier: "volumeInstructionVC")
-        return [dndVC]
+        let volumeVC = sb.instantiateViewController(withIdentifier: "volumeInstructionVC")
+        return [dndVC, volumeVC]
     }()
 
     override func viewDidLoad() {

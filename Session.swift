@@ -63,6 +63,13 @@ public class Session {
         return elapsed
     }
     
+    func intervalBetweenTwoDatesRounded(date1 : Date, date2 : Date) -> Int
+    {
+        var elapsed = date1.timeIntervalSince(date2)
+        elapsed = elapsed/60
+        return Int(elapsed)
+    }
+    
     func continuePlay() {
         audioPlayer.playAudio(recordVol: true)
         // Because diaryData has the type [String: Any], in order to manipulate the value

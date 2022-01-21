@@ -172,17 +172,17 @@
             </objects>
             <point key="canvasLocation" x="-1600" y="1412"/>
         </scene>
-        <!--Callibrate Volume View Controller-->
+        <!--View Controller-->
         <scene sceneID="Cxl-Ke-JTa">
             <objects>
-                <viewController storyboardIdentifier="volumeInstructionVC" id="ico-9S-9I4" customClass="CallibrateVolumeViewController" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="volumeInstructionVC" id="ico-9S-9I4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jAQ-pL-NPR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wait for the raindrops audio to come in and check to see the volume is at a comfortable level." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVK-Ru-B5U">
-                                <rect key="frame" x="40" y="40" width="334" height="123"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure your earbuds are plugged in." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVK-Ru-B5U">
+                                <rect key="frame" x="40" y="40" width="334" height="75"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -190,6 +190,9 @@
                                 <rect key="frame" x="294" y="660" width="80" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Wtw-3u-Kpc"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker" translatesAutoresizingMaskIntoConstraints="NO" id="une-WL-wUA">
                                 <rect key="frame" x="80" y="112" width="254" height="512"/>
@@ -214,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY2-wc-7Jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-916" y="1412"/>
+            <point key="canvasLocation" x="-28" y="404"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="bpt-sx-dkg">
@@ -631,14 +634,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donotdisturb" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-9k-wZp">
                                 <rect key="frame" x="80" y="112" width="254" height="512"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvW-dQ-geD">
-                                <rect key="frame" x="294" y="660" width="80" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Continue"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="D67-2T-ZiZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IOn-cL-snZ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -649,16 +644,13 @@
                             <constraint firstItem="xrh-9k-wZp" firstAttribute="centerY" secondItem="HaC-ZF-7BQ" secondAttribute="centerY" id="QRX-8B-0IC"/>
                             <constraint firstItem="ee8-w0-XQ1" firstAttribute="top" secondItem="IOn-cL-snZ" secondAttribute="top" constant="40" id="Xq4-Vs-XuO"/>
                             <constraint firstItem="IOn-cL-snZ" firstAttribute="trailing" secondItem="ee8-w0-XQ1" secondAttribute="trailing" constant="40" id="dLV-Ey-ZaO"/>
-                            <constraint firstItem="IOn-cL-snZ" firstAttribute="bottom" secondItem="MvW-dQ-geD" secondAttribute="bottom" constant="40" id="ips-Tc-wFT"/>
-                            <constraint firstItem="MvW-dQ-geD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IOn-cL-snZ" secondAttribute="leading" symbolic="YES" id="mi6-zg-4gC"/>
                             <constraint firstItem="xrh-9k-wZp" firstAttribute="centerX" secondItem="HaC-ZF-7BQ" secondAttribute="centerX" id="sAq-xW-2Rm"/>
-                            <constraint firstItem="IOn-cL-snZ" firstAttribute="trailing" secondItem="MvW-dQ-geD" secondAttribute="trailing" constant="40" id="sAs-oc-AE2"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Me-N1-1ei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175.36231884057972" y="404.46428571428572"/>
+            <point key="canvasLocation" x="-690" y="402"/>
         </scene>
         <!--Q4-->
         <scene sceneID="cpJ-DR-MFB">
@@ -1203,7 +1195,7 @@
         <segue reference="INe-i9-vCp"/>
         <segue reference="6Jw-9s-4nb"/>
         <segue reference="giO-hV-Q4k"/>
-        <segue reference="D2V-An-Xa9"/>
+        <segue reference="Wtw-3u-Kpc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="donotdisturb" width="512" height="512"/>
