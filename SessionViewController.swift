@@ -52,9 +52,15 @@ class SessionViewController: UIViewController {
         let timeEnd = Date()
         let timeStart = diary.diaryData["timeWhenStart"] as! Date
         let elapsedTime = session.intervalBetweenTwoDatesRounded(date1: timeEnd, date2: timeStart)
+        let timeDay = Int(diary.diaryData["timeForDay"] as! Double)
+        let totalTimeDay = timeDay + elapsedTime
+        var timeLeftForDay = 60-totalTimeDay
+        if (timeLeftForDay < 0){
+            timeLeftForDay = 0
+        }
         
         //  Declare Alert message
-        let messageStr = "Are you sure you want to stop the session? You have currently listened for \(elapsedTime) minutes so far."
+        let messageStr = "Are you sure you want to stop the session? \nCurrent time for session: \(elapsedTime) \nCurrent time for day: \(totalTimeDay) \nTime left for day: \(timeLeftForDay)"
         let confirmAlert = UIAlertController(title: "Confirm", message: messageStr, preferredStyle: .alert)
         
         //  Create Yes button that ends session
