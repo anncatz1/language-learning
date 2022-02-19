@@ -10,5 +10,6 @@ target 'Sleep Learning' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
+  pod 'iOSDropDown'
 
 end
