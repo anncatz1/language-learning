@@ -38,6 +38,7 @@
 		FA2337DE274C1F6F00C1A7C0 /* Q4new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */; };
 		FA2337E0274C208100C1A7C0 /* Q5_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337DF274C208100C1A7C0 /* Q5_2.swift */; };
 		FA2337E2274C675900C1A7C0 /* Q5_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337E1274C675900C1A7C0 /* Q5_3.swift */; };
+		FA5A4FD427C01DE000031F5E /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A4FD327C01DE000031F5E /* iOSDropDown.swift */; };
 		FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C42702B6AE004E7D70 /* Q1new.swift */; };
 		FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C62702B870004E7D70 /* Q2new.swift */; };
 		FAC8C0CB2702B884004E7D70 /* Q4newbad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */; };
@@ -81,6 +82,7 @@
 		FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4new.swift; sourceTree = "<group>"; };
 		FA2337DF274C208100C1A7C0 /* Q5_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_2.swift; sourceTree = "<group>"; };
 		FA2337E1274C675900C1A7C0 /* Q5_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_3.swift; sourceTree = "<group>"; };
+		FA5A4FD327C01DE000031F5E /* iOSDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = "Sleep Learning/Pods/iOSDropDown/iOSDropDown/Classes/iOSDropDown.swift"; sourceTree = SOURCE_ROOT; };
 		FAC8C0C42702B6AE004E7D70 /* Q1new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1new.swift; sourceTree = "<group>"; };
 		FAC8C0C62702B870004E7D70 /* Q2new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2new.swift; sourceTree = "<group>"; };
 		FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4newbad.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		3C67855322A6C0A100031F1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA5A4FD327C01DE000031F5E /* iOSDropDown.swift */,
 				3C67854122A6BEB500031F1B /* AppDelegate.swift */,
 				3C67854822A6BEB600031F1B /* Assets.xcassets */,
 				3C67854A22A6BEB600031F1B /* LaunchScreen.storyboard */,
@@ -330,6 +333,7 @@
 				3C67854422A6BEB500031F1B /* SessionViewController.swift in Sources */,
 				FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */,
 				3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */,
+				FA5A4FD427C01DE000031F5E /* iOSDropDown.swift in Sources */,
 				3C3C4FF322CD6D8A003B8E55 /* Q2aii.swift in Sources */,
 				2CE61AD924C25C4400553EAC /* Q3b.swift in Sources */,
 				FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */,
@@ -514,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.5;
+				MARKETING_VERSION = 4.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -536,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.5;
+				MARKETING_VERSION = 4.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
