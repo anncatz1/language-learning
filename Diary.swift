@@ -18,8 +18,7 @@ struct Diary {
     var diaryData: [String: Any]
     var diaryDate: String
     var diaryDateTime: String
-    //var diarydayNum: Int
-    //var changedDay: Bool 
+    var continueDay: Bool
     
     init() {
         diaryData = [String: Any]()
@@ -37,9 +36,9 @@ struct Diary {
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil
-        diaryData["englishSpeaker1"] = nil
-        diaryData["englishSpeaker2"] = nil
-        diaryData["englishSpeaker3"] = nil
+        diaryData["englishPhraseGender1"] = nil
+        diaryData["englishPhraseGender2"] = nil
+        diaryData["englishPhraseGender3"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
@@ -50,9 +49,7 @@ struct Diary {
         diaryData["timePaused"] = 0.0
         diaryDate = ""
         diaryDateTime = ""
-        //diarydayNum = 1
-        //changedDay = true
-        //diaryDate = ""
+        continueDay = false
     }
     
     mutating func resetInfo(resetDay : Bool){
@@ -64,16 +61,15 @@ struct Diary {
         diaryData["numberOfPauses"] = 0
         diaryData["timesPressedPause"] = [Date]()
         diaryData["timesPressedContinue"] = [Date]()
-        diaryData["streamMinsReported"] = nil
         diaryData["activity"] = nil
         diaryData["englishHeardYN"] = nil
         diaryData["numPhrases"] = nil
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil
-        diaryData["englishSpeaker1"] = nil
-        diaryData["englishSpeaker2"] = nil
-        diaryData["englishSpeaker3"] = nil
+        diaryData["englishPhraseGender1"] = nil
+        diaryData["englishPhraseGender2"] = nil
+        diaryData["englishPhraseGender3"] = nil
         diaryData["issuesWithVolumeYN"] = nil
         diaryData["issuesWithVolume"] = nil
         diaryData["issuesWithAppYN"] = nil
@@ -81,7 +77,9 @@ struct Diary {
         diaryData["timeForSession"] = 0.0
         diaryData["timePaused"] = 0.0
         if (resetDay){
-            diaryData["totalTimeForDay"] = 0.0
+            diaryData["timeForDay"] = 0.0
+            diaryData["audioFile"] = nil
+            continueDay = false
         }
     }
     
@@ -111,8 +109,47 @@ struct Diary {
         return dateFormatter.string(from: todaysDate)
     }
     
+    func eventFile(fileName : String)
+    {
+        if fileName=="" { return}
+        let Database = Firestore.firestore()
+        guard let userEmail = Auth.auth().currentUser?.email else {
+            print("No User Email")
+            return
+        }
+        let eventFileDocRef = Database.collection("eventFiles").document(fileName)
+        var eventFileData = [String: Any]()
+        eventFileDocRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                eventFileData = document.data()!
+            } else {
+                print("Document does not exist")
+            }
+        }
+        let userInfoDocRef = Database.collection("Subjects").document(userEmail)
+        userInfoDocRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                //  Find user ID
+                let userID = (document.data()!["ID"] as! String)
+                //  Store diary data in the collection titled with the user ID in a document with the day number as the title
+                let collection1 = Database.collection(userID).document(self.diaryDate).collection("Day");
+                collection1.document(self.diaryDateTime).setData(eventFileData, merge : true) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added")
+                    }
+                }
+            }
+            else {
+                print("Event file document does not exist")
+            }
+        }
+    }
+    
     // Uploads all the filled out fields in the diary to the server
     func upload() {
+        eventFile(fileName : diaryData["audioFile"] as? String ?? "")
         let Database = Firestore.firestore()
         
         //  Use the date as title for the diary document
@@ -132,7 +169,7 @@ struct Diary {
                 //let collectionName = "Day " + String(diary.diarydayNum)
                 //  Store diary data in the collection titled with the user ID in a document with the day number as the title
                 let collection1 = Database.collection(userID).document(self.diaryDate).collection("Day");
-                collection1.document(self.diaryDateTime).setData(self.diaryData) { err in
+                collection1.document(self.diaryDateTime).setData(self.diaryData, merge : true) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {

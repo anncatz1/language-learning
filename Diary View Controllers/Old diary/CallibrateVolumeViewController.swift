@@ -13,7 +13,7 @@ class CallibrateVolumeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         //  Play the ocean audio so that the volume can be calibrated.
         //diary.dayChange()
-        audioPlayer.loadAudio(with: oceanURL)
+        //audioPlayer.loadAudio(with: oceanURL)
         audioPlayer.playAudio(recordVol: true)
     }
     

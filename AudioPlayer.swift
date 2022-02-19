@@ -41,16 +41,16 @@ class AudioPlayer {
     }
     
     //  Loads a single audio file into the player. Used for volume calibration.
-    func loadAudio(with audioURL: URL) {
-        player.removeAllItems()
-        let playerItem = AVPlayerItem(url: audioURL)
-        if player.canInsert(playerItem, after: player.currentItem) {
-            player.insert(playerItem, after: player.currentItem)
-        }
-        else {
-            fatalError("Inserting item into queue failed.")
-        }
-    }
+//    func loadAudio(with audioURL: URL) {
+//        player.removeAllItems()
+//        let playerItem = AVPlayerItem(url: audioURL)
+//        if player.canInsert(playerItem, after: player.currentItem) {
+//            player.insert(playerItem, after: player.currentItem)
+//        }
+//        else {
+//            fatalError("Inserting item into queue failed.")
+//        }
+//    }
     
     func playAudio(recordVol : Bool) {
         player.play()
@@ -81,7 +81,7 @@ class AudioPlayer {
             diary.upload()
             }
         player.pause()
-        player.removeAllItems()
+        //player.removeAllItems()
     }
     
     func skipToNext() {
@@ -91,10 +91,6 @@ class AudioPlayer {
     internal func getPlayerItemURL(from playerItem: AVPlayerItem) -> URL {
         return (playerItem.asset as! AVURLAsset).url
     }
-    
-    //func pause(){
-    //
-    //}
     
     //  Called when the "restart" button is pressed. It plays a 20-minute blank
     //  audio file and then the rest of the audio from when "restart" was pressed.

@@ -30,7 +30,7 @@ class Q5_2: UIViewController {
             return
         }
         diary.diaryData["englishPhrase2"] = responseField.text!
-        diary.diaryData["englishSpeaker2"] = response2Field.text!
+        diary.diaryData["englishPhraseGender2"] = response2Field.text!
         diary.upload()
     }
     
