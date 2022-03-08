@@ -295,7 +295,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4Z-OD-hUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0mp-4D-Wuu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7924.6376811594209" y="401.78571428571428"/>
+            <point key="canvasLocation" x="7177" y="417"/>
         </scene>
         <!--Q4b-->
         <scene sceneID="C8z-e5-Py4">
@@ -365,7 +365,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9d-j6-Tua" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dBl-65-zHt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7098.5507246376819" y="1153.7946428571429"/>
+            <point key="canvasLocation" x="6386" y="1155"/>
         </scene>
         <!--Q5b-->
         <scene sceneID="fvh-7c-iiI">
@@ -435,7 +435,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjs-1F-wVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="PPe-kG-Qbs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8053.6231884057979" y="1107.5892857142856"/>
+            <point key="canvasLocation" x="7468" y="1154"/>
         </scene>
         <!--Session Completed View Controller-->
         <scene sceneID="8ir-ZE-heO">
@@ -532,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v02-md-SeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8821.7391304347839" y="403.53260869565219"/>
+            <point key="canvasLocation" x="8093" y="439"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ojw-PB-Ldh">
@@ -703,7 +703,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8m-1L-D3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ueR-Sg-hgo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7025" y="402"/>
+            <point key="canvasLocation" x="6272" y="404"/>
         </scene>
         <!--Q2new-->
         <scene sceneID="BkZ-iv-xgJ">
@@ -778,7 +778,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmg-xv-cws" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6zj-1E-xO8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6003" y="404"/>
+            <point key="canvasLocation" x="5455" y="401"/>
         </scene>
         <!--Q5_1-->
         <scene sceneID="XDT-HP-jFZ">
@@ -820,7 +820,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oly-dQ-OkO" customClass="DropDown" customModule="Sleep_Learning" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oly-dQ-OkO">
                                 <rect key="frame" x="67" y="440" width="280" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -876,7 +876,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="JLm-6c-ERV"/>
                     <connections>
-                        <outlet property="response2" destination="Oly-dQ-OkO" id="P3p-ld-kQO"/>
                         <outlet property="response2Field" destination="Oly-dQ-OkO" id="RWO-KH-wB2"/>
                         <outlet property="responseField" destination="0cg-oz-1B3" id="Muk-T3-fqL"/>
                     </connections>
@@ -992,7 +991,7 @@
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fnc-dK-eGL"/>
@@ -1122,7 +1121,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVX-YP-pRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tfn-x8-eQA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3908.6956521739135" y="1232.608695652174"/>
+            <point key="canvasLocation" x="3786" y="1233"/>
         </scene>
         <!--Q5_3-->
         <scene sceneID="Ayh-Ge-cKy">
@@ -1223,14 +1222,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPo-fL-zjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5gw-3b-ktH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4965" y="1233"/>
+            <point key="canvasLocation" x="4610" y="1233"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kh8-hs-vA3"/>
+        <segue reference="78X-1P-5dv"/>
         <segue reference="INe-i9-vCp"/>
         <segue reference="6Jw-9s-4nb"/>
-        <segue reference="KZD-pL-Sws"/>
+        <segue reference="giO-hV-Q4k"/>
         <segue reference="D2V-An-Xa9"/>
     </inferredMetricsTieBreakers>
     <resources>

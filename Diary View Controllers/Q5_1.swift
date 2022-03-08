@@ -19,9 +19,9 @@ class Q5_1: UIViewController {
     
     @IBOutlet weak var responseField: UITextField!
     
-    @IBOutlet weak var response2: DropDown!
-    //response2.optionArray = ["Male", "Female"]
     @IBOutlet weak var response2Field: UITextField!
+    //@IBOutlet weak var response2: DropDown!
+    //response2.optionArray = ["Male", "Female"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
