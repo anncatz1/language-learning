@@ -28,7 +28,6 @@ class SessionViewController: UIViewController {
     //  Instances of the main button that starts and restarts sessions, and the end session button
     @IBOutlet weak var startOrRestartButton: UIButton!
     @IBOutlet weak var endSegmentButton: UIButton!
-    //@IBOutlet weak var endDayButton: UIButton!
     
     //  When "start" or "restart" is pressed, take the appropriate action depending on the state (isAsleep)
     @IBAction func startOrRestartSession(_ sender: UIButton) {
@@ -49,8 +48,20 @@ class SessionViewController: UIViewController {
     
     //  When "end" is pressed, view a confirmation alert and take the appropriate action based on user input.
     @IBAction func endSegment(_ sender: UIButton) {
+        // time for session
+        let timeEnd = Date()
+        let timeStart = diary.diaryData["timeWhenStart"] as! Date
+        let elapsedTime = session.intervalBetweenTwoDatesRounded(date1: timeEnd, date2: timeStart)
+        let timeDay = Int(diary.diaryData["timeForDay"] as! Double)
+        let totalTimeDay = timeDay + elapsedTime
+        var timeLeftForDay = 60-totalTimeDay
+        if (timeLeftForDay < 0){
+            timeLeftForDay = 0
+        }
+        
         //  Declare Alert message
-        let confirmAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to stop the session?", preferredStyle: .alert)
+        let messageStr = "Are you sure you want to stop the session? \nCurrent time for session: \(elapsedTime) \nCurrent time for day: \(totalTimeDay) \nTime left for day: \(timeLeftForDay)"
+        let confirmAlert = UIAlertController(title: "Confirm", message: messageStr, preferredStyle: .alert)
         
         //  Create Yes button that ends session
         let yesButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
@@ -60,41 +71,20 @@ class SessionViewController: UIViewController {
         })
         
         //  Create No button that cancels
-        let noButton = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        let noButton = UIAlertAction(title: "No", style: .cancel, handler: {(action) in
+            self.currentSession.continuePlay()
+        })
         
         //  Add Yes and No buttons to alert
         confirmAlert.addAction(noButton)
         confirmAlert.addAction(yesButton)
         
         //  Present alert message to user
-        self.present(confirmAlert, animated: true, completion: nil)
+        self.present(confirmAlert, animated: true, completion: {
+            self.currentSession.pause()
+        })
         updateViewFromModel()
     }
-    
-//    //  When "end" is pressed, view a confirmation alert and take the appropriate action based on user input.
-//    @IBAction func endDay(_ sender: UIButton) {
-//        //  Declare Alert message
-//        let confirmAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to end the day?", preferredStyle: .alert)
-//
-//        //  Create Yes button that ends session
-//        let yesButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
-//            self.currentSession.endSession()
-//            //diary.changedDay = true
-//            self.hasSessionEnded = true
-//            self.performSegue(withIdentifier: "beginDiarySegue", sender: sender)
-//        })
-//
-//        //  Create No button that cancels
-//        let noButton = UIAlertAction(title: "No", style: .cancel, handler: nil)
-//
-//        //  Add Yes and No buttons to alert
-//        confirmAlert.addAction(noButton)
-//        confirmAlert.addAction(yesButton)
-//
-//        //  Present alert message to user
-//        self.present(confirmAlert, animated: true, completion: nil)
-//        updateViewFromModel()
-//    }
 
     func updateViewFromModel() {
         //  In session want pause:

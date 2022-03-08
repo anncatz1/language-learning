@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import DropDown
 
 class Q5_1: UIViewController {
     
@@ -18,6 +19,8 @@ class Q5_1: UIViewController {
     
     @IBOutlet weak var responseField: UITextField!
     
+    @IBOutlet weak var response2: DropDown!
+    //response2.optionArray = ["Male", "Female"]
     @IBOutlet weak var response2Field: UITextField!
     
     override func viewDidLoad() {
