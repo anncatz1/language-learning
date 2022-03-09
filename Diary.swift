@@ -32,7 +32,7 @@ struct Diary {
         diaryData["timesPressedContinue"] = [Date]()
         diaryData["activity"] = nil
         diaryData["englishHeardYN"] = nil
-        diaryData["numPhrases"] = nil
+        diaryData["numPhrases"] = 0
         diaryData["englishPhrase1"] = nil
         diaryData["englishPhrase2"] = nil
         diaryData["englishPhrase3"] = nil

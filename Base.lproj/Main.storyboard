@@ -496,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjn-H9-YJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1147.8260869565217" y="-330.13392857142856"/>
+            <point key="canvasLocation" x="-1147.8260869565217" y="-330.16304347826087"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LYG-LG-Gfu">
@@ -1085,9 +1085,8 @@
                                     <segue destination="5gw-3b-ktH" kind="unwind" unwindAction="unwindToPreviousQuestionWithSegue:" id="YfC-6Z-BDy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek8-FK-zX4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek8-FK-zX4">
                                 <rect key="frame" x="294" y="660" width="80" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1113,6 +1112,9 @@
                             <constraint firstItem="cy9-w8-b5V" firstAttribute="centerX" secondItem="R6q-6g-Acy" secondAttribute="centerX" id="afT-Nh-VcL"/>
                             <constraint firstItem="bYx-w8-QPi" firstAttribute="leading" secondItem="q7O-PW-p3V" secondAttribute="leading" constant="40" id="bAK-GI-suG"/>
                             <constraint firstItem="q7O-PW-p3V" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="jXW-C4-SMP" secondAttribute="bottom" constant="220" id="dde-dk-VDq"/>
+                            <constraint firstItem="q7O-PW-p3V" firstAttribute="bottom" secondItem="Ek8-FK-zX4" secondAttribute="bottom" constant="40" id="eIX-1F-BmC"/>
+                            <constraint firstItem="q7O-PW-p3V" firstAttribute="trailing" secondItem="Ek8-FK-zX4" secondAttribute="trailing" constant="40" id="jGq-hl-1uW"/>
+                            <constraint firstItem="Ek8-FK-zX4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i1l-8V-0Ar" secondAttribute="trailing" constant="8" symbolic="YES" id="mED-Xg-buO"/>
                             <constraint firstItem="VJD-oM-hSQ" firstAttribute="centerX" secondItem="R6q-6g-Acy" secondAttribute="centerX" id="mxM-cW-Ehk"/>
                             <constraint firstItem="cy9-w8-b5V" firstAttribute="top" secondItem="VJD-oM-hSQ" secondAttribute="bottom" constant="20" id="v6Y-7x-JZT"/>
                         </constraints>

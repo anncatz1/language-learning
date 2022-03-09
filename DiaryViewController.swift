@@ -25,13 +25,13 @@ class DiaryViewController: UIPageViewController, UIPageViewControllerDataSource,
     lazy var instructionPages: [UIViewController] = {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         //  Pages:
-        let firstEngVC = sb.instantiateViewController(withIdentifier: "firstEnglish")
-        let secondEngVC = sb.instantiateViewController(withIdentifier: "secondEnglish")
-        let thirdEngVC = sb.instantiateViewController(withIdentifier: "thirdEnglish")
-        if diary.diaryData["numPhrases"] as! Int == 1{
+        let firstEngVC = sb.instantiateViewController(withIdentifier: "firstEngVC")
+        let secondEngVC = sb.instantiateViewController(withIdentifier: "secondEngVC")
+        let thirdEngVC = sb.instantiateViewController(withIdentifier: "thirdEngVC")
+        if diary.diaryData["numPhrases"] as? Int == 1{
                 return [firstEngVC]
         }
-        else if diary.diaryData["numPhrases"] as! Int == 2 {
+        else if diary.diaryData["numPhrases"] as? Int == 2 {
                 return [firstEngVC, secondEngVC]
         }
         return [firstEngVC, secondEngVC, thirdEngVC]
