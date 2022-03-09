@@ -72,7 +72,7 @@ class SessionViewController: UIViewController {
         
         //  Create No button that cancels
         let noButton = UIAlertAction(title: "No", style: .cancel, handler: {(action) in
-            self.currentSession.continuePlay()
+            self.currentSession.continuePlayForPopup()
         })
         
         //  Add Yes and No buttons to alert
@@ -81,7 +81,7 @@ class SessionViewController: UIViewController {
         
         //  Present alert message to user
         self.present(confirmAlert, animated: true, completion: {
-            self.currentSession.pause()
+            self.currentSession.pauseForPopup()
         })
         updateViewFromModel()
     }

@@ -679,16 +679,16 @@
         <!--Q5_1-->
         <scene sceneID="XDT-HP-jFZ">
             <objects>
-                <viewController storyboardIdentifier="firstEngVC" title="Q5_1" modalPresentationStyle="fullScreen" id="Dvz-lI-7sT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstEngVC" title="Q5_1" modalPresentationStyle="fullScreen" id="Dvz-lI-7sT" customClass="Q5_1" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jb9-lB-Hae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was the first English phrase you heard during this session?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-ja-RXd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first English phrase that you heard during this session?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-ja-RXd">
                                 <rect key="frame" x="20" y="50" width="374" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="ct1-Yh-x3A"/>
-                                    <constraint firstAttribute="width" constant="374" id="zve-A8-JdK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="zve-A8-JdK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -735,17 +735,7 @@
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="continueToNextQuestion:" destination="Dvz-lI-7sT" eventType="touchUpInside" id="dnd-QI-MAQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adf-xb-oey">
-                                <rect key="frame" x="40" y="660" width="44" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OTj-NM-M6U" kind="unwind" unwindAction="unwindToPreviousQuestionWithSegue:" id="aiL-4x-lVA"/>
+                                    <action selector="continueToNextQuestion:" destination="Dvz-lI-7sT" eventType="touchUpInside" id="WqS-Ul-d2M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -757,26 +747,22 @@
                             <constraint firstItem="Oly-dQ-OkO" firstAttribute="top" secondItem="PE5-gs-S5Z" secondAttribute="bottom" constant="20" id="8Iu-Uf-kgk"/>
                             <constraint firstItem="Oly-dQ-OkO" firstAttribute="centerX" secondItem="Jb9-lB-Hae" secondAttribute="centerX" id="EgM-pN-Bv6"/>
                             <constraint firstItem="hnl-Le-5Tr" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="2hI-aY-3Wq" secondAttribute="bottom" constant="220" id="IiP-GC-9Zw"/>
-                            <constraint firstItem="hnl-Le-5Tr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Adf-xb-oey" secondAttribute="trailing" symbolic="YES" id="JLX-TH-V00"/>
                             <constraint firstItem="hnl-Le-5Tr" firstAttribute="trailing" secondItem="fvN-ja-RXd" secondAttribute="trailing" constant="20" id="MYh-Pn-0Cg"/>
                             <constraint firstItem="2hI-aY-3Wq" firstAttribute="centerX" secondItem="Jb9-lB-Hae" secondAttribute="centerX" id="OBe-o9-v0L"/>
                             <constraint firstItem="PE5-gs-S5Z" firstAttribute="top" secondItem="0cg-oz-1B3" secondAttribute="bottom" constant="50" id="R8g-It-fAd"/>
                             <constraint firstItem="0cg-oz-1B3" firstAttribute="centerX" secondItem="Jb9-lB-Hae" secondAttribute="centerX" id="SEY-lw-QzE"/>
                             <constraint firstItem="fvN-ja-RXd" firstAttribute="leading" secondItem="hnl-Le-5Tr" secondAttribute="leading" constant="20" id="VTK-BJ-dCU"/>
-                            <constraint firstItem="Adf-xb-oey" firstAttribute="leading" secondItem="hnl-Le-5Tr" secondAttribute="leading" constant="40" id="mMe-sJ-pzl"/>
                             <constraint firstItem="0cg-oz-1B3" firstAttribute="top" secondItem="fvN-ja-RXd" secondAttribute="bottom" constant="40" id="sqU-4l-eRM"/>
                             <constraint firstItem="2hI-aY-3Wq" firstAttribute="top" secondItem="Oly-dQ-OkO" secondAttribute="bottom" constant="30" id="t2q-id-bjl"/>
-                            <constraint firstItem="hnl-Le-5Tr" firstAttribute="bottom" secondItem="Adf-xb-oey" secondAttribute="bottom" constant="40" id="zFf-sm-48i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="JLm-6c-ERV"/>
                     <connections>
-                        <outlet property="response2Field" destination="Oly-dQ-OkO" id="RWO-KH-wB2"/>
-                        <outlet property="responseField" destination="0cg-oz-1B3" id="Muk-T3-fqL"/>
+                        <outlet property="response2Field" destination="Oly-dQ-OkO" id="75Z-b6-Yov"/>
+                        <outlet property="responseField" destination="0cg-oz-1B3" id="6MQ-ag-nKu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoN-Mm-tcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="OTj-NM-M6U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2934.7826086956525" y="1232.608695652174"/>
         </scene>
@@ -873,7 +859,7 @@
                                 </state>
                                 <connections>
                                     <action selector="continueToNextQuestion:" destination="vzJ-Vm-71q" eventType="touchUpInside" id="hRv-aM-KG1"/>
-                                    <segue destination="hog-ak-oiU" kind="show" id="sqg-TT-j9k"/>
+                                    <segue destination="hog-ak-oiU" kind="show" id="LI1-VK-NCq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEt-Sw-GdB">
@@ -920,13 +906,13 @@
         <!--Q5_2-->
         <scene sceneID="gH2-8c-1sN">
             <objects>
-                <viewController storyboardIdentifier="secondEngVC" title="Q5_2" modalPresentationStyle="fullScreen" id="L99-8b-K5o" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondEngVC" title="Q5_2" modalPresentationStyle="fullScreen" id="L99-8b-K5o" customClass="Q5_2" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AWs-9e-0Yg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6x-zR-DEe">
-                                <rect key="frame" x="67" y="204.66666666666666" width="280" height="40"/>
+                                <rect key="frame" x="67" y="194" width="280" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -938,7 +924,7 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was the speaker male or female?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcK-8q-Ddd">
-                                <rect key="frame" x="57" y="294.66666666666669" width="300" height="100"/>
+                                <rect key="frame" x="57" y="284" width="300" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="8c3-EZ-sJt"/>
                                     <constraint firstAttribute="height" constant="100" id="imC-o5-Ito"/>
@@ -948,7 +934,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1o-J7-8jJ">
-                                <rect key="frame" x="67" y="414.66666666666669" width="280" height="40"/>
+                                <rect key="frame" x="67" y="404" width="280" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -960,7 +946,7 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpX-Yz-K7d">
-                                <rect key="frame" x="175" y="479.66666666666669" width="64" height="46.000000000000057"/>
+                                <rect key="frame" x="175" y="469" width="64" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -969,19 +955,9 @@
                                     <action selector="continueToNextQuestion:" destination="L99-8b-K5o" eventType="touchUpInside" id="8yS-Bb-lxw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoJ-Kx-zQt">
-                                <rect key="frame" x="40" y="660" width="44" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tfn-x8-eQA" kind="unwind" unwindAction="unwindToPreviousQuestionWithSegue:" id="dSI-Ol-NV5"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was the second English phrase that you heard during the streaming? Press continue if you did not hear a second phrase." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-XG-Rwf">
-                                <rect key="frame" x="30" y="50.000000000000007" width="354" height="114.66666666666669"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the second English phrase that you heard during this session? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmc-XG-Rwf">
+                                <rect key="frame" x="30" y="50" width="354" height="104"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -991,8 +967,6 @@
                         <constraints>
                             <constraint firstItem="EpX-Yz-K7d" firstAttribute="centerX" secondItem="AWs-9e-0Yg" secondAttribute="centerX" id="15v-Iy-zCE"/>
                             <constraint firstItem="2k8-jw-91P" firstAttribute="trailing" secondItem="nmc-XG-Rwf" secondAttribute="trailing" constant="30" id="2ex-05-yYc"/>
-                            <constraint firstItem="EpX-Yz-K7d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KoJ-Kx-zQt" secondAttribute="trailing" constant="8" symbolic="YES" id="5BF-Dl-VwJ"/>
-                            <constraint firstItem="KoJ-Kx-zQt" firstAttribute="leading" secondItem="2k8-jw-91P" secondAttribute="leading" constant="40" id="86H-AB-P0D"/>
                             <constraint firstItem="C1o-J7-8jJ" firstAttribute="centerX" secondItem="AWs-9e-0Yg" secondAttribute="centerX" id="DLC-Rd-qok"/>
                             <constraint firstItem="nmc-XG-Rwf" firstAttribute="top" secondItem="AWs-9e-0Yg" secondAttribute="topMargin" constant="50" id="RJg-Dg-Zm7"/>
                             <constraint firstItem="nmc-XG-Rwf" firstAttribute="leading" secondItem="2k8-jw-91P" secondAttribute="leading" constant="30" id="Xo1-XS-O0m"/>
@@ -1002,7 +976,6 @@
                             <constraint firstItem="d6x-zR-DEe" firstAttribute="centerX" secondItem="AWs-9e-0Yg" secondAttribute="centerX" id="tXG-xE-fP7"/>
                             <constraint firstItem="2k8-jw-91P" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="EpX-Yz-K7d" secondAttribute="bottom" constant="220" id="xo1-Z3-kQV"/>
                             <constraint firstItem="QcK-8q-Ddd" firstAttribute="centerX" secondItem="AWs-9e-0Yg" secondAttribute="centerX" id="y7N-tu-ohA"/>
-                            <constraint firstItem="2k8-jw-91P" firstAttribute="bottom" secondItem="KoJ-Kx-zQt" secondAttribute="bottom" constant="40" id="zJd-o7-nrc"/>
                             <constraint firstItem="C1o-J7-8jJ" firstAttribute="top" secondItem="QcK-8q-Ddd" secondAttribute="bottom" constant="20" id="zQx-eN-i4s"/>
                         </constraints>
                     </view>
@@ -1013,26 +986,25 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVX-YP-pRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="tfn-x8-eQA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3786" y="1233"/>
         </scene>
         <!--Q5_3-->
         <scene sceneID="Ayh-Ge-cKy">
             <objects>
-                <viewController storyboardIdentifier="thirdEngVC" title="Q5_3" modalPresentationStyle="fullScreen" id="Y12-kk-KdV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="thirdEngVC" title="Q5_3" modalPresentationStyle="fullScreen" id="Y12-kk-KdV" customClass="Q5_3" customModule="Sleep_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R6q-6g-Acy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was the third English phrase that you heard during the streaming? Press continue if you did not hear a third phrase." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYx-w8-QPi">
-                                <rect key="frame" x="40" y="50.000000000000007" width="334" height="114.66666666666669"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the third English phrase that you heard during this session? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYx-w8-QPi">
+                                <rect key="frame" x="40" y="50" width="334" height="104"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8rT-1Q-LEJ">
-                                <rect key="frame" x="67" y="204.66666666666666" width="280" height="40"/>
+                                <rect key="frame" x="67" y="194" width="280" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1044,7 +1016,7 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was the speaker male or female?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJD-oM-hSQ">
-                                <rect key="frame" x="57" y="294.66666666666669" width="300" height="100"/>
+                                <rect key="frame" x="57" y="284" width="300" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="4GN-ey-DSZ"/>
                                     <constraint firstAttribute="height" constant="100" id="ka1-Jq-Ijf"/>
@@ -1054,7 +1026,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-w8-b5V">
-                                <rect key="frame" x="67" y="414.66666666666669" width="280" height="40"/>
+                                <rect key="frame" x="67" y="404" width="280" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1066,7 +1038,7 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXW-C4-SMP">
-                                <rect key="frame" x="175" y="479.66666666666669" width="64" height="46.000000000000057"/>
+                                <rect key="frame" x="175" y="469" width="64" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

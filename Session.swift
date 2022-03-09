@@ -93,6 +93,16 @@ public class Session {
         diary.diaryData["timesPressedPause"] = (diary.diaryData["timesPressedPause"] as! [Date]) + [Date()]
         diary.upload()
     }
+    
+    func pauseForPopup() {
+        audioPlayer.pauseAudio(recordVol: true)
+        sessionPaused = true
+    }
+    
+    func continuePlayForPopup() {
+        audioPlayer.playAudio(recordVol: true)
+        sessionPaused = false
+    }
 }
 
 //    func restart() {
