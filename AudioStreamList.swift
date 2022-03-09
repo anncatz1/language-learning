@@ -152,8 +152,6 @@ func getLangAudioStreamList() -> URL {
     "mandarin-f1-part3_JS-MG-YZ",
     "mandarin-f2-part1_MG",
     "mandarin-f2-part2_YZ-JS-JL",
-    "mandarin-f3-part1_JL-YZ-JS",
-    "mandarin-f3-part2_YZ-YZ",
     "mandarin-f4-part1_MG",
     "mandarin-f4-part2_JL",
     "mandarin-f4-part3_JS",
@@ -172,7 +170,7 @@ func getLangAudioStreamList() -> URL {
     }
     else if assignedLanguage.lowercased() == "mandarin" {
         //picks random number between 1 and 10 including 10 to choose audio file
-        let audioInt = Int.random(in: 0 ... 62)
+        let audioInt = Int.random(in: 0 ... 60)
         audioName = listMandarin[audioInt]
         diary.diaryData["audioFile"] = audioName
         diary.upload()
