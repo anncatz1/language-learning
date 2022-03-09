@@ -39,6 +39,7 @@
 		FA2337E0274C208100C1A7C0 /* Q5_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337DF274C208100C1A7C0 /* Q5_2.swift */; };
 		FA2337E2274C675900C1A7C0 /* Q5_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337E1274C675900C1A7C0 /* Q5_3.swift */; };
 		FA5A4FD427C01DE000031F5E /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A4FD327C01DE000031F5E /* iOSDropDown.swift */; };
+		FAC145AE27D930EA00F9DD68 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC145AD27D930EA00F9DD68 /* DiaryViewController.swift */; };
 		FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C42702B6AE004E7D70 /* Q1new.swift */; };
 		FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C62702B870004E7D70 /* Q2new.swift */; };
 		FAC8C0CB2702B884004E7D70 /* Q4newbad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */; };
@@ -83,6 +84,7 @@
 		FA2337DF274C208100C1A7C0 /* Q5_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_2.swift; sourceTree = "<group>"; };
 		FA2337E1274C675900C1A7C0 /* Q5_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q5_3.swift; sourceTree = "<group>"; };
 		FA5A4FD327C01DE000031F5E /* iOSDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = "Sleep Learning/Pods/iOSDropDown/iOSDropDown/Classes/iOSDropDown.swift"; sourceTree = SOURCE_ROOT; };
+		FAC145AD27D930EA00F9DD68 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		FAC8C0C42702B6AE004E7D70 /* Q1new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q1new.swift; sourceTree = "<group>"; };
 		FAC8C0C62702B870004E7D70 /* Q2new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2new.swift; sourceTree = "<group>"; };
 		FAC8C0CA2702B884004E7D70 /* Q4newbad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q4newbad.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				3C11183A22E0FBFF00C15000 /* loginViewController.swift */,
 				3C67854322A6BEB500031F1B /* SessionViewController.swift */,
 				3CC2874F22C273D40043394C /* InstructionsViewController.swift */,
+				FAC145AD27D930EA00F9DD68 /* DiaryViewController.swift */,
 				3C21E35022AEEB9E00003F7D /* Session.swift */,
 				3C21E35222B0039700003F7D /* AudioPlayer.swift */,
 				3C21E35A22B19B6900003F7D /* AudioStreamList.swift */,
@@ -216,7 +219,7 @@
 				3C67853A22A6BEB500031F1B /* Sources */,
 				3C67853B22A6BEB500031F1B /* Frameworks */,
 				3C67853C22A6BEB500031F1B /* Resources */,
-				6E407E6EC3AADA5EC8ABE065 /* [CP] Embed Pods Frameworks */,
+				BFD8BE48D15AC17936BA5739 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,7 +308,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6E407E6EC3AADA5EC8ABE065 /* [CP] Embed Pods Frameworks */ = {
+		BFD8BE48D15AC17936BA5739 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,6 +357,7 @@
 				2CC1187924AAAF670055E7E2 /* Q4.swift in Sources */,
 				3C3C4FF122CD6D7C003B8E55 /* Q2ai.swift in Sources */,
 				3C21E35322B0039700003F7D /* AudioPlayer.swift in Sources */,
+				FAC145AE27D930EA00F9DD68 /* DiaryViewController.swift in Sources */,
 				FA2337E0274C208100C1A7C0 /* Q5_2.swift in Sources */,
 				3C3C4FFF22CD6E6F003B8E55 /* Q1a.swift in Sources */,
 				2C5DDA5124AFAA9E00B324CA /* Q4b.swift in Sources */,
@@ -518,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.8;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -540,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.8;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "memorylab.Sleep-Learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
