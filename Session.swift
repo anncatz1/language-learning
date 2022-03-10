@@ -96,12 +96,12 @@ public class Session {
     }
     
     func pauseForPopup() {
-        audioPlayer.pauseAudio(recordVol: true)
+        audioPlayer.pauseAudio(recordVol: false)
         sessionPaused = true
     }
     
     func continuePlayForPopup() {
-        audioPlayer.playAudio(recordVol: true)
+        audioPlayer.playAudio(recordVol: false)
         sessionPaused = false
     }
 }
