@@ -17,15 +17,17 @@ class Q5_2: UIViewController {
     }
     
     @IBOutlet weak var responseField: UITextField!
-    
     @IBOutlet weak var response2Field: UITextField!
+    @IBOutlet weak var continueButton: UIButton!
+    var isLast = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.updateView()
     }
     
-    @IBAction func continueToNextQuestion(_ sender: Any) {
+    @IBAction func enterInfo(_ sender: Any) {
         guard responseField.text != nil && responseField.text != "" else {
             return
         }
@@ -34,6 +36,17 @@ class Q5_2: UIViewController {
         diary.upload()
     }
     
+    func updateView() {
+        if session.lastItem == 2 {
+            continueButton.isEnabled = true // END SEGMENT BUTTON
+            continueButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
+        }
+        
+        else {
+            continueButton.isEnabled = false
+            continueButton.setTitleColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0), for: UIControl.State.normal)
+        }
+    }
 //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 //        if identifier == "continueToNextQuestion" && (responseField.text == "" || responseField.text == nil) {
 //            //  Display alert

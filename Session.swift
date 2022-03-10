@@ -17,6 +17,7 @@ public class Session {
     // is the participant asleep
     var sessionRunning = false
     var sessionPaused = false
+    var lastItem = 0
     
     func beginSession() {
         sessionRunning = true

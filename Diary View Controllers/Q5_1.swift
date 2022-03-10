@@ -11,6 +11,8 @@ import UIKit
 
 class Q5_1: UIViewController {
     
+    //@IBOutlet weak var response2: DropDown!
+    //response2.optionArray = ["Male", "Female"]
     //  Set the status bar to have light content so it's visible against the black
     //  background
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -18,23 +20,37 @@ class Q5_1: UIViewController {
     }
     
     @IBOutlet weak var responseField: UITextField!
-    
     @IBOutlet weak var response2Field: UITextField!
-    //@IBOutlet weak var response2: DropDown!
-    //response2.optionArray = ["Male", "Female"]
+    @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.updateView()
     }
     
-    @IBAction func continueToNextQuestion(_ sender: Any) {
+    @IBAction func enterInfo(_ sender: Any) {
         guard responseField.text != nil && responseField.text != "" && response2Field.text != nil && response2Field.text != "" else {
+            //  Display alert
+            let emptyAlert = UIAlertController(title: "Invalid response", message: "You must enter a response before continuing.", preferredStyle: .alert)
+            emptyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(emptyAlert, animated: true, completion: nil)
             return
         }
         diary.diaryData["englishPhrase1"] = responseField.text!
         diary.diaryData["englishPhraseGender1"] = response2Field.text!
         diary.upload()
+    }
+    
+    func updateView() {
+        if session.lastItem == 1 {
+            continueButton.isEnabled = true // END SEGMENT BUTTON
+            continueButton.setTitleColor(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), for: UIControl.State.normal)
+        }
+        else {
+            continueButton.isEnabled = false
+            continueButton.setTitleColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0), for: UIControl.State.normal)
+        }
     }
 
 //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

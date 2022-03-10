@@ -13,6 +13,7 @@ import UIKit
 
 class DiaryViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    // var lastItem = 0
     //  Set the status bar to have light content so it's visible against the black
     //  background
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -29,11 +30,14 @@ class DiaryViewController: UIPageViewController, UIPageViewControllerDataSource,
         let secondEngVC = sb.instantiateViewController(withIdentifier: "secondEngVC")
         let thirdEngVC = sb.instantiateViewController(withIdentifier: "thirdEngVC")
         if diary.diaryData["numPhrases"] as? Int == 1{
-                return [firstEngVC]
+            session.lastItem = 1
+            return [firstEngVC]
         }
         else if diary.diaryData["numPhrases"] as? Int == 2 {
-                return [firstEngVC, secondEngVC]
+            session.lastItem = 2
+            return [firstEngVC, secondEngVC]
         }
+        session.lastItem = 3
         return [firstEngVC, secondEngVC, thirdEngVC]
     }()
 
@@ -43,6 +47,7 @@ class DiaryViewController: UIPageViewController, UIPageViewControllerDataSource,
         if let firstViewController = instructionPages.first {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
+        //let lastVC = instructionPages.last!
     }
     
     //  Transitioning between pages
