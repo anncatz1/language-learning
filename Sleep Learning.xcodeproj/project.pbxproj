@@ -38,7 +38,6 @@
 		FA2337DE274C1F6F00C1A7C0 /* Q4new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337DD274C1F6F00C1A7C0 /* Q4new.swift */; };
 		FA2337E0274C208100C1A7C0 /* Q5_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337DF274C208100C1A7C0 /* Q5_2.swift */; };
 		FA2337E2274C675900C1A7C0 /* Q5_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2337E1274C675900C1A7C0 /* Q5_3.swift */; };
-		FA5A4FD427C01DE000031F5E /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A4FD327C01DE000031F5E /* iOSDropDown.swift */; };
 		FAC145AE27D930EA00F9DD68 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC145AD27D930EA00F9DD68 /* DiaryViewController.swift */; };
 		FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C42702B6AE004E7D70 /* Q1new.swift */; };
 		FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C0C62702B870004E7D70 /* Q2new.swift */; };
@@ -175,7 +174,7 @@
 				3C1E93FB22BBCE340024240A /* Diary.swift */,
 				3C67854D22A6BEB600031F1B /* Info.plist */,
 			);
-			path = "Sleep Learning";
+			name = "Sleep Learning";
 			sourceTree = "<group>";
 		};
 		3C67855322A6C0A100031F1B /* Supporting Files */ = {
@@ -336,7 +335,6 @@
 				3C67854422A6BEB500031F1B /* SessionViewController.swift in Sources */,
 				FAC8C0C52702B6AE004E7D70 /* Q1new.swift in Sources */,
 				3CEBA66522CAD95E009014B6 /* CallibrateVolumeViewController.swift in Sources */,
-				FA5A4FD427C01DE000031F5E /* iOSDropDown.swift in Sources */,
 				3C3C4FF322CD6D8A003B8E55 /* Q2aii.swift in Sources */,
 				2CE61AD924C25C4400553EAC /* Q3b.swift in Sources */,
 				FAC8C0C72702B870004E7D70 /* Q2new.swift in Sources */,
@@ -516,7 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 542BZ7JZM4;
-				INFOPLIST_FILE = "Sleep Learning/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -538,7 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 542BZ7JZM4;
-				INFOPLIST_FILE = "Sleep Learning/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
